@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Parsing JSON with Ruby"
-date:   2013-12-23 00:18:23 +0700
-categories: [ruby]
+title:  "Univariate and Multivariate Linear Regression: Cancer Mortality Rates"
+date:   2013-12-23
 ---
 
 # Univariate and Multivariate Linear Regression: Cancer Mortality Rates
