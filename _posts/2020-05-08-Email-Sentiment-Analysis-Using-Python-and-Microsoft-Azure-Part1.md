@@ -360,30 +360,22 @@ Now that we have our results in a nice dictionary we can work on plotting them i
 To do this we're going to use the `matplotlib.pyplot`library. We'll be creating both a pie chart (to visualize the percentages) and a bar chart (to visualize the e-mail count by result). We'll also do some formatting changes to the plots before showing them, such as: color changes, font changes, padding/spacing, display sizes, etc.
 
 #Setting our Key/Value pairs from our results\
-
-<pre style='color:#000000;background:#ffffff;'>keys <span style='color:#808030; '>=</span> senti_results<span style='color:#808030; '>.</span>keys<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>\
-values <span style='color:#808030; '>=</span> senti_results<span style='color:#808030; '>.</span>values<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Establishing some format changes for our charts\</span>
-figure<span style='color:#808030; '>(</span>num<span style='color:#808030; '>=</span><span style='color:#074726; '>None</span><span style='color:#808030; '>,</span> figsize<span style='color:#808030; '>=</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>8</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>8</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span>dpi<span style='color:#808030; '>=</span><span style='color:#008c00; '>80</span><span style='color:#808030; '>)</span>\
-colors <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#0000e6; '>'seagreen'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'lightsteelblue'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'indianred'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'silver'</span><span style='color:#808030; '>]</span>\
-explode <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span><span style='color:#008000; '>0.1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>\
-plt<span style='color:#808030; '>.</span>rcParams<span style='color:#808030; '>.</span>update<span style='color:#808030; '>(</span><span style='color:#800080; '>{</span><span style='color:#0000e6; '>'font.size'</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>12</span><span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Creating the first plot (pie chart)\</span>
-plt<span style='color:#808030; '>.</span>subplot<span style='color:#808030; '>(</span><span style='color:#008c00; '>221</span><span style='color:#808030; '>)</span>\
-plt<span style='color:#808030; '>.</span>pie<span style='color:#808030; '>(</span>values<span style='color:#808030; '>,</span>labels<span style='color:#808030; '>=</span>keys<span style='color:#808030; '>,</span>colors<span style='color:#808030; '>=</span>colors<span style='color:#808030; '>,</span> explode<span style='color:#808030; '>=</span>explode<span style='color:#808030; '>,</span>autopct<span style='color:#808030; '>=</span><span style='color:#0000e6; '>'%1.1f%%'</span><span style='color:#808030; '>,</span>shadow<span style='color:#808030; '>=</span><span style='color:#074726; '>True</span><span style='color:#808030; '>,</span>startangle<span style='color:#808030; '>=</span><span style='color:#008c00; '>90</span><span style='color:#808030; '>)</span>\
-plt<span style='color:#808030; '>.</span>title<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'Overall Sentiment Against 1,277 E-mails, by Percentage'</span><span style='color:#808030; '>,</span>bbox<span style='color:#808030; '>=</span><span style='color:#800080; '>{</span><span style='color:#0000e6; '>'facecolor'</span><span style='color:#808030; '>:</span><span style='color:#0000e6; '>'1'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'pad'</span><span style='color:#808030; '>:</span><span style='color:#008c00; '>8</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>y<span style='color:#808030; '>=</span><span style='color:#008000; '>1.10</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Creating the second plot (bar chart)\</span>
-plt<span style='color:#808030; '>.</span>subplot<span style='color:#808030; '>(</span><span style='color:#008c00; '>222</span><span style='color:#808030; '>)</span>\
-plt<span style='color:#808030; '>.</span>title<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'E-mail Count by Sentiment Result'</span><span style='color:#808030; '>,</span>bbox<span style='color:#808030; '>=</span><span style='color:#800080; '>{</span><span style='color:#0000e6; '>'facecolor'</span><span style='color:#808030; '>:</span><span style='color:#0000e6; '>'1'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'pad'</span><span style='color:#808030; '>:</span><span style='color:#008c00; '>8</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>y<span style='color:#808030; '>=</span><span style='color:#008000; '>1.10</span><span style='color:#808030; '>)</span>\
-plt<span style='color:#808030; '>.</span>bar<span style='color:#808030; '>(</span>keys<span style='color:#808030; '>,</span>values<span style='color:#808030; '>,</span>width<span style='color:#808030; '>=</span><span style='color:#008000; '>.8</span><span style='color:#808030; '>,</span>color<span style='color:#808030; '>=</span>colors<span style='color:#808030; '>)</span><span style='color:#696969; '>#Adjusting the spacing/padding between subplots\</span>
-plt<span style='color:#808030; '>.</span>subplots_adjust<span style='color:#808030; '>(</span>left<span style='color:#808030; '>=</span><span style='color:#008000; '>0.125</span><span style='color:#808030; '>,</span> bottom<span style='color:#808030; '>=</span><span style='color:#008000; '>0.1</span><span style='color:#808030; '>,</span> right<span style='color:#808030; '>=</span><span style='color:#008000; '>1.8</span><span style='color:#808030; '>,</span> top<span style='color:#808030; '>=</span><span style='color:#008000; '>1.3</span><span style='color:#808030; '>,</span> wspace<span style='color:#808030; '>=</span><span style='color:#008000; '>0.2</span><span style='color:#808030; '>,</span> hspace<span style='color:#808030; '>=</span><span style='color:#008000; '>0.2</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Displaying the plots\</span>
-plt<span style='color:#808030; '>.</span>show<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
-</pre>
-
-
-
-
-
-
-
-
+{% highlight python %}
+keys = senti_results.keys()\
+values = senti_results.values()#Establishing some format changes for our charts\
+figure(num=None, figsize=(8,8),dpi=80)\
+colors = ['seagreen','lightsteelblue','indianred','silver']\
+explode = (0.1, 0, 0, 0)\
+plt.rcParams.update({'font.size': 12})#Creating the first plot (pie chart)\
+plt.subplot(221)\
+plt.pie(values,labels=keys,colors=colors, explode=explode,autopct='%1.1f%%',shadow=True,startangle=90)\
+plt.title('Overall Sentiment Against 1,277 E-mails, by Percentage',bbox={'facecolor':'1','pad':8},y=1.10)#Creating the second plot (bar chart)\
+plt.subplot(222)\
+plt.title('E-mail Count by Sentiment Result',bbox={'facecolor':'1','pad':8},y=1.10)\
+plt.bar(keys,values,width=.8,color=colors)#Adjusting the spacing/padding between subplots\
+plt.subplots_adjust(left=0.125, bottom=0.1, right=1.8, top=1.3, wspace=0.2, hspace=0.2)#Displaying the plots\
+plt.show()
+{% endhighlight %}
 
 Now we can see we have a nice visual representation of our data! While we still have a bunch of "Unknown" response types from our API, we can tell that overall we aren't as negative in our responses as we may have thought.
 
