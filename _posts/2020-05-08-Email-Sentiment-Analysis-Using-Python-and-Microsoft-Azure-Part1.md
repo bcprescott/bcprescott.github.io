@@ -1,7 +1,5 @@
 What does our e-mail Sent Items folder say about our demeanor? Can we use this and other complementary data to possibly determine trends in happiness or sadness at work?
 
-![](https://miro.medium.com/max/60/0*i7X1eUdbZI7FsxBk?q=20)
-
 ![](https://miro.medium.com/max/10368/0*i7X1eUdbZI7FsxBk)
 
 Photo by [Sebastian Herrmann](https://unsplash.com/@officestock?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
@@ -55,8 +53,6 @@ Now that we understand the basics of the tools we'll be using, lets get to build
 Step 1 --- Deploy an Azure Text Analytics API Instance
 ====================================================
 
-![](https://miro.medium.com/max/60/0*SsheKLpzygQUaYQN?q=20)
-
 ![](https://miro.medium.com/max/10944/0*SsheKLpzygQUaYQN)
 
 Photo by [Vladimir Anikeev](https://unsplash.com/@anikeevproduction?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
@@ -73,11 +69,9 @@ Once we're logged in we'll need to search for Text Analytics API.
 -   Type Text Analytics. Hit enter.
 -   Click Create.
 
-![](https://miro.medium.com/max/60/1*9IUoNlCb0nEvDOgDTs1EYw.png?q=20)
 
 ![](https://miro.medium.com/max/2108/1*9IUoNlCb0nEvDOgDTs1EYw.png)
 
-![](https://miro.medium.com/max/60/1*3UH1RqnUGSHpLX4eQcfrmA.png?q=20)
 
 ![](https://miro.medium.com/max/1622/1*3UH1RqnUGSHpLX4eQcfrmA.png)
 
@@ -85,7 +79,6 @@ Create Text Analytics API instance
 
 Next, we need to enter details about the service and its pricing tier. Type a Name, Subscription (if you have more than 1 active), Location (would recommend picking one close to you), Pricing Tier (F0 is free and works fine for this), and a Resource Group for it to live in. If you don't have one, click Create New and give it a name.
 
-![](https://miro.medium.com/max/44/1*-FV-g0fKf2J-4zoXT5Legg.png?q=20)
 
 ![](https://miro.medium.com/max/1140/1*-FV-g0fKf2J-4zoXT5Legg.png)
 
@@ -93,11 +86,8 @@ Azure Text Analytics API information
 
 Once deployed, select All Resources from the left and click on your API resource. Then, click on Keys and Endpoint and copy the Endpoint and Key1 into a notepad or something for later use.
 
-![](https://miro.medium.com/max/60/1*3zc6E6tdSA367c35IVzdMA.png?q=20)
 
 ![](https://miro.medium.com/max/3178/1*3zc6E6tdSA367c35IVzdMA.png)
-
-![](https://miro.medium.com/max/60/1*J0itR_UGLWPE8tkRvjuhRw.png?q=20)
 
 ![](https://miro.medium.com/max/4120/1*J0itR_UGLWPE8tkRvjuhRw.png)
 
@@ -105,8 +95,6 @@ Key & Endpoint Retrieval
 
 Step 2--- Outlook CSV Export
 ==========================
-
-![](https://miro.medium.com/max/60/0*L3G4WAQFTXYQEak2?q=20)
 
 ![](https://miro.medium.com/max/5536/0*L3G4WAQFTXYQEak2)
 
@@ -125,7 +113,6 @@ The next step is to grab a CSV export of your e-mail Sent Items. Considering we'
 Step 3---Setup & Reviewing CSV Data
 =================================
 
-![](https://miro.medium.com/max/48/0*YDa-ITjhkrQD6McP?q=20)
 
 ![](https://miro.medium.com/max/6204/0*YDa-ITjhkrQD6McP)
 
@@ -197,8 +184,6 @@ email_data.head()
 
 If you run the above you should see something similar to the below output.
 
-![](https://miro.medium.com/max/60/1*D6MTTSvmXUXjMlcZHYnkrw.png?q=20)
-
 ![](https://miro.medium.com/max/3584/1*D6MTTSvmXUXjMlcZHYnkrw.png)
 
 There are plenty of columns (useful or not) provided with the Outlook export, but you'll find one critical data point missing --- timestamps.
@@ -207,8 +192,6 @@ Unfortunately, Outlook doesn't provide the ability to map the date/time property
 
 Step 4--- Cleaning & Preparing The Dataset
 ========================================
-
-![](https://miro.medium.com/max/60/0*W8rkmVkMiqilcOY5?q=20)
 
 ![](https://miro.medium.com/max/11520/0*W8rkmVkMiqilcOY5)
 
@@ -224,8 +207,6 @@ print("Starting email count:",email_body.shape)
 
 Here I'm using selection by column label considering we have those available to us. You can also use the column index, or whatever you prefer.
 
-![](https://miro.medium.com/max/60/1*RicbMehWkUetNuMuIlkEig.png?q=20)
-
 ![](https://miro.medium.com/max/1742/1*RicbMehWkUetNuMuIlkEig.png)
 
 Now we can see we have just the body content, which is what we'll use to perform sentiment analysis on. We'll be closely monitoring the shape of our Series as we continue to clean this. We're currently starting with 1675 rows.
@@ -239,8 +220,6 @@ print(email_body.head())\
 print('\n')\
 print("Current e-mail count:",email_body.shape)
 
-![](https://miro.medium.com/max/60/1*ysGle-ua5kcdxRm3Z3DvdA.png?q=20)
-
 ![](https://miro.medium.com/max/1708/1*ysGle-ua5kcdxRm3Z3DvdA.png)
 
 Next, we're going to remove forwarded or trailing email threads where we don't want to analyze a full email thread. An example is row index 3 where we see a date trailing my response in an e-mail thread.
@@ -252,8 +231,6 @@ split_df = email_body.str.partition("Regards")\
 print(split_df[0:3])\
 print('\n')\
 print("Current e-mail count:",split_df.shape)
-
-![](https://miro.medium.com/max/60/1*sk5Pm6GtFIjCsKzswpumHQ.png?q=20)
 
 ![](https://miro.medium.com/max/2008/1*sk5Pm6GtFIjCsKzswpumHQ.png)
 
@@ -267,8 +244,6 @@ clean_col = split_df.drop(columns=[1,2]) #1 contains "Regards", 2 contains trail
 clean_nan = clean_col.dropna()print("E-mail count before NaN removal:",clean_col.shape[0]) #Display before NaN removal\
 print("E-mail count after NaN removal:",clean_nan.shape[0]) #Display before NaN removal
 
-![](https://miro.medium.com/max/60/1*CKm5M1RzgSdYOS2SUyivmQ.png?q=20)
-
 ![](https://miro.medium.com/max/1194/1*CKm5M1RzgSdYOS2SUyivmQ.png)
 
 We can see before partitioning we had 1,675 rows. We dropped the two columns containing the fluff including and after my signature. After removing rows with NaN we are down to 1,642 emails. We need to continue cleaning by removing PTO emails and forwarded message emails. We'll also add a column name to our body text column.
@@ -279,8 +254,6 @@ clean_pto = clean_nan[~clean_nan.EmailBody.str.contains("Hello,I am currently")]
 cleaned_df = clean_pto[~clean_pto.EmailBody.str.contains("---------- Forwarded message ---------")]print("E-mail count before removals:",clean_nan.shape[0]) #Pre PTO count\
 print("E-mail count after removing PTO messages:",clean_pto.shape[0]) #Post PTO count\
 print("E-mail count after also removing forwarded messages:",cleaned_df.shape[0]) #Post fwd removal
-
-![](https://miro.medium.com/max/60/1*HQE5bB-3VO02Vs6ZE1im1A.png?q=20)
 
 ![](https://miro.medium.com/max/1806/1*HQE5bB-3VO02Vs6ZE1im1A.png)
 
@@ -293,8 +266,6 @@ If we print the `cleaned_df` Series we'll see that we have rows that look to b
 cleaned_df['EmailBody'].replace(" ",np.nan,inplace=True)\
 print(cleaned_df)
 
-![](https://miro.medium.com/max/60/1*ivRLLfC8iinEslCzlvO6mg.png?q=20)
-
 ![](https://miro.medium.com/max/1798/1*ivRLLfC8iinEslCzlvO6mg.png)
 
 Now our empty rows will show NaN. We can now drop those rows by using `pd.dropna()` .
@@ -304,8 +275,6 @@ cleaned_df = cleaned_df.dropna()\
 print(cleaned_df)\
 print('\n')\
 print("E-mail count after dropping empty rows/rows with NaN:",cleaned_df.shape)
-
-![](https://miro.medium.com/max/60/1*UWwS6Q_Z0bCVdewM9P7Aag.png?q=20)
 
 ![](https://miro.medium.com/max/1816/1*UWwS6Q_Z0bCVdewM9P7Aag.png)
 
@@ -322,14 +291,12 @@ print("E-mail count before error removal, ready for analysis:",len(senti_list))
 
 We can print the length of the list of lists to make sure that it matches our DataFrame row count, which it does.
 
-![](https://miro.medium.com/max/60/1*T6ETyFtO8jgHh5GSIe3mkA.png?q=20)
 
 ![](https://miro.medium.com/max/1872/1*T6ETyFtO8jgHh5GSIe3mkA.png)
 
 Step 5--- Performing Sentiment Analysis
 =====================================
 
-![](https://miro.medium.com/max/60/0*biw6eKzTxhXigQuY?q=20)
 
 ![](https://miro.medium.com/max/15000/0*biw6eKzTxhXigQuY)
 
@@ -351,8 +318,6 @@ print("\n")\
 print("Sentiment errors:",senti_errors)\
 print("Error count:",len(senti_errors))
 
-![](https://miro.medium.com/max/60/1*HlRscaMkbzFC4IiltVPVJA.png?q=20)
-
 ![](https://miro.medium.com/max/3114/1*HlRscaMkbzFC4IiltVPVJA.png)
 
 We can see two main things here: the overall sentiment results for our data and the rows that errored out when being analyzed. We can see we have a total of 11 rows not being analyzed and it seems to be because of varying white spaces.
@@ -368,8 +333,6 @@ senti_cleaned = senti_listfor i in senti_errors:\
 
 print("E-mail count after removing error rows. Final used for analysis:",len(senti_cleaned))
 
-![](https://miro.medium.com/max/60/1*H5XabVyrt626nFRhLh17rQ.png?q=20)
-
 ![](https://miro.medium.com/max/2150/1*H5XabVyrt626nFRhLh17rQ.png)
 
 We can see we're down exactly 11 rows, which matches the count of errors. We can now re-run the analysis on our data copy to make sure we have no other errors.
@@ -381,16 +344,12 @@ print("\n")\
 print("Sentiment errors:",senti_errors)\
 print("Error count:",len(senti_errors))
 
-![](https://miro.medium.com/max/60/1*UM7hr7kTPfLxNNAQ5aK3qw.png?q=20)
-
 ![](https://miro.medium.com/max/2102/1*UM7hr7kTPfLxNNAQ5aK3qw.png)
 
 Reviewing the output we can verify we have no more errors (your mileage may vary) and are ready to move on to plotting our results.
 
 Step 6--- Visualization
 =====================
-
-![](https://miro.medium.com/max/60/0*tzKe3KeDWta5BVDJ?q=20)
 
 ![](https://miro.medium.com/max/12288/0*tzKe3KeDWta5BVDJ)
 
@@ -401,24 +360,32 @@ Now that we have our results in a nice dictionary we can work on plotting them i
 To do this we're going to use the `matplotlib.pyplot`library. We'll be creating both a pie chart (to visualize the percentages) and a bar chart (to visualize the e-mail count by result). We'll also do some formatting changes to the plots before showing them, such as: color changes, font changes, padding/spacing, display sizes, etc.
 
 #Setting our Key/Value pairs from our results\
-keys = senti_results.keys()\
-values = senti_results.values()#Establishing some format changes for our charts\
-figure(num=None, figsize=(8,8),dpi=80)\
-colors = ['seagreen','lightsteelblue','indianred','silver']\
-explode = (0.1, 0, 0, 0)\
-plt.rcParams.update({'font.size': 12})#Creating the first plot (pie chart)\
-plt.subplot(221)\
-plt.pie(values,labels=keys,colors=colors, explode=explode,autopct='%1.1f%%',shadow=True,startangle=90)\
-plt.title('Overall Sentiment Against 1,277 E-mails, by Percentage',bbox={'facecolor':'1','pad':8},y=1.10)#Creating the second plot (bar chart)\
-plt.subplot(222)\
-plt.title('E-mail Count by Sentiment Result',bbox={'facecolor':'1','pad':8},y=1.10)\
-plt.bar(keys,values,width=.8,color=colors)#Adjusting the spacing/padding between subplots\
-plt.subplots_adjust(left=0.125, bottom=0.1, right=1.8, top=1.3, wspace=0.2, hspace=0.2)#Displaying the plots\
-plt.show()
+
+<pre style='color:#000000;background:#ffffff;'>keys <span style='color:#808030; '>=</span> senti_results<span style='color:#808030; '>.</span>keys<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>\
+values <span style='color:#808030; '>=</span> senti_results<span style='color:#808030; '>.</span>values<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Establishing some format changes for our charts\</span>
+figure<span style='color:#808030; '>(</span>num<span style='color:#808030; '>=</span><span style='color:#074726; '>None</span><span style='color:#808030; '>,</span> figsize<span style='color:#808030; '>=</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>8</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>8</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span>dpi<span style='color:#808030; '>=</span><span style='color:#008c00; '>80</span><span style='color:#808030; '>)</span>\
+colors <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#0000e6; '>'seagreen'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'lightsteelblue'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'indianred'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'silver'</span><span style='color:#808030; '>]</span>\
+explode <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span><span style='color:#008000; '>0.1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span>\
+plt<span style='color:#808030; '>.</span>rcParams<span style='color:#808030; '>.</span>update<span style='color:#808030; '>(</span><span style='color:#800080; '>{</span><span style='color:#0000e6; '>'font.size'</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>12</span><span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Creating the first plot (pie chart)\</span>
+plt<span style='color:#808030; '>.</span>subplot<span style='color:#808030; '>(</span><span style='color:#008c00; '>221</span><span style='color:#808030; '>)</span>\
+plt<span style='color:#808030; '>.</span>pie<span style='color:#808030; '>(</span>values<span style='color:#808030; '>,</span>labels<span style='color:#808030; '>=</span>keys<span style='color:#808030; '>,</span>colors<span style='color:#808030; '>=</span>colors<span style='color:#808030; '>,</span> explode<span style='color:#808030; '>=</span>explode<span style='color:#808030; '>,</span>autopct<span style='color:#808030; '>=</span><span style='color:#0000e6; '>'%1.1f%%'</span><span style='color:#808030; '>,</span>shadow<span style='color:#808030; '>=</span><span style='color:#074726; '>True</span><span style='color:#808030; '>,</span>startangle<span style='color:#808030; '>=</span><span style='color:#008c00; '>90</span><span style='color:#808030; '>)</span>\
+plt<span style='color:#808030; '>.</span>title<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'Overall Sentiment Against 1,277 E-mails, by Percentage'</span><span style='color:#808030; '>,</span>bbox<span style='color:#808030; '>=</span><span style='color:#800080; '>{</span><span style='color:#0000e6; '>'facecolor'</span><span style='color:#808030; '>:</span><span style='color:#0000e6; '>'1'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'pad'</span><span style='color:#808030; '>:</span><span style='color:#008c00; '>8</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>y<span style='color:#808030; '>=</span><span style='color:#008000; '>1.10</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Creating the second plot (bar chart)\</span>
+plt<span style='color:#808030; '>.</span>subplot<span style='color:#808030; '>(</span><span style='color:#008c00; '>222</span><span style='color:#808030; '>)</span>\
+plt<span style='color:#808030; '>.</span>title<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'E-mail Count by Sentiment Result'</span><span style='color:#808030; '>,</span>bbox<span style='color:#808030; '>=</span><span style='color:#800080; '>{</span><span style='color:#0000e6; '>'facecolor'</span><span style='color:#808030; '>:</span><span style='color:#0000e6; '>'1'</span><span style='color:#808030; '>,</span><span style='color:#0000e6; '>'pad'</span><span style='color:#808030; '>:</span><span style='color:#008c00; '>8</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>y<span style='color:#808030; '>=</span><span style='color:#008000; '>1.10</span><span style='color:#808030; '>)</span>\
+plt<span style='color:#808030; '>.</span>bar<span style='color:#808030; '>(</span>keys<span style='color:#808030; '>,</span>values<span style='color:#808030; '>,</span>width<span style='color:#808030; '>=</span><span style='color:#008000; '>.8</span><span style='color:#808030; '>,</span>color<span style='color:#808030; '>=</span>colors<span style='color:#808030; '>)</span><span style='color:#696969; '>#Adjusting the spacing/padding between subplots\</span>
+plt<span style='color:#808030; '>.</span>subplots_adjust<span style='color:#808030; '>(</span>left<span style='color:#808030; '>=</span><span style='color:#008000; '>0.125</span><span style='color:#808030; '>,</span> bottom<span style='color:#808030; '>=</span><span style='color:#008000; '>0.1</span><span style='color:#808030; '>,</span> right<span style='color:#808030; '>=</span><span style='color:#008000; '>1.8</span><span style='color:#808030; '>,</span> top<span style='color:#808030; '>=</span><span style='color:#008000; '>1.3</span><span style='color:#808030; '>,</span> wspace<span style='color:#808030; '>=</span><span style='color:#008000; '>0.2</span><span style='color:#808030; '>,</span> hspace<span style='color:#808030; '>=</span><span style='color:#008000; '>0.2</span><span style='color:#808030; '>)</span><span style='color:#696969; '>#Displaying the plots\</span>
+plt<span style='color:#808030; '>.</span>show<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+</pre>
+
+
+
+
+
+
+
+
 
 Now we can see we have a nice visual representation of our data! While we still have a bunch of "Unknown" response types from our API, we can tell that overall we aren't as negative in our responses as we may have thought.
-
-![](https://miro.medium.com/max/60/1*mtDlDPVtRJsoZDerZelr1Q.png?q=20)
 
 ![](https://miro.medium.com/max/3844/1*mtDlDPVtRJsoZDerZelr1Q.png)
 
