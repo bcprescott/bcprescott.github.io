@@ -1,9 +1,3 @@
----
-layout: post
-title:  "Univariate and Multivariate Linear Regression: Cancer Mortality Rates"
-date:   2013-12-23
----
-
 # Univariate and Multivariate Linear Regression: Cancer Mortality Rates
 
 ![cancerregression](/assets/images/regression.png)

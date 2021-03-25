@@ -1,8 +1,3 @@
----
-layout: post
-title:  "E-mail Sentiment Analysis Using Python and Microsoft Azure - Part 1"
-date:   2020-05-08 
----
 What does our e-mail Sent Items folder say about our demeanor? Can we use this and other complementary data to possibly determine trends in happiness or sadness at work?
 
 ![](https://miro.medium.com/max/60/0*i7X1eUdbZI7FsxBk?q=20)
