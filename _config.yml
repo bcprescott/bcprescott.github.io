@@ -120,6 +120,9 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
+
+background-image: /assets/images/sea-of-trees-forest-plain.jpg
+
 # Site Header
 header:
   overlay_image: /assets/images/sea-of-trees-forest-plain.jpg
