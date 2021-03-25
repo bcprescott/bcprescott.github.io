@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django. Now, I am doing more on backend.
+Microsoft Azure Expert & Skilled Data Science Enthusiast
 
-email: agus[at]python.web.id
+email: bcprescott[at]outlook.com
