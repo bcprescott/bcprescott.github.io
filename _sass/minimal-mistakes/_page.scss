@@ -10,7 +10,7 @@
   padding-right: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
-  max-width: 100%;
+  max-width: 20%;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 
@@ -94,7 +94,7 @@ body {
 			position: relative;
 			left: 0.5em;
 			opacity: 0;
-			font-size: 0.2em;
+			font-size: 0.8em;
 			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
 			-moz-transition: opacity 0.2s ease-in-out 0.1s;
 			-o-transition: opacity 0.2s ease-in-out 0.1s;
