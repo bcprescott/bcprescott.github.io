@@ -123,13 +123,14 @@ Now that we have our CSV we need to start writing our code to explore and prepar
 We need to create a new [Jupyter](https://jupyter.org/) Notebook to work out of. I just called mine something simple like *EmailSentiment.ipynb* for now. If you don't have Jupyter installed, and don't want to use a hosted version, I would strongly suggest checking out [Anaconda](https://www.anaconda.com/) for a well-rounded package.
 
 Now that we have our notebook we need to install the Azure Text Analytics API package for Python (if you don't already have it).
-
+{% highlight python %}
 !pip install azure-ai-textanalytics
-
+{% endhighlight %}
 We're going to assume our dev environment already has Pandas and Numpy installed (both Anaconda and Azure Notebooks come with them available).
 
 We can then continue to import the necessary packages. We're also going to assign our Azure Text Analytics API key and endpoint information (from Step 1) into this cell.
 
+{% highlight python %}
 import pandas as pd\
 import numpy as np\
 import matplotlib.pyplot as plt\
@@ -138,6 +139,7 @@ from azure.ai.textanalytics import TextAnalyticsClient\
 from azure.core.credentials import AzureKeyCredential#Key and enpoint from Azure Text Analytics API service\
 key = "f7c7c91cd70e493ea38521d1cbf698aa"\
 endpoint = "<https://mediumapi.cognitiveservices.azure.com/>"
+{% endhighlight %}
 
 We also need to define some functions we're going to use later in our notebook. For organization sake, I just added both to a cell so they're in the same location in the notebook.
 
@@ -145,6 +147,7 @@ We need one function to provide authentication for the Text Analytics API, as we
 
 While the auth function is straight forward, we need to modify the sentiment analysis function to iterate over a list of lists (compared to a single hard-coded string), only retrieving the overall score(we'll explore sentiment score ranges in the next post), and incrementing a frequency table we'll create later.
 
+{% highlight python %}
 #Creating the Azure authentication function\
 def authenticate_client():\
     ta_credential = AzureKeyCredential(key)\
@@ -173,14 +176,17 @@ def sentiment_analysis_example(client,list_name):\
             senti_errors.append(row)\
     return(senti_results,senti_errors)#Assigning authentication function to object\
 client = authenticate_client()
+{% endhighlight %}
 
 Now that we have our Azure API functions setup we're ready to start exploring and preparing our dataset.
 
+{% highlight python %}
 #Assign your filename to a variable\
 emailFile = 'BenSent.CSV'#Display the first 5 rows of our CSV to inspect\
 #Notice encoding --- this seemed to work for our CSV\
 email_data = pd.read_csv(emailFile,encoding='ISO 8859--1')\
 email_data.head()
+{% endhighlight %}
 
 If you run the above you should see something similar to the below output.
 
@@ -199,11 +205,13 @@ Photo by [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=medium&u
 
 Based on the available data in this scenario, we'll focus on what we're saying to others in our e-mails and determining if it was a positive, neutral or negative sentiment overall. We're going to need to create a separate object with just the content from the Body column. We'll do this using Pandas.
 
+{% highlight python %}
 #Assign Body column to new object\
 email_body = email_data['Body']#Display top 5 rows and the overall length of the series\
 print(email_body.head())\
 print('\n')\
 print("Starting email count:",email_body.shape)
+{% endhighlight %}
 
 Here I'm using selection by column label considering we have those available to us. You can also use the column index, or whatever you prefer.
 
@@ -213,12 +221,14 @@ Now we can see we have just the body content, which is what we'll use to perform
 
 Next, we'll notice just from the first 5 rows that we have odd characters we don't want to analyze, such as `\r`or `\n`and others. We'll use a simple `str.replace` to remove these.
 
+{% highlight python %}
 #Removing \r and \n characters from strings\
 email_body = email_body.str.replace("\r","")\
 email_body = email_body.str.replace("\n","")#Display top 5 rows and the overall length of the series\
 print(email_body.head())\
 print('\n')\
 print("Current e-mail count:",email_body.shape)
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/1708/1*ysGle-ua5kcdxRm3Z3DvdA.png)
 
@@ -226,11 +236,13 @@ Next, we're going to remove forwarded or trailing email threads where we don't w
 
 I'll clean these trailing e-mails by using what I know is automatically added to every sent item - my signature block. Using this as the target we can partition the data based on an identifying signature word(s) and trailing message into separate columns.
 
+{% highlight python %}
 #Removing trailing email threads after start of my email signature\
 split_df = email_body.str.partition("Regards")\
 print(split_df[0:3])\
 print('\n')\
 print("Current e-mail count:",split_df.shape)
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/2008/1*sk5Pm6GtFIjCsKzswpumHQ.png)
 
@@ -238,22 +250,26 @@ From the shape and output, we can now see we have 3 different partitioned column
 
 We now need to drop these additional columns and focus back on our body text. We're also going to remove rows that are identified to have no information.
 
+{% highlight python %}
 #Removing extra fluff from partitioning\
 clean_col = split_df.drop(columns=[1,2]) #1 contains "Regards", 2 contains trailing text\
 #Removing rows with NaN - no data\
 clean_nan = clean_col.dropna()print("E-mail count before NaN removal:",clean_col.shape[0]) #Display before NaN removal\
 print("E-mail count after NaN removal:",clean_nan.shape[0]) #Display before NaN removal
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/1194/1*CKm5M1RzgSdYOS2SUyivmQ.png)
 
 We can see before partitioning we had 1,675 rows. We dropped the two columns containing the fluff including and after my signature. After removing rows with NaN we are down to 1,642 emails. We need to continue cleaning by removing PTO emails and forwarded message emails. We'll also add a column name to our body text column.
 
+{% highlight python %}
 #Updating the primary column with name EmailBody\
 clean_nan = clean_nan.rename(columns={0:"EmailBody"})#Remove emails with default out of office reply\
 clean_pto = clean_nan[~clean_nan.EmailBody.str.contains("Hello,I am currently")]#Remove emails with a forwarded message\
 cleaned_df = clean_pto[~clean_pto.EmailBody.str.contains("---------- Forwarded message ---------")]print("E-mail count before removals:",clean_nan.shape[0]) #Pre PTO count\
 print("E-mail count after removing PTO messages:",clean_pto.shape[0]) #Post PTO count\
 print("E-mail count after also removing forwarded messages:",cleaned_df.shape[0]) #Post fwd removal
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/1806/1*HQE5bB-3VO02Vs6ZE1im1A.png)
 
@@ -261,20 +277,24 @@ After checking the shape we can see we went from 1,642 rows to 1,460 rows, t
 
 If we print the `cleaned_df` Series we'll see that we have rows that look to be empty. We need to make sure we remove those so that our analysis doesn't error out. We'll do this by using Pandas' `df.replace` and replace empty data with NaN.
 
+{% highlight python %}
 #Considering we know we still have rows with no data, we'll replace the empty space with NaN\
 #We can see all visible rows with nothing now show NaN\
 cleaned_df['EmailBody'].replace(" ",np.nan,inplace=True)\
 print(cleaned_df)
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/1798/1*ivRLLfC8iinEslCzlvO6mg.png)
 
 Now our empty rows will show NaN. We can now drop those rows by using `pd.dropna()` .
 
+{% highlight python %}
 #We can now find all rows with NaN and drop them using pd.dropna\
 cleaned_df = cleaned_df.dropna()\
 print(cleaned_df)\
 print('\n')\
 print("E-mail count after dropping empty rows/rows with NaN:",cleaned_df.shape)
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/1816/1*UWwS6Q_Z0bCVdewM9P7Aag.png)
 
@@ -282,12 +302,14 @@ After removing our NaN rows were down to 1,288 rows. Feel free to continue exp
 
 As for the last step, we're going to convert our DataFrame into a list of lists that contains strings. We'll use this to send to our API and return our results.
 
+{% highlight python %}
 #Create an empty list to store values\
 #Iterate over each row in the dataframe and append it to the listsenti_list = []for row in range((cleaned_df.shape[0])):\
     senti_list.append(list(cleaned_df.iloc[row,:]))
 
 #Length of list matches length of old df\
 print("E-mail count before error removal, ready for analysis:",len(senti_list))
+{% endhighlight %}
 
 We can print the length of the list of lists to make sure that it matches our DataFrame row count, which it does.
 
@@ -313,17 +335,19 @@ sentiment = sentiment_analysis_example(client,senti_list)
 
 Once this is completed we can review the initial results.
 
+{% highlight python %}
 print(senti_results)\
 print("\n")\
 print("Sentiment errors:",senti_errors)\
 print("Error count:",len(senti_errors))
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/3114/1*HlRscaMkbzFC4IiltVPVJA.png)
 
 We can see two main things here: the overall sentiment results for our data and the rows that errored out when being analyzed. We can see we have a total of 11 rows not being analyzed and it seems to be because of varying white spaces.
 
 We need to iterate over this list, iterate over our original dataset list of lists, and remove all lists containing these. We'll also make a copy of our list of lists just so we have the historical version in case we need it in the future.
-
+{% highlight python %}
 #Removing the errors from our list of lists\
 #Assigning to a new variable so we have the unmodified original\
 senti_cleaned = senti_listfor i in senti_errors:\
@@ -332,17 +356,19 @@ senti_cleaned = senti_listfor i in senti_errors:\
             senti_cleaned.remove(row)
 
 print("E-mail count after removing error rows. Final used for analysis:",len(senti_cleaned))
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/2150/1*H5XabVyrt626nFRhLh17rQ.png)
 
 We can see we're down exactly 11 rows, which matches the count of errors. We can now re-run the analysis on our data copy to make sure we have no other errors.
-
+{% highlight python %}
 #Triggering next run of analysis on the final dataset\
 sentiment = sentiment_analysis_example(client,senti_cleaned)#Displaying the sentiment analysis results\
 print(senti_results)\
 print("\n")\
 print("Sentiment errors:",senti_errors)\
 print("Error count:",len(senti_errors))
+{% endhighlight %}
 
 ![](https://miro.medium.com/max/2102/1*UM7hr7kTPfLxNNAQ5aK3qw.png)
 
@@ -358,9 +384,8 @@ Photo by [Lukas Blazek](https://unsplash.com/@goumbik?utm_source=medium&utm_med
 Now that we have our results in a nice dictionary we can work on plotting them into nice graphs. For this article, we'll be focused on two views: overall sentiment percentage by result and e-mail count of each sentiment type.
 
 To do this we're going to use the `matplotlib.pyplot`library. We'll be creating both a pie chart (to visualize the percentages) and a bar chart (to visualize the e-mail count by result). We'll also do some formatting changes to the plots before showing them, such as: color changes, font changes, padding/spacing, display sizes, etc.
-
-#Setting our Key/Value pairs from our results\
 {% highlight python %}
+#Setting our Key/Value pairs from our results\
 keys = senti_results.keys()\
 values = senti_results.values()#Establishing some format changes for our charts\
 figure(num=None, figsize=(8,8),dpi=80)\
