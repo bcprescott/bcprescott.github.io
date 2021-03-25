@@ -1,3 +1,5 @@
+# Univariate and Multivariate Linear Regression: Cancer Mortality Rates
+
 *Full disclosure:* There is a lot of code behind this article, much of which won't be included here. For full details please review the [notebook.](https://github.com/bcprescott/datascience/blob/master/assorted/CancerBlog.ipynb) If you have any feedback, find any errors in process or code, or just want to chat please send me a message! I'm always looking for areas to improve.
 
 Also - if anyone happens to know how to achieve true syntax highlighting in LinkedIn code snippets, PLEASE reach out!
