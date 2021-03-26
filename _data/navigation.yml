@@ -2,8 +2,8 @@
 main:
   - title: "Home"
     url: https://www.thegradientdescent.com
-  - title: "Portfolio"
-    url: https://www.thegradientdescent.com/portfolio
+  # - title: "Portfolio"
+  #   url: https://www.thegradientdescent.com/portfolio
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
