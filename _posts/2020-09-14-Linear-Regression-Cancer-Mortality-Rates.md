@@ -1,7 +1,3 @@
----
-usemathjax: true
----
-
 # Univariate and Multivariate Linear Regression: Cancer Mortality Rates
 
 ![cancerregression](/assets/images/regression.png)
