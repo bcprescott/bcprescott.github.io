@@ -266,7 +266,7 @@ compress_html:
   ignore:
     envs: development
 
-
+ search: true
 # Defaults
 defaults:
   # _posts
@@ -281,4 +281,3 @@ defaults:
       share: true
       related: true
       show_date: true
-      search: true
