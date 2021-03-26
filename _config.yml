@@ -190,7 +190,6 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
@@ -198,8 +197,6 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Mathjax
-usemathjax: true
 
 # Markdown Processing
 kramdown:
@@ -211,6 +208,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  usemathjax: true
 
 
 # Sass/SCSS
