@@ -1,3 +1,7 @@
+---
+usemathjax: true
+---
+
 # Univariate and Multivariate Linear Regression: Cancer Mortality Rates
 
 ![cancerregression](/assets/images/regression.png)
@@ -6,7 +10,7 @@
 
 Also - if anyone happens to know how to achieve true syntax highlighting in LinkedIn code snippets, PLEASE reach out!
 
-$$E=mc^2$$
+$$ E=mc^2 $$
 
 A Brief Introduction
 --------------------
