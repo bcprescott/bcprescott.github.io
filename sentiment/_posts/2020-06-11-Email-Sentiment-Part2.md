@@ -3,10 +3,8 @@ title: "Email Sentiment Analysis Using Python & Microsoft Azure - Part 2"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/happy.jpg
+  teaser: /assets/images/thinkpositive.jpg
 ---
-Part 1 Recap
-============
 
 Just to recap real quick, Part 1 of this series was focused on grabbing a CSV export of your email Sent Items and using Microsoft Azure's Text Analytics API to return a sentiment result for each line.
 
