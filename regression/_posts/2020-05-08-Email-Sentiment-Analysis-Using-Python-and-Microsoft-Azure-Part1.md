@@ -2,7 +2,7 @@
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/ben.jpg
+  teaser: /assets/images/happy.jpg
 ---
 
 What does our e-mail Sent Items folder say about our demeanor? Can we use this and other complementary data to possibly determine trends in happiness or sadness at work?
