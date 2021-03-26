@@ -1,3 +1,7 @@
+---
+toc: true
+---
+
 What does our e-mail Sent Items folder say about our demeanor? Can we use this and other complementary data to possibly determine trends in happiness or sadness at work?
 
 ![](https://miro.medium.com/max/10368/0*i7X1eUdbZI7FsxBk)
