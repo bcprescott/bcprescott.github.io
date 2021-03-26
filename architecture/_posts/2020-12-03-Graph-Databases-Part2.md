@@ -194,24 +194,24 @@ Traversing the Graph
 --------------------
 
 Now we'll write some queries to help draw out information from our newly created graph. Let's start by finding every person who is a friend with someone else.
-
+{% highlight graphql %}
 MATCH (u:User)-[:FRIENDS_WITH]->()
 RETURN u
-
+{% endhighlight %}
 ![No alt text provided for this image](https://media-exp1.licdn.com/dms/image/C5612AQEfLlPEIAvOsg/article-inline_image-shrink_1000_1488/0/1607032953642?e=1622073600&v=beta&t=zaG67h1fhwscLbncu4b5iSzQuVXaHGaF3f_OOH-53Z0)
 
 At first glance it looks like I'm a friend with Bill Gates and he's also a friend with me. It also looks like Derek Jones friended me but I didn't friend him back. Same situation with Bill Gates and Paul Jackson. We can expand on our search to find people who are friends with someone and are also looking for work.
-
+{% highlight graphql %}
 MATCH (u:User)-[:FRIENDS_WITH]->()
 
 WHERE u.opentowork = 'yes'
 
 RETURN u
-
+{% endhighlight %}
 ![No alt text provided for this image](https://media-exp1.licdn.com/dms/image/C5612AQGE8EFycxyh9w/article-inline_image-shrink_1000_1488/0/1607033290928?e=1622073600&v=beta&t=lhsu05iHzytwWKSSTR7lHfQYjql6lWDO6axg_yOCpZI)
 
 Huh, interesting. Looks like Bill Gates is looking for work. Does he work somewhere right now?
-
+{% highlight graphql %}
 MATCH (u:User)-[:FRIENDS_WITH]->()
 
 WHERE u.opentowork = 'yes' 
@@ -219,24 +219,24 @@ WHERE u.opentowork = 'yes' 
 AND (u:User)-[:WORKS_AT]->()
 
 RETURN u
-
+{% endhighlight %}
 ![No alt text provided for this image](https://media-exp1.licdn.com/dms/image/C5612AQEj5r1L57TWzw/article-inline_image-shrink_1000_1488/0/1607033628284?e=1622073600&v=beta&t=aBvJ3KJcvzKuLytXFj2CB4qwk0xRiDz5m6FHQYnbD_Y)
 
 Looks like Bill currently works somewhere and has his "opentowork" option set as "yes". Lets find out more about Bill. We'll modify our query a bit to be less specific on the node's relationships and open it up to any relationship to anything.
-
+{% highlight graphql %}
 MATCH p=(u:User {name: 'Bill Gates'})-[r]->(a)
 
 RETURN *
-
+{% endhighlight %}
 ![No alt text provided for this image](https://media-exp1.licdn.com/dms/image/C5612AQFambBgm9KFjw/article-inline_image-shrink_1000_1488/0/1607034500210?e=1622073600&v=beta&t=9jguf91wfzl1cqJuv9q651csbTjcZy1U5Ub1fxhILNs)
 
 Now we can see all of Bill's relationships, including how he is friends with me and works at the same company as I do. If we look at the detailed information in the Table output we can see Bill's job title. Looks like Bill works as an Azure Architect at AHEAD. We'll also modify our query to pull my information now and compare.
 
 ![No alt text provided for this image](https://media-exp1.licdn.com/dms/image/C5612AQGsJS9CxmAtXg/article-inline_image-shrink_1500_2232/0/1607034774373?e=1622073600&v=beta&t=GfbTRUCwS3t4IkbvUCgvJouBKTCdhDcVxYP2unysw7I)
-
+{% highlight graphql %}
 MATCH p=(u:User {name: 'Ben Prescott'})-[r]->(a)
 RETURN *
-
+{% endhighlight %}
 ![No alt text provided for this image](https://media-exp1.licdn.com/dms/image/C5612AQHRtPxWlZqImQ/article-inline_image-shrink_1500_2232/0/1607034884479?e=1622073600&v=beta&t=uSoKmAK_uUB2XN5kn0w3e_WhE_tLnlNDFxpFHjprxb4)
 
 Looks like I'm an Azure Delivery Manager and Bill is an Azure Architect. Maybe I should have a chat with Bill. :)
