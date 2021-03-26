@@ -281,3 +281,17 @@ defaults:
       share: true
       related: true
       show_date: true
+      show_tags: true
+
+
+defaults:
+  - scope:
+      path: ""
+      type: tag
+    values:
+      author_profile: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
