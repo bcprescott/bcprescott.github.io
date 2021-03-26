@@ -90,6 +90,8 @@ As mentioned at the beginning of this article, we'll be creating a fictional mod
 
 I've added a code snippet of a model I created for the use of this article. Feel free to copy/paste this whole block into the command line in Neo4j and submit.
 
+{% highlight graphql %}
+
 // LI Users
 
 CREATE (u1:User {name:'Ben Prescott', age:'32', phone:'312-566-3234', opentowork:'no', hiring:'yes'})
@@ -156,6 +158,8 @@ CREATE (u4)-[:STUDIED_AT {graduated: 'No', level: 'Bachelors'}]->(s3)
 CREATE (u5)-[:STUDIED_AT {graduated: 'Yes', level: 'Bachelors'}]->(s4)
 
 RETURN *
+
+{% endhighlight %}
 
 Once you submit the above code you should see the following output:
 
