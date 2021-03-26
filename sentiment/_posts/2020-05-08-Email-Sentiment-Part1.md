@@ -1,12 +1,14 @@
 ---
-title: "Test Me 123"
+title: "Email Sentiment Analysis Using Python & Microsoft Azure - Part 1"
 toc: true
 toc_sticky: true
 header:
   teaser: /assets/images/happy.jpg
 ---
 
-What does our e-mail Sent Items folder say about our demeanor? Can we use this and other complementary data to possibly determine trends in happiness or sadness at work?
+What does our e-mail Sent Items folder say about our demeanor? 
+
+Can we use this and other complementary data to possibly determine trends in happiness or sadness at work?
 
 ![](https://miro.medium.com/max/10368/0*i7X1eUdbZI7FsxBk)
 

@@ -1,4 +1,5 @@
 ---
+title: "Email Sentiment Analysis Using Python & Microsoft Azure - Part 2"
 toc: true
 toc_sticky: true
 header:
