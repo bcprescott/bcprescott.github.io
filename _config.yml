@@ -198,6 +198,8 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
+# Mathjax
+usemathjax: true
 
 # Markdown Processing
 kramdown:
