@@ -10,7 +10,7 @@ usemathjax: true
 
 Also - if anyone happens to know how to achieve true syntax highlighting in LinkedIn code snippets, PLEASE reach out!
 
-$$ E=mc^2 $$
+$$e=mc^2$$
 
 A Brief Introduction
 --------------------
