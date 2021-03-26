@@ -2,6 +2,8 @@
 toc: true
 toc_sticky: true
 tags: regression cancer
+header:
+  teaser: /assets/images/regression.png
 ---
 
 ![cancerregression](/assets/images/regression.png)
