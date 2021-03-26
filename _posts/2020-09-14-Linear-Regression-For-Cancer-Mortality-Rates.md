@@ -1,7 +1,7 @@
 ---
 toc: true
 toc_sticky: true
-tag: regression
+tags: regression cancer
 ---
 
 ![cancerregression](/assets/images/regression.png)
