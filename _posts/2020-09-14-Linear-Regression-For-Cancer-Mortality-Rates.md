@@ -1,5 +1,6 @@
 ---
 toc: true
+toc_sticky: true
 ---
 
 ![cancerregression](/assets/images/regression.png)
