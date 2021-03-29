@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 tags: sentiment python azure email
 categories:
-  - NLP
+  - Natural Language Processing
 header:
   teaser: /assets/images/happy.jpg
 ---
