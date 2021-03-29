@@ -1,5 +1,5 @@
 ---
-title: "Project Crashing: A Linear Programming Approach"
+title: "Project Crashing - A Linear Programming Approach"
 toc: true
 toc_sticky: true
 tags: linear-programming project gurobi optimization
@@ -8,7 +8,7 @@ categories:
 header:
   teaser: /assets/images/pert.png
 ---
-
+<!-- 
 Introduction & Motivation
 -----------------------
 
@@ -28,4 +28,4 @@ Interpreting The Results
 ------------------------
 
 What Next?
----------- -->
+---------- --> -->
