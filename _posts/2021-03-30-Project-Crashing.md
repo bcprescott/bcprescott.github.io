@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 tags: linear-programming project gurobi optimization
 categories:
-  - Linear Programming
+  - LinearProgramming
 header:
   teaser: /assets/images/pert.png
 ---
