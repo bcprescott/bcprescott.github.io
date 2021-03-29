@@ -272,9 +272,8 @@ defaults:
   - scope:
       path: ""
       type: posts
-      type: category
     values:
-      layout: category
+      layout: single
       author_profile: true
       read_time: true
       comments: true
