@@ -3,6 +3,10 @@ title: "Basics of Graph Databases - Part 1"
 toc: true
 toc_sticky: true
 tags: neo4j graph database architecture
+categories:
+  - Database
+  - Data-Engineering
+  - Cloud
 header:
   teaser: /assets/images/graph.png
 ---

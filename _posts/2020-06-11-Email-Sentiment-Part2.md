@@ -3,6 +3,10 @@ title: "Email Sentiment Analysis Using Python & Microsoft Azure - Part 2"
 toc: true
 toc_sticky: true
 tags: sentiment python azure email
+categories:
+  - NLP
+  - Data-Science
+  - Cloud
 header:
   teaser: /assets/images/thinkpositive.jpg
 ---
