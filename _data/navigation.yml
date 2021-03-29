@@ -8,7 +8,7 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
-  - title: "Categories"
+  - title: "Posts by Category"
     url: /categories/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Posts by Tags"
+    url: /tags/
