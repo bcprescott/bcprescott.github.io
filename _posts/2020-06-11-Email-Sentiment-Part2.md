@@ -5,8 +5,6 @@ toc_sticky: true
 tags: sentiment python azure email
 categories:
   - NLP
-  - Data-Science
-  - Cloud
 header:
   teaser: /assets/images/thinkpositive.jpg
 ---

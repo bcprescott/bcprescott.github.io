@@ -4,9 +4,7 @@ toc: true
 toc_sticky: true
 tags: neo4j graph database architecture
 categories:
-  - Database
-  - Data-Engineering
-  - Cloud
+  - Databases
 header:
   teaser: /assets/images/graph2.png
 ---
