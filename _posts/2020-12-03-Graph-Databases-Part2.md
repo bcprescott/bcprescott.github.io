@@ -8,7 +8,7 @@ categories:
 header:
   teaser: /assets/images/graph2.png
 ---
-*This article is a continuation of *[*Basics of Graph Databases (Part 1)*](https://www.linkedin.com/pulse/basics-graph-databases-part-1-benjamin-prescott/)* which focused on an introduction to graph databases, Neo4j and the Cypher language.*
+*This article is a continuation of *[*Basics of Graph Databases (Part 1)*](https://www.thegradientdescent.com/databases/graph-databases-part1/)* which focused on an introduction to graph databases, Neo4j and the Cypher language.*
 
 Introduction
 ------------
