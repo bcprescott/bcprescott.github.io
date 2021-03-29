@@ -9,15 +9,13 @@ header:
   teaser: /assets/images/pert.png
 ---
 
-Background & Motivation
+Introduction & Motivation
 -----------------------
 
-This idea originated from project delivery experience within the technology consulting space, specifically with cloud projects. It is common for projects to begin under the assumption that the duration of the project is dictated by the task/milestone efforts. 
-
-However, this is commonly not the case as many clients may impose a soft or hard deadline for a variety of reasons, which requires a shift in how the project would be delivered. This leads to a “fire drill” in finding ways to support the project. ​
+Having just spent the past three months focusing heavily on prescriptive analytics, building a number of optimization algorithms, I decided to write about a specific project I worked on.
 
 
-Understanding Project Crashing
+<!-- Understanding Project Crashing
 ------------------------------
 
 Introduction to Linear Optimization
@@ -30,4 +28,4 @@ Interpreting The Results
 ------------------------
 
 What Next?
-----------
+---------- -->
