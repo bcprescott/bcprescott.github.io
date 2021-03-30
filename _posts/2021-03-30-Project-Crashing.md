@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 tags: lp project gurobi optimization
 categories:
-  - LP
+  - Optimization
 header:
   teaser: /assets/images/pert.png
 ---
