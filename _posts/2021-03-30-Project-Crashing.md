@@ -2,9 +2,9 @@
 title: "Project Crashing - A Linear Programming Approach"
 toc: true
 toc_sticky: true
-tags: linearprogramming project gurobi optimization
+tags: lp project gurobi optimization
 categories:
-  - LinearProgramming
+  - LP
 header:
   teaser: /assets/images/pert.png
 ---
