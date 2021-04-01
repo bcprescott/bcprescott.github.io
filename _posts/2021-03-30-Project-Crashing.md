@@ -9,6 +9,8 @@ header:
   teaser: /assets/images/pert.png
 ---
 
+Have you ever been a part of a project where a deadline is imposed after the project kicks off? This post focuses on using a mathematical approach to determining how to shorten the duration of different project tasks by adding more project resources, while ensuring the added internal cost is kept to a minimum and the deadline is met. 
+
 Introduction & Motivation
 -----------------------
 
