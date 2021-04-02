@@ -48,7 +48,7 @@ Each pair of pants requires 2 units of polyester and 2 units of cotton.
 
 Each shirt requires 1 unit of polyester and 2.5 units of cotton.
 
-They sell a pair of pants at $ 30 and a shirt at $ 20. 
+They sell a pair of pants at 30 dollars and a shirt at 20 dollars. 
 
 The below objective function, $$Z$$, represents the sales revenue of pants and shirts. The company wants to maximize their revenue. 
 
@@ -56,13 +56,17 @@ The below objective function, $$Z$$, represents the sales revenue of pants and s
 
 MAXIMIZE:
 
-$$ Z = 30x + 20y $$
+$$Z = 30x + 20y$$
 
 **Decision Variables**
 
-$$x$$ -- the number of pants
+the number of pants
 
-$$y$$ -- the number of shirts
+$$x$$
+
+the number of shirts
+
+$$y$$
 
 **Constraints**
 
@@ -78,6 +82,41 @@ ensures that values obtained for x and y are natural numbers, as you can't have 
 
 $$x >= 0, y >= 0$$ 
 
+
+Now that we have our model formulation, we can easily plug this info into Python and solve using Gurobi. I won't be going deep into Gurobi here, but heres a snippet:
+
+{% highlight python %}
+
+import gurobipy as gp
+from gurobipy import GRB
+
+# Create a new model
+m = gp.Model("ClothesSales")
+
+# Create variables
+x = m.addVar(vtype=GRB.INTEGER, name="x")
+y = m.addVar(vtype=GRB.INTEGER, name="y")
+
+# Set objective
+m.setObjective(30*x + 20*y, GRB.MAXIMIZE)
+
+# Set constraints
+m.addConstr(2*x + y <= 600, "polyester constraint")
+m.addConstr(2*x + 2.5*y <= 700, "cotton constraint")
+m.addConstr(x >= 0, "x non-negativity constraint")
+m.addConstr(y >= 0, "y non-negativity constraint")
+
+#Run the model    
+m.optimize()
+
+#Print the solution's variable values
+for v in m.getVars():
+  print('%s %g' % (v.varName, v.x))
+
+#Print the objective function value
+print('Obj: %g' % m.objVal)
+
+{% endhighlight %}
 
 Approach & Model Formulation
 ----------------------------
