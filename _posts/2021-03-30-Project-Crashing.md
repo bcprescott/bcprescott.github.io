@@ -48,7 +48,7 @@ Each pair of pants requires 2 units of polyester and 2 units of cotton.
 
 Each shirt requires 1 unit of polyester and 2.5 units of cotton.
 
-They sell a pair of pants at $30 and a shirt at $20. 
+They sell a pair of pants at $ 30 and a shirt at $ 20. 
 
 The below objective function, $$Z$$, represents the sales revenue of pants and shirts. The company wants to maximize their revenue. 
 
@@ -66,12 +66,18 @@ $$y$$ -- the number of shirts
 
 **Constraints**
 
-$$2x + y <= 2000$$ -- polyester used for both pants and shirts needs to be less than the max available, 2000  
+polyester used for both pants and shirts needs to be less than the max available, 2000
 
-$$2x + 2.5 <= 700$$ -- cotton used for both pants and shirts needs to be less than the max available, 700  
+$$2x + y <= 2000$$   
 
-$$x >= 0, y >= 0$$ -- ensures that values obtained for x and y are natural numbers, as you can't have negative pants/shirts. :)
-   
+cotton used for both pants and shirts needs to be less than the max available, 700  
+
+$$2x + 2.5 <= 700$$ 
+
+ensures that values obtained for x and y are natural numbers, as you can't have negative pants/shirts. :)
+
+$$x >= 0, y >= 0$$ 
+
 
 Approach & Model Formulation
 ----------------------------
