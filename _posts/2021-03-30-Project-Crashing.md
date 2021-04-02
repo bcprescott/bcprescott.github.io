@@ -11,6 +11,10 @@ header:
 
 Have you been involved in a project that requires a shortened timeline? It isn't uncommon for project deadlines to be imposed after a project kickoff occurs, or to attempt to accelerate a project for any number of reasons. Different situations require Project Management to evaluate the project tasks and schedule to determine where or how an overall project can be shortened, requiring manual adjustments and a sprinkle of intuition. 
 
+**Disclaimer**
+
+Everything modeled in this post is fictional. No real data or project examples were used.
+
 Introduction & Motivation
 -----------------------
 
@@ -122,10 +126,38 @@ The output of our model is shown below. We can see at the end that we'll achieve
 
 ![LPBasic](/assets/images/lpbasic.png)
 
+Alright... back to project crashing!
+
 Approach & Model Formulation
 ----------------------------
 
+Before we move too deep, lets mock something up quickly in Excel. 
+
+The below screenshot shows an example project's task crash plan. We can see the following information, from left to right:
+
+- Task names
+- Letter assigned to tasks (used in the PERT chart later)
+- Task dependencies or predecessors
+- Standard duration of a task
+- Estimated days the task _could_ be crashed
+- Standard project cost
+- Project cost if crashed
+- The new task duration if crashed
+- How much cost is added by crashing the project
+- The cost of crashing per time unit
+
+At the bottom you'll also see I've color-coded the two project resource, a senior and junior, as well as a made up internal cost per hour. I've also color-coded the tasks of which they are responsible. 
+
+![rawsheet](/assets/images/raw.png)
+
+We can now create a PERT chart from this information. There is plenty of information online on how to create a PERT chart, but it can follow information from the spreadsheet and just models the project visually.
+
+![pert](/assets/images/pert.png)
+
+
+
 Part of the crashing effort typically starts with leveraging or creating a _Program Evaluation Review Technique_ (PERT) chart. PERT charts provide a visualization of the project's timeline, with different tasks associated with the project and their dependencies. PERT charts may also provide additional information, such as the duration of each task and the effort from the different project resources. 
+ 
 
 Interpreting The Results
 ------------------------
