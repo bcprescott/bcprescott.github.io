@@ -47,8 +47,13 @@ $$ Z = 2x + y $$
 
 **Decision Variables**
 
-$$x$$ is the price of dough
-$$y$$ is the price of yeast
+$$x$$ -- the price of dough
+
+$$y$$ the price of yeast
+
+**Constraints**
+
+$$x >= 0, y >= 0$$
 
 Approach & Model Formulation
 ----------------------------
