@@ -150,13 +150,12 @@ At the bottom you'll also see I've color-coded the two project resource, a senio
 
 ![rawsheet](/assets/images/raw.png)
 
+Part of the crashing effort may involve creating a _Program Evaluation Review Technique_ (PERT) chart. PERT charts provide a visualization of the project's timeline, with different tasks associated with the project and their dependencies. PERT charts may also provide additional information, such as the duration of each task and the effort from the different project resources. 
+
 We can now create a PERT chart from this information. There is plenty of information online on how to create a PERT chart, but it can follow information from the spreadsheet and just models the project visually.
 
 ![pert](/assets/images/pert.png)
 
-
-
-Part of the crashing effort typically starts with leveraging or creating a _Program Evaluation Review Technique_ (PERT) chart. PERT charts provide a visualization of the project's timeline, with different tasks associated with the project and their dependencies. PERT charts may also provide additional information, such as the duration of each task and the effort from the different project resources. 
  
 
 Interpreting The Results
