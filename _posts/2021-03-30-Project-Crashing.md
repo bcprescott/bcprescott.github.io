@@ -38,22 +38,40 @@ LP models are typically made up of an _Objective Function_, one or more _Constra
 
 Let's take a look at a short LP model...
 
-We'll suppose that our objective function, $$Z$$, represents the internal cost of creating bread. 
+**Background**
+
+We'll suppose a fake company creates pants and shirts...
+
+In order to make these they have the material polyester and cotton. They have 2000 units of polyester available and 700 units of cotton. 
+
+Each pair of pants requires 2 units of polyester and 2 units of cotton.
+
+Each shirt requires 1 unit of polyester and 2.5 units of cotton.
+
+They sell a pair of pants at $30 and a shirt at $20. 
+
+The below objective function, $$Z$$, represents the sales revenue of pants and shirts. The company wants to maximize their revenue. 
 
 **Objective Function**
 
-MINIMIZE:
-$$ Z = 2x + y $$
+MAXIMIZE:
+
+$$ Z = 30x + 20y $$
 
 **Decision Variables**
 
-$$x$$ -- the price of dough
+$$x$$ -- the number of pants
 
-$$y$$ the price of yeast
+$$y$$ -- the number of shirts
 
 **Constraints**
 
-$$x >= 0, y >= 0$$
+$$2x + y <= 2000$$ -- polyester used for both pants and shirts needs to be less than the max available, 2000  
+
+$$2x + 2.5 <= 700$$ -- cotton used for both pants and shirts needs to be less than the max available, 700  
+
+$$x >= 0, y >= 0$$ -- ensures that values obtained for x and y are natural numbers, as you can't have negative pants/shirts. :)
+   
 
 Approach & Model Formulation
 ----------------------------
