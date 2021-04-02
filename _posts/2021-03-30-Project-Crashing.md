@@ -118,6 +118,10 @@ print('Obj: %g' % m.objVal)
 
 {% endhighlight %}
 
+The output of our model is shown below. We can see at the end that we'll achieve a maximum revenue of $9,330 by creating 267 pairs of jeans and 66 shirts, while ensuring the solution meets all of the given constrains.
+
+![LPBasic](/assets/images/lpbasic.png)
+
 Approach & Model Formulation
 ----------------------------
 
