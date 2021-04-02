@@ -41,12 +41,14 @@ Let's take a look at a short LP model...
 We'll suppose that our objective function, $$Z$$, represents the internal cost of creating bread. 
 
 **Objective Function**
+
 MINIMIZE:
 $$ Z = 2x + y $$
 
 **Decision Variables**
-$$x$$ - Price of dough
-$$y$$ - Price of yeast
+
+$$x$$ is the price of dough
+$$y$$ is the price of yeast
 
 Approach & Model Formulation
 ----------------------------
