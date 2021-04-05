@@ -171,7 +171,8 @@ Using the scenario of shortening a project to hit a deadline, we'll start by def
 **Objective Function**
 
 _MINIMIZE:_ 
-$$\sum_{a=1}^nD_aC_a$$
+
+$$\sum_{a=1}^n D_aC_a$$
 
 **Decision Variables**
 
@@ -183,11 +184,12 @@ $$E_t$$ - when an event will occur within the project, based on the PERT
 
 $$D_a <=$$ _maximum crash potential for a specific task_
 
-$$E_t >= n - D_a + E_{t-1}$$ - defines the duration of each tasks in relation to it's previous dependent tasks's occurent in the project
+$$E_t >= n - D_a + E_{t-1}$$ <span style="color:blue"> - defines the duration of each tasks in relation to it's previous dependent tasks's occurent in the project</span>
+
 
 $$E_{12} <=$$ _project deadline requirement (in days)_
 
-$$E_1 = 0$$ - states the first task has an occurence of zero, as it is just starting the project
+$$E_1 = 0$$ <span style="color:blue"> - states the first task has an occurence of zero, as it is just starting the project</span>
 
 
 
