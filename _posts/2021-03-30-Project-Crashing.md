@@ -170,7 +170,8 @@ Using the scenario of shortening a project to hit a deadline, we'll start by def
 
 **Objective Function**
 
-_MINIMIZE:_ $$sum_{a=1}^nD_aC_a$$
+_MINIMIZE:_ 
+$$\sum_{a=1}^nD_aC_a$$
 
 **Decision Variables**
 
