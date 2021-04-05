@@ -304,4 +304,4 @@ We can also see that our last dependent task, represented by X12, shows a projec
 
 Our model found a recommended method that not only hits our deadline of 11 days, but also keeps the additional crash cost to a minimum, adding $5,120 to the overall project cost.
 
-**If you have any comments please leave them below, or send me a message/email directly!**
+**Feel free to drop me an email or reach me on LinkedIn if you have any questions/comments!**
