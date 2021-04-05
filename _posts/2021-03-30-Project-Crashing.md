@@ -29,7 +29,7 @@ Understanding Project Crashing
 
 The purpose behind project crashing, or "crashing a project", is to shorten the overall project duration. This could be to hit a client imposed deadline, to keep project delivery times to a minimum, or to ensure we can free up resources as fast as possible for the next project.
 
-Project crashing can be an exercise in itself, as tasks need to be evaluated to see if they can even be shortened/crashed, by how long, and what the impact to the project budget or internal costs are by shortened said tasks. 
+Project crashing can be an exercise in itself, as tasks need to be evaluated to see if they can even be shortened/crashed, by how long, and what the impact to the project budget or internal costs are by shortening said tasks. 
 
 There may be a few creative ways to shorten a task, including asking a client to support the effort, to add additional project resources to help speed up delivery, or to burn additional hours each day. An increase in internal costs is likely to occur with the either of the three mentioned options.
 
