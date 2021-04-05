@@ -182,7 +182,7 @@ $$E_t$$ - when an event will occur within the project, based on the PERT
 
 $$D_a <=$$ _maximum crash potential for a specific task_
 
-$$E_t >= n - D_a + E_t-1$$ - defines the duration of each tasks in relation to it's previous dependent tasks's occurent in the project
+$$E_t >= n - D_a + E_t_-_1$$ - defines the duration of each tasks in relation to it's previous dependent tasks's occurent in the project
 
 $$E_12 <=$$ _project deadline requirement (in days)_
 
