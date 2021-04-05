@@ -11,7 +11,7 @@ header:
 
 Have you been involved in a project that requires a shortened timeline? It isn't uncommon for project deadlines to be imposed after a project kickoff occurs, or to attempt to accelerate a project for any number of reasons. Different situations require Project Management to evaluate the project tasks and schedule to determine where or how an overall project can be shortened, requiring manual adjustments and a sprinkle of intuition. 
 
-**Disclaimer**
+<span style="color:red">**Disclaimer**</span>
 
 Everything modeled in this post is fictional. No real data or project examples were used.
 
@@ -156,6 +156,7 @@ We can now create a PERT chart from this information. There is plenty of informa
 
 ![pert](/assets/images/pert.png)
 
+From here we can create our model formulation. There is a lot involved with creating this 
  
 
 Interpreting The Results
