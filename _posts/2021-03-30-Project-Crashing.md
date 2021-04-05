@@ -175,9 +175,9 @@ $$\sum_{a=1}^n D_aC_a$$
 
 **Decision Variables**
 
-$$D_a$$ - number of days a specific task will be crashed
+$$D_a$$ <span style="color:blue">number of days a specific task will be crashed</span>
 
-$$E_t$$ - when an event will occur within the project, based on the PERT
+$$E_t$$ <span style="color:blue">when an event will occur within the project, based on the PERT</span>
 
 **Constraints**
 
@@ -189,6 +189,9 @@ $$E_t >= n - D_a + E_{t-1}$$ <span style="color:blue">defines the duration of ea
 $$E_{12} <=$$ _project deadline requirement (in days)_
 
 $$E_1 = 0$$ <span style="color:blue">states the first task has an occurence of zero, as it is just starting the project</span>
+
+
+Now that we have our mathematical formulation we can move into writing this in Python. Below is the Python code for this problem, using Gurobi, and with some comments for clarification purposes. 
 
 
 
