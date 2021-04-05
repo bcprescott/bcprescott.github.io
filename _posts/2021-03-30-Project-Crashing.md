@@ -184,7 +184,7 @@ $$D_a <=$$ _maximum crash potential for a specific task_
 
 $$E_t >= n - D_a + E_t_-_1$$ - defines the duration of each tasks in relation to it's previous dependent tasks's occurent in the project
 
-$$E_12 <=$$ _project deadline requirement (in days)_
+$$E_1_2 <=$$ _project deadline requirement (in days)_
 
 $$E_1 = 0$$ - states the first task has an occurence of zero, as it is just starting the project
 
