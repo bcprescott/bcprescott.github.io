@@ -20,7 +20,7 @@ Introduction & Motivation
 
 Having just spent the past three months focusing heavily on prescriptive analytics and building a number of optimization algorithms, I decided to write about a specific project I worked on that provided an analytical approach to solving what is known as _project crashing_. 
 
-A shift or addition to project resources happens all the time. However, many decisions are made quickly and are based on intuition. I wanted to find a way to solve some of these problems using matmeatical algorithms, rather than best guesses. 
+A shift or addition to project resources happens all the time. However, many decisions are made quickly and are based on intuition. I wanted to find a way to solve some of these problems using mathematical algorithms, rather than best guesses. 
 
 This approach uses a _Mixed-integer Programming_ method and is solved using commercial software called [Gurobi](https://www.gurobi.com/) and Python. 
 
