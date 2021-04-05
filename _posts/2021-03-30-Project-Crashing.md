@@ -1,5 +1,5 @@
 ---
-title: "Project Crashing - A Linear Programming Approach"
+title: "Project Crashing - A Prescriptive Analytics Approach"
 toc: true
 toc_sticky: true
 tags: lp project gurobi optimization
