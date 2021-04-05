@@ -112,15 +112,15 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/benjaminprescott/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bcprescott"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin-in"
-      url: "https://www.linkedin.com/in/benjaminprescott/"
 # Site Footer
 footer:
   links:
