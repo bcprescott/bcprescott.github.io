@@ -156,7 +156,7 @@ We can now create a PERT chart from this information. There is plenty of informa
 
 ![pert](/assets/images/pert.png)
 
-From here we can create our model formulation. There is a lot involved with creating this 
+From here we can create our model formulation. This gets a bit complex, so bear with me! 
  
 Model Formulation & Code
 ----------------------------
