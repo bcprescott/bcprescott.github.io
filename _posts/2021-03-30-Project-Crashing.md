@@ -146,7 +146,7 @@ The below screenshot shows an example project's task crash plan. We can see the 
 - How much cost is added by crashing the project
 - The cost of crashing per time unit
 
-At the bottom you'll also see I've color-coded the two project resource, a senior and junior, as well as a made up internal cost per hour. I've also color-coded the tasks of which they are responsible. 
+At the bottom you'll also see I've color-coded the two project resource, a senior and junior, as well as a made up internal cost per hour. The color-coded tasks represent which resource is responsible for it.
 
 ![rawsheet](/assets/images/raw.png)
 
