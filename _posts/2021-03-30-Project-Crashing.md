@@ -167,7 +167,7 @@ To help keep this post a bit shorter, I'm not going to be diving into the mappin
 
 Using the scenario of shortening a project to hit a deadline, we'll start by defining our objective function, which aims at minimizing the project crash costs. I.e., we want to hit the deadline while keeping added costs as low as possible.
 
-$\sum_{a=1}^n*D_a*C_a$
+$$\sum_{a=1}^n*D_a*C_a$$
 
 
 
