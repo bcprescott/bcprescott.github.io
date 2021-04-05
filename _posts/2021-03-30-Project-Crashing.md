@@ -158,8 +158,17 @@ We can now create a PERT chart from this information. There is plenty of informa
 
 From here we can create our model formulation. There is a lot involved with creating this 
  
-Model Formulation
------------------
+Model Formulation & Code
+----------------------------
+
+Now that we have our PERT chart and our project costs/durations laid out, we can create our mathematical formulation and write some code to solve it. 
+
+To help keep this post a bit shorter, I'm not going to be diving into the mapping of each task to the model. If you're interested in understanding more, please read [this paper](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjzn5e_zOfvAhVBbc0KHYG-CR4QFjAAegQIBRAD&url=https%3A%2F%2Fpapers.ssrn.com%2Fsol3%2FDelivery.cfm%3Fabstractid%3D1012525&usg=AOvVaw1n3_0EWVhpRaZzoL2sQhP5&cshid=1617642742158203).
+
+Using the scenario of shortening a project to hit a deadline, we'll start by defining our objective function, which aims at minimizing the project crash costs. I.e., we want to hit the deadline while keeping added costs as low as possible.
+
+$\sum_{a=1}^n*D_a*C_a$
+
 
 
 
