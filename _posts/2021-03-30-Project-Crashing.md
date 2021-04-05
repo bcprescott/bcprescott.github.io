@@ -9,11 +9,11 @@ header:
   teaser: /assets/images/pert.png
 ---
 
-Have you been involved in a project that requires a shortened timeline? It isn't uncommon for project deadlines to be imposed after a project kickoff occurs, or to attempt to accelerate a project for any number of reasons. Different situations require Project Management to evaluate the project tasks and schedule to determine where or how an overall project can be shortened, requiring manual adjustments and a sprinkle of intuition. 
+Have you been involved in a project that requires a shortened timeline? It isn't uncommon for project deadlines to be imposed after a project kickoff occurs, or to attempt to accelerate a project for any number of reasons. 
 
-<span style="color:red">**Disclaimer**</span>
+Different situations require Project Management to evaluate the project tasks and schedule to determine where or how an overall project can be shortened, requiring manual adjustments and a sprinkle of intuition. 
 
-Everything modeled in this post is fictional. No real data or project examples were used.
+<span style="color:red">**Disclaimer**</span>: Everything modeled in this post is fictional. No real data or project examples were used.
 
 Introduction & Motivation
 -----------------------
@@ -128,8 +128,8 @@ The output of our model is shown below. We can see at the end that we'll achieve
 
 Alright... back to project crashing!
 
-Approach & Model Formulation
-----------------------------
+Preparation & Approach
+----------------------
 
 Before we move too deep, lets mock something up quickly in Excel. 
 
@@ -158,6 +158,10 @@ We can now create a PERT chart from this information. There is plenty of informa
 
 From here we can create our model formulation. There is a lot involved with creating this 
  
+Model Formulation
+-----------------
+
+
 
 Interpreting The Results
 ------------------------
