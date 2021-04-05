@@ -191,13 +191,117 @@ $$E_{12} <=$$ _project deadline requirement (in days)_
 $$E_1 = 0$$ <span style="color:blue">states the first task has an occurence of zero, as it is just starting the project</span>
 
 
-Now that we have our mathematical formulation we can move into writing this in Python. Below is the Python code for this problem, using Gurobi, and with some comments for clarification purposes. 
+Now that we have our mathematical formulation we can move into writing this in Python. Below is the Python code for this problem, using Gurobi, and with some comments for clarification purposes. Long code snippet incoming...
 
+{% highlight python %}
 
+# Create a new model
+m = gp.Model("ProjectCrash")
 
+# Create variables for the potential crash durations
+Y1 = m.addVar(vtype=GRB.INTEGER, name="Y1")
+Y2 = m.addVar(vtype=GRB.INTEGER, name="Y2")
+Y3 = m.addVar(vtype=GRB.INTEGER, name="Y3")
+Y4 = m.addVar(vtype=GRB.INTEGER, name="Y4")
+Y5 = m.addVar(vtype=GRB.INTEGER, name="Y5")
+Y6 = m.addVar(vtype=GRB.INTEGER, name="Y6")
+Y7 = m.addVar(vtype=GRB.INTEGER, name="Y7")
+Y8 = m.addVar(vtype=GRB.INTEGER, name="Y8")
+Y9 = m.addVar(vtype=GRB.INTEGER, name="Y9")
+Y10 = m.addVar(vtype=GRB.INTEGER, name="Y10")
+Y11 = m.addVar(vtype=GRB.INTEGER, name="Y11")
+Y12 = m.addVar(vtype=GRB.INTEGER, name="Y12")
+Y13 = m.addVar(vtype=GRB.INTEGER, name="Y13")
+
+#Create variables for task durations
+X1 = m.addVar(vtype=GRB.INTEGER, name="X1")
+X2 = m.addVar(vtype=GRB.INTEGER, name="X2")
+X3 = m.addVar(vtype=GRB.INTEGER, name="X3")
+X4 = m.addVar(vtype=GRB.INTEGER, name="X4")
+X5 = m.addVar(vtype=GRB.INTEGER, name="X5")
+X6 = m.addVar(vtype=GRB.INTEGER, name="X6")
+X7 = m.addVar(vtype=GRB.INTEGER, name="X7")
+X8 = m.addVar(vtype=GRB.INTEGER, name="X8")
+X9 = m.addVar(vtype=GRB.INTEGER, name="X9")
+X10 = m.addVar(vtype=GRB.INTEGER, name="X10")
+X11 = m.addVar(vtype=GRB.INTEGER, name="X11")
+X12 = m.addVar(vtype=GRB.INTEGER, name="X12")
+
+# Set objective function. 
+# The static numbers were determined from the spreadsheet "Crash cost/time" column.
+# We're trying to minimize the output of this function.
+m.setObjective(800*Y1 + 640*Y2 + 640*Y3 + 640*Y4 + 800*Y5 + 
+                800*Y6 + 640*Y7 + 800*Y8 + 640*Y9 + 800*Y10 + 
+                800*Y11 + 640*Y12 + 800*Y13, GRB.MINIMIZE)
+
+#Crash potentials (days) for eask task - from the spreadsheet
+m.addConstr(Y1 <= 2, "c0") #A
+m.addConstr(Y2 <= .5, "c1") #B
+m.addConstr(Y3 <= 1, "c2") #C
+m.addConstr(Y4 <= 1, "c3") #D
+m.addConstr(Y5 <= 2, "c4") #E
+m.addConstr(Y6 <= .8, "c5") #F
+m.addConstr(Y7 <= 1.5, "c6") #G
+m.addConstr(Y8 <= 2, "c7") #H
+m.addConstr(Y9 <= 1, "c8") #I
+m.addConstr(Y10 <= 2, "c9") #J
+m.addConstr(Y11 <= .5, "c10") #K
+m.addConstr(Y12 <= 1, "c11") #L
+m.addConstr(Y13 <= 1, "c12") #M 
+
+# Duration of each task in relation to previous dependent task's occurence
+# This part takes a bit to map out. For more information refer to the linked paper in the blog
+m.addConstr(X1 == 0, "c14") #START (#1)
+m.addConstr(X2 >= 5 - Y1 + X1, "c15") #2
+m.addConstr(X3 >= 1 - Y2 + X2, "c16") #3 
+m.addConstr(X4 >= 2 - Y3 + X2, "c17") #4 
+m.addConstr(X5 >= 2 - Y4 + X3, "c18") #5 
+m.addConstr(X6 >= 3 - Y5 + X4, "c19") #6
+m.addConstr(X7 >= 3 - Y7 + X4, "c21") #7 
+m.addConstr(X8 >= 1 - Y6 + X5, "c22") #8
+m.addConstr(X8 >= 3 - Y8 + X6, "c23") #8
+m.addConstr(X9 >= 2 - Y9 + X6, "c24") #9
+m.addConstr(X9 >= 5 - Y10 + X7, "c25") #9
+m.addConstr(X10 >= 1 - Y11 + X7, "c26") #10
+m.addConstr(X11 >= 5 - Y12 + X7, "c27") #11
+m.addConstr(X12 >= 2 - Y13 + X8, "c28") #12
+m.addConstr(X12 >= 2 - Y13 + X9, "c29") #12
+m.addConstr(X12 >= 2 - Y13 + X10, "c30") #12
+m.addConstr(X12 >= 2 - Y13 + X11, "c31") #12
+
+# Necessary project duration. What it needs to be shortened to (in days) to hit the deadline.
+# This represents a necessary project duration of 11 days
+m.addConstr(X12 <= 11, "c32")
+
+# This is our non-negativity constraint. We can't have negative days.
+# Creating a for loop for each variable that needs a non-negativity constraint.
+xlist = [X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9,Y10,Y11,Y12,Y13]
+for x in xlist:
+  m.addConstr(x >= 0)
+
+# Run the model optimization
+m.optimize()
+
+# Return the variable values
+for v in m.getVars():
+    print('%s %g' % (v.varName, v.x))
+
+# Return the result of our objective function
+print('Obj: %g' % m.objVal)
+
+{% endhighlight %}
 
 Interpreting The Results
 ------------------------
 
-What Next?
-----------
+After running this model we'll be presented with the following output:
+
+![CrashOutput](/assets/images/crashout.png)
+
+This provides us with a few pieces of information. The Y variables we defined represent the number of days to crash a task. This is ultimately the prescriptive part of this model. Essentially, it is telling us to crash task 1 by 2 days, crash task 3 by 1 day, task 7 by 1 day, etc. 
+
+We can also see that our last dependent task, represented by X12, shows a project duration of 11 days, which is the deadline we defined in our code. 
+
+Our model found a recommended method that not only hits our deadline of 11 days, but also keeps the additional crash cost to a minimum, adding $5,120 to the overall project cost.
+
+**If you have any comments please leave them below, or send me a message/email directly!**
