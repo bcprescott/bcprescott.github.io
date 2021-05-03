@@ -32,7 +32,7 @@ A Quick History Lesson
 
 The concept of Artificial Intelligence has been around for quite a while. We won't be exploring an in-depth history lesson on AI, but rather some interesting (hopefully thought provoking) bits of information. 
 
-AI first started gaining _real_ popularity between 1960 and and 1975. Many started driving the thought of "in a few years we'll have computeres as intelligent as humans" (ha). Then as the late 80's and early 90's rolled around, the funding and interest in driving new developments started to plateau. There weren't any substantial improvements, mostly due to lack of technological advanced in computational hardware.
+AI first started gaining _real_ popularity between 1960 and 1975. Many started driving the thought of "in a few years we'll have computeres as intelligent as humans" (ha). Then as the late 80's and early 90's rolled around, the funding and interest in driving new developments started to plateau. There weren't any substantial improvements, mostly due to lack of technological advanced in computational hardware.
 
 Just as interest started to decrease, IBM's Deep Blue program defeated the reigning chess champion Gary Kasparov in 1997. Dragon Systems also created the first speech recognition software. Things were starting to get interesting again, but with many critics saying AI wouldn't be able to achieve anything better. Then in 2016 DeepMind's AlphaGo defeated the reigning Go champion.
 
