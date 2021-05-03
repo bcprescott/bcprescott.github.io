@@ -41,7 +41,7 @@ I say all this not to dive into a history lesson, but to paint the picture of ho
 AI In The Wild
 ------------------------------
 
-Something worth mentioning is how often you may have seen the term 'AI' or 'Artificial Intelligence' used to describe a product, service, or feature. I don't know about you, but I see something being coined as 'AI' every day. The question then becomes - do these systems really exhibit some form of intelligence? If whatever you see says that it is 'intelligent', what does that even mean? What is intelligence?
+Something worth mentioning is how often you may have seen the term 'AI' or 'Artificial Intelligence' used to describe a product, service, or feature. I don't know about you, but I see something being coined as 'AI' every day. The question then becomes - do these systems really exhibit some form of intelligence? What even is 'intelligence'?
 
 You (like me) may be skeptical with all these claims of some technology being "driven by AI", especially if you've used the service before and wondered what part of it was actually artificial intelligence. I find it odd that many have already advanced past the use of machine mearning and created some form of intelligent system. I'll address my thoughts on this towards the end, but maybe it would be worth recapping machine learning real quick...
 
