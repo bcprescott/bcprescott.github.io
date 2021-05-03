@@ -27,6 +27,10 @@ My initial goal when starting my blog was to write more technical content, focus
 
 With the increasing popularity in analytics and 'Big Data' causing a form of statistics revival, a lot of terms are being thrown around that only drive confusion for those wanting to know more. Something as simple as the semantics of single terms (such as Artificial Intelligence) vary significantly from person to person and company to company.   
 
+Something worth mentioning is how often you may have seen the term 'AI' or 'Artificial Intelligence' used to describe a product, service, or feature. I don't know about you, but I see something being coined as 'AI' every day. The question then becomes - do these systems really exhibit some form of intelligence? What even is 'intelligence'?
+
+I find it odd that many have already advanced past the use of machine mearning and created some form of intelligent system. I'll address my thoughts on this towards the end.
+
 A Quick History Lesson
 -----------------------------------
 
@@ -43,14 +47,14 @@ AI In The Wild
 
 Something worth mentioning is how often you may have seen the term 'AI' or 'Artificial Intelligence' used to describe a product, service, or feature. I don't know about you, but I see something being coined as 'AI' every day. The question then becomes - do these systems really exhibit some form of intelligence? What even is 'intelligence'?
 
-You (like me) may be skeptical with all these claims of some technology being "driven by AI", especially if you've used the service before and wondered what part of it was actually artificial intelligence. I find it odd that many have already advanced past the use of machine mearning and created some form of intelligent system. I'll address my thoughts on this towards the end, but maybe it would be worth recapping machine learning real quick...
+You (like me) may be skeptical with all these claims of some technology being "driven by AI", especially if you've used the service before and wondered what part of it was actually artificial intelligence. 
 
 Machine Learning
 -----------------------------------
 
 Machine learning (ML), at its most basic description, is seen as a discipline that focuses on forms of mathematical optimization. What do I mean by that? Well, ML uses a variety of different algorithms that perform some form of mathematical optimization on data to create a 'learner', or a solution that has 'learned' something. 
 
-We may use the process of ML to train an algorithm to know what process to follow and what knobs to turn to achieve a desired output, using data as the input. Once the knobs are dialed in, we may decide to use this algorithm to help with finding desired outputs of new data. 
+We may use the process of ML to train an algorithm to know what knobs to turn to achieve a desired output, using data as the input. Once the knobs are dialed in, we may decide to use this algorithm to help with insight from new data. 
 
 Something worth noodling on is - is machine learning 'artificial intelligence'? These algorithms that use mathematical optimization to tune these knobs, is this what drives intelligent systems?
 
