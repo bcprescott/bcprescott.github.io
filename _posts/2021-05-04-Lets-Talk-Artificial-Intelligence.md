@@ -72,9 +72,7 @@ My Opinion
 
 A while back I read a book called [Agile AI](https://learning.oreilly.com/library/view/agile-ai/9781492074984/) by Appugliese, Nathan and Roberts, and something they mentioned has stuck with me ever since. In the book they mention that something can be considered 'AI' when _machine learning impacts social systems_. 
 
-While short and sweet, there is a lot of meat behind this statement. I would agree that the _application_ of a machine learning model is what can determine if it functions in a way that can be determined as AI. After all, what good is a solution if it is not actually being used?
-
-Does this mean that everything you see being touted as AI is actually AI? Well, probably not. The reality of the situation is that the term catches a lot of interest. 
+While short and sweet, there is a lot of meat behind this statement. I would agree that the _application_ of a machine learning model is what can determine if it functions in a way that can be determined as AI. After all, what good is a solution if it is not actually being used? Does it really matter if it is AI or not, as long as the solution is driving business value?
 
 If you have watched the Hulu documentary about WeWork you may have noticed how SoftBank is investing heavily in AI. In 2019, [Forbes reported](https://www.forbes.com/sites/samshead/2019/07/26/softbank-launches-new-108-billion-vision-fund-to-invest-in-ai/?sh=47bd07e6568d) that SoftBank was launching a new 108 billion dollar fund for investment in AI. This, along with the emergence of many AI-focused companies, may help show the interest in creating AI-like capabilities.
 
@@ -82,9 +80,11 @@ Conclusion
 -----------------------------------
 ![ai](/assets/images/ai.png)
 
-So, what does it all mean? My recommendation is to tread lightly when you see something being called AI and do your own research. If interested, spend some time digesting what the product or service really is, as many could be traditional automation being rebranded as 'AI' to get in on the buzz. 
+So, what does it all mean? Is everything you see being touted as AI is actually AI? Probably not. The reality of the situation is that the term catches a lot of interest/hype and will be abused to aid marketing efforts.
 
-With machine learning advancing rapidly, especially in the space of unstructured data (text/documents), we will in turn see the growth of artificial intelligence. If you have an interest in this space, make sure to study up on machine learning!
+My recommendation is to tread lightly when you see something being called AI and do your own research. If interested, spend some time digesting what the product or service really is, as many could be traditional automation being rebranded as 'AI' to get in on the buzz. 
+
+With machine learning advancing rapidly, especially in the space of unstructured data (text/documents), we will in turn see the continued growth of artificial intelligence. ML is likely to be a key driver of new capabilities for a while. If you have an interest in this space, make sure to study up on it!
 
 As mentioned at the beginning, these definitions may all change as technology advances and we uncover more about our own mind, but hopefully this helps provide more insight and spark some interesting thoughts!
 
