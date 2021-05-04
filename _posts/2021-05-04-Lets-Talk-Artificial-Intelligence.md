@@ -33,7 +33,9 @@ I find it a bit odd that many have already advanced past the use of machine mear
 A Quick History Lesson
 -----------------------------------
 
-AI first started gaining _real_ popularity between 1960 and 1975. Many started driving the thought of "in a few years we'll have computeres as intelligent as humans" (ha). Then as the late 80's and early 90's rolled around, the funding and interest in driving new developments started to plateau. Then, in 1997, IBM's Deep Blue program defeated the reigning chess champion Gary Kasparov and Dragon Systems created the first speech recognition software. Things were starting to get interesting again! As critics started thinking this was the peak of AI, DeepMind's AlphaGo defeated the reigning Go champion in 2016.
+AI first started gaining _real_ popularity between 1960 and 1975. Many started driving the thought of "in a few years we'll have computeres as intelligent as humans" (ha). Then as the late 80's and early 90's rolled around, the funding and interest in driving new developments started to plateau. 
+
+Then, in 1997, IBM's Deep Blue program defeated the reigning chess champion Gary Kasparov and Dragon Systems created the first speech recognition software. Things were starting to get interesting again! As critics started thinking this was the peak of AI, DeepMind's AlphaGo defeated the reigning Go champion in 2016.
 
 I say all this not to dive into a history lesson, but to state how the goal post continues to move. At what point can we stamp something and say "we've achieved artificial intelligence"?
 
