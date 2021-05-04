@@ -50,7 +50,7 @@ What Is Intelligence Anyway?
 -----------------------------------
 ![dataidea](/assets/images/datahasabetteridea.png)
 
-According to a simple definition by Merriam-Webster, Intelligence is "the ability to learn or understand or to deal with new or trying situations", or "the ability to apply knowledge to manipulate one's environment or to think abstractly as measured by objective criteria (such as tests)". 
+According to a [simple definition](https://www.merriam-webster.com/dictionary/intelligence) by Merriam-Webster, Intelligence is "the ability to learn or understand or to deal with new or trying situations", or "the ability to apply knowledge to manipulate one's environment or to think abstractly as measured by objective criteria (such as tests)". 
 
 Based on those simple definitions, do you think that ML is a form of intelligence? One might argue that the algorithm is learning, so it exhibits a form of intelligence. You might even say that some of the learning methods work similarly to how we (humans) learn - through reinforcement or trial/error. After all, machine learning is a subset of the artificial intelligence umbrella.
 
@@ -59,7 +59,7 @@ Now look at it from the angle of what we currently know about human intelligence
 AI or AGI?
 -----------------------------------
 
-Let us be real, when many see the term Artificial Intelligence the first thing that comes to mind is Skynet. Well, if not Skynet probably some kind of robotics (see [Boston Dynamics]('https://www.bostondynamics.com/spot)). However, there is not just one _type_ of artificial intelligence.
+When many see the term Artificial Intelligence the first thing that comes to mind is Skynet. Well ok, if not Skynet probably some kind of robotics (see [Boston Dynamics]('https://www.bostondynamics.com/spot)). However, there is not just one _type_ of artificial intelligence.
 
 Artificial Intelligence (AI) itself is more of a broad-brush stroke term, incorporating many different subfields. We may leverage machine learning techniques to create something that can help predict a future state, or to understand a scenario and provide a recommended next step to us humans (prescriptive/decision analytics). This could be seen as a form of intelligence, as we are providing a cognitive task commonly done by a human.
 
