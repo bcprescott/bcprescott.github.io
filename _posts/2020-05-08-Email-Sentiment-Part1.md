@@ -7,6 +7,9 @@ categories:
   - NLP
 header:
   teaser: /assets/images/happy.jpg
+
+image: happy.jpg
+
 ---
 
 What does our e-mail Sent Items folder say about our demeanor? 

@@ -7,6 +7,8 @@ categories:
   - NLP
 header:
   teaser: /assets/images/thinkpositive.jpg
+
+image: thinkpositive.jpg
 ---
 
 Just to recap real quick, Part 1 of this series was focused on grabbing a CSV export of your email Sent Items and using Microsoft Azure's Text Analytics API to return a sentiment result for each line.

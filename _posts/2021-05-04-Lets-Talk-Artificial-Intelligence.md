@@ -8,7 +8,6 @@ categories:
   - Opinion
 header:
   teaser: /assets/images/alexa.png
-
 image: alexa.png
 
 

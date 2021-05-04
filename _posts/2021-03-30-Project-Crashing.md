@@ -7,6 +7,8 @@ categories:
   - Optimization
 header:
   teaser: /assets/images/pert.png
+
+image: pert.png
 ---
 
 Have you been involved in a project that requires a shortened timeline? It isn't uncommon for project deadlines to be imposed after a project kickoff occurs, or to attempt to accelerate a project for any number of reasons. 

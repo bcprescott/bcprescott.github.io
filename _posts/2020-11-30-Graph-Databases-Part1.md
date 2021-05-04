@@ -7,6 +7,9 @@ categories:
   - Databases
 header:
   teaser: /assets/images/graph.png
+
+image: graph.png
+
 ---
 *This is Part 1 of 2. Part 2 will be focused on deploying/configuring and building/querying a graph database in Neo4j on Microsoft Azure.*
 
