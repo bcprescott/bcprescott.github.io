@@ -1,5 +1,5 @@
 ---
-title: "Lets Talk Artificial Intelligence"
+title: "Let's Talk Artificial Intelligence"
 toc: true
 toc_sticky: true
 tags: basics opinion artificialintelligence ai  
