@@ -7,10 +7,8 @@ categories:
   - AI
   - Opinion
 header:
-  teaser: alexa.png
+  teaser: /assets/images/alexa.png
 
-image:
-  feature: alexa.png
 
 ---
 I thought writing a quick post on the topic of 'Artificial Intelligence', or AI, would be fun. As you read through this article, keep a few things in mind: 
