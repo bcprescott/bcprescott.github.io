@@ -260,7 +260,7 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
+image: mstile-150x150.png
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
