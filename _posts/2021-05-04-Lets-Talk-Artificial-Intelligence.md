@@ -59,7 +59,7 @@ Now look at it from the angle of what we currently know about human intelligence
 AI or AGI?
 -----------------------------------
 
-Let us be real, when many see the term Artificial Intelligence the first thing that comes to mind is Skynet. Well, if not Skynet probably some kind of robotics (search Boston Dynamics). However, there is not just one _type_ of artificial intelligence.
+Let us be real, when many see the term Artificial Intelligence the first thing that comes to mind is Skynet. Well, if not Skynet probably some kind of robotics (see [Boston Dynamics]('https://www.bostondynamics.com/spot)). However, there is not just one _type_ of artificial intelligence.
 
 Artificial Intelligence (AI) itself is more of a broad-brush stroke term, incorporating many different subfields. We may leverage machine learning techniques to create something that can help predict a future state, or to understand a scenario and provide a recommended next step to us humans (prescriptive/decision analytics). This could be seen as a form of intelligence, as we are providing a cognitive task commonly done by a human.
 
