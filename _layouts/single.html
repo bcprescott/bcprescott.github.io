@@ -52,7 +52,17 @@ layout: default
         {% include page__date.html %}
       </footer>
 
-      {% if page.share %}{% include social-share.html %}{% endif %}
+      {% if page.share %}{% include social-share.html %}
+      
+        <script src="https://utteranc.es/client.js"
+          repo="bcprescott/bcprescott.github.io"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+
+      {% endif %}
    
       {% include post_pagination.html %}
     </div>
@@ -87,11 +97,3 @@ layout: default
     </div>
   {% endif %}
 </div>
-
-<script src="https://utteranc.es/client.js"
-  repo="bcprescott/bcprescott.github.io"
-  issue-term="pathname"
-  theme="github-light"
-  crossorigin="anonymous"
-  async>
-</script>
