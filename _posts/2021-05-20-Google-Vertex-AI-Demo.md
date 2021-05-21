@@ -7,7 +7,7 @@ categories:
   - Regression
   - GCP
 header:
-  teaser: /assets/images/vertex/vertex.png
+  teaser: /assets/images/vertex.png
 
 image: vertex.png
 ---
