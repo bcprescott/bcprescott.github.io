@@ -66,6 +66,7 @@ The high-level steps we are going to follow are:
 Once our dataset is uploaded, we can see information on the dataset, as well as being able to generate statistics. Generating summary stats will provide information like the below. You can also click on each feature/column name and see additional detail.
 
 ![stats](/assets/images/vertex/stats.png)
+
 ![bathrooms](/assets/images/vertex/bathrooms.png)
 
 Training the Model
