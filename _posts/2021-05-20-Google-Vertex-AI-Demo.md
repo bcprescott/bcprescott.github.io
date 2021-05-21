@@ -111,7 +111,7 @@ Once you're ready to deploy, move to the _Deploy & Test_ tab and select **DEPLOY
 
 Scrolling down we'll also see a _Test your model_ section. This allows us to manually input numbers as if a new row were created in the file. We provide information describing house data, then hit **PREDICT** to determing our predicted house sale price.
 
-I provided data that simulated a really nice house, which would be very expensive in the King County area. You can see on the right my predicted sale price is $1,023,117, with a 95% confidence interval of $567,934 to $1,681,832. Thats quite a range. Try changing the values a bit and see how your model's confidence interval changes. More reasonable/common house information seems to reduce the span.
+I provided data that simulated a really nice house, which would be very expensive in the King County area. You can see on the right my predicted sale price is 1,023,117, with a 95% confidence interval of 567,934 to 1,681,832. Thats quite a range. Try changing the values a bit and see how your model's confidence interval changes. More reasonable/common house information seems to reduce the span.
 
 ![model3](/assets/images/vertex/model3.png)
 
