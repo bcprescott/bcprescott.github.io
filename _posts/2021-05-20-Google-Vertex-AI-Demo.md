@@ -90,7 +90,7 @@ Selecting Advanced Options also provides us with the option to select our model'
 
 ![train3](/assets/images/vertex/train3.png)
 
-The final page provides us with how many node hours you want to train for. The longer you train the more likely your model improve, or you could potentially overfit. Use the link next to the Node Hours box to check out pricing and suggestions. Once ready, add your 
+The final page provides us with how many node hours you want to train for. The longer you train the more likely your model improve, or you could potentially overfit. Use the link next to the Node Hours box to check out pricing and suggestions.
 
 Also, be sure to check "Enable early stopping", as this will identify when a model's performance doesn't improve and stop training early. This helps reduce your training costs, as well as keep from potentially overfitting a model. 
 
