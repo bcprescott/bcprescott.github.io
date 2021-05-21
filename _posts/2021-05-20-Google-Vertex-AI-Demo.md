@@ -31,7 +31,7 @@ A quick glance at the Vertex AI dashboard hits some of the key features, includi
 * Deployment Pipelines
 * Container Endpoints 
 
-![vertex](/assets/images/vertex/vert.png)
+![vai](/assets/images/vertex/vert.png)
 
 This does't cover everything, but as you read through the list you can see how Vertex AI's goal is to stitch together all the ML and MLops components into a single UI. Let’s dive in to building, deploying, and testing a simple model!
 
