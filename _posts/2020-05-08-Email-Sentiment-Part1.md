@@ -1,18 +1,10 @@
 ---
-title: "Email Sentiment Analysis Using Python & Microsoft Azure - Part 1"
-toc: true
-toc_sticky: true
-tags: sentiment python azure email
-categories:
-  - NLP
-header:
-  teaser: happy.jpg
-
-image: happy.jpg
-
-
----
-# Email Sentiment Analysis: Part 1
+layout: post
+title:  Email Sentiment Analysis Using Python & Microsoft Azure - Part 1
+date: 2020-05-08 00:00:00 +0600
+description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
+img: happy.jpg
+tags: [Sentiment, Python, Azure, NLP] 
 ---
 
 What does our e-mail Sent Items folder say about our demeanor? 
