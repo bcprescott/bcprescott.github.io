@@ -9,10 +9,11 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Ben Prescott # add your name
 author-img: benblog.jpg # add your photo
-about-author: | 
+about-author: 
 I am a data scientist with a passion for solving unique challenges with math and code.
 
 My goal is that my magnum opus will aid in cancer research.  
+
 social-twitter:
 social-facebook:
 social-github: bcprescott # add your Github handle
