@@ -30,7 +30,7 @@ Each hidden layer is made up of some defined number of neurons. Each neuron rece
 Basic Concepts of Convolutional Networks
 ------------------------------
 
-![CNN](assets/images/cnn.jpeg)
+![CNN](/assets/images/cnn.jpeg)
 
 Convolutional networks work a bit differently, using convolutional layers and pooling layers to modify the input data as it moves through the network. Considering CNNs are commonly used in image processing tasks, the input values to a CNN are typically in a format commonly seen in images - length x width x color channels. 
 
@@ -40,7 +40,7 @@ A **convolutional layer** performs a mathematical operation called a convolution
 
 See below for how a convolutional layer works. This is showcasing a 5x5 image with a dot product against a 3x3 filter/kernel. 
 
-![convolution](assets/images/conv.gif)
+![convolution](/assets/images/conv.gif)
 
 The result of this convolutional operation is what is called a _feature map_, which shows some learned representation of the input. However, as you can probably tell from the gif above, the output of the input and dot product of the filter is not the same shape as the original input. Each time we perform a convolution on an input the output is reduced in shape (shape being number of elements in each dimension - i.e. 50,50,3 for LxWxColors).
 
@@ -76,7 +76,7 @@ y_val = y_train_full[40000:]
 
 We can also do some other Python magic and display some example images along with their Y values, converted to class names.
 
-![cifarclasses](assets/images/cifarclasses.png)
+![cifarclasses](/assets/images/cifarclasses.png)
 
 Considering neural networks work best with minimal variance in the data, I would also recommend scaling the input data. Its common to scale all pixel values in an image to between 0 and 1. This can be done easily by dividing each of your X variables by 255 (the highest pixel value in an image).
 
@@ -108,7 +108,7 @@ model3.compile(loss = 'sparse_categorical_crossentropy',
 
 We can also see how our model looks and what happens to our data's shape as it moves through layers.
 
-![model](assets/images/model.png)
+![model](/assets/images/model.png)
 
 Now we can finally train our model. I've selected 200 epochs, but I've also included an early stopping callback, which will end the training if it notices no increase in validation data accuracy.
 
@@ -126,9 +126,9 @@ output3 = model3.fit(
 
 The output shows the model reached about 68% accuracy on the validation data. Not very good, but good enough for the purpose of this post!
 
-![training](assets/images/training.png)
+![training](/assets/images/training.png)
 
-![plot](assets/images/plot.png)
+![plot](/assets/images/plot.png)
 
 
 Generating Feature Maps
@@ -138,7 +138,7 @@ Now that we have a trained model that has its learned representations of the inp
 
 I randomly selected image #91 out of my X_test set, which happened to be a cat. 
 
-![cat](assets/images/cat.png)
+![cat](/assets/images/cat.png)
 
 Now we want to grab our convolutional and max pooling layers from our trained model. We can do this by using a for loop or list comprehension, selecting the outputs of the first 4 layers. 
 
@@ -168,7 +168,7 @@ Visualizing Feature Maps
 
 Theres a whole block of code in how to pull out the images from the 4 layers we identified, so please reference the notebook. However, we can now use this predicted output to pull the activation values and visualize them, showing what the convolutional and pooling layers 'saw' as the data passed through them.
 
-![resultviz](assets/images/cnnviz.png)
+![resultviz](/assets/images/cnnviz.png)
 
 You can see how the pixelization of the image increases as it moves through convolutional/pooling layers, and we can see what each filter was 'looking at' on the cat to create the feature map. This is a similar concept to the activation values in a fully connected network, giving some insight into feature representation.
 

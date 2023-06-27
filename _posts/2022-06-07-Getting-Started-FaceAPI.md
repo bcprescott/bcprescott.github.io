@@ -20,7 +20,7 @@ To get started, lets review the difference between recognition and detection. Th
 
 **Face Recognition** - identifying _who_ the faces belong to that were found within the image
 
-![Compare](assets/images/detectvsrecog.png)
+![Compare](/assets/images/detectvsrecog.png)
 
 Barrier to entry for the two is also different, as detecting if a face exists in an image does not require any customization/training data. It is common for everyone to have similar facial features (nose/mouth/eyes) that many different methods can detect. This is like identifying if a vehicle is present in an image or not, but becomes more difficult when determining what make/model the car is. 
 
@@ -122,7 +122,7 @@ Reviewing the Results
 
 If all goes well you should have a Python window display that is showing you the frame-by-frame live playback (example below). 
 
-![Playback](assets/images/frameplayback.gif)
+![Playback](/assets/images/frameplayback.gif)
 
 Remember, in this scenario we are reading a video feed, which is just a stream of images/frames. Therefore, we can treat our manipulation and playback as individual images. 
 
@@ -141,7 +141,7 @@ Facial recognition has gained some bad press due to how it is applied and blindl
 
 Below is a notice from Microsoft on their [Face API documentation pages](https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview)
 
-![MSFTwarn](assets/images/msftwarning.png)
+![MSFTwarn](/assets/images/msftwarning.png)
 
 On another extreme, consider the military's use of face recognition. Incorrectly identifying a person of interest may lead to an innocent person being killed. However, correctly identifying someone quickly could save lives. Something worth noodling on.
 
