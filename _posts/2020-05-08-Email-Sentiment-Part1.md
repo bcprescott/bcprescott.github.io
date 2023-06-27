@@ -6,7 +6,7 @@ tags: sentiment python azure email
 categories:
   - NLP
 header:
-  teaser: /assets/images/happy.jpg
+  teaser: happy.jpg
 
 image: happy.jpg
 
