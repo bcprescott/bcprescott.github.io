@@ -5,6 +5,7 @@ date: 2022-06-07 00:00:00 +0600
 # description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
 img: benface.png
 tags: [Azure, Face Recognition] 
+toc: true
 ---
 
 At ConvergeOne we recently showcased a few customer demos involving various face detection and recognition methods. These were rooted in AWS and Azure's API services (Rekognition and Face API, respectively), but also included demonstrations on how to train and deploy custom models to IoT Edge devices for local inference. 
@@ -29,7 +30,7 @@ Many libraries, such as OpenCV, come with face detection algorithms (i.e. HAAR c
 AWS Rekognition or Azure Face API?
 ----------------------------------
 
-<div style="text-align:center"><img src="assets/images/rekogface.png" /></div>
+<div style="text-align:center"><img src="/assets/images/rekogface.png" /></div>
 
 Both AWS' Rekognition service, and the Azure Face API service, are hosted computer vision services that help with video or image analysis tasks. In typical 'AWS vs Azure' fashion, the services are similar but also different. The **TL;DR**:
 

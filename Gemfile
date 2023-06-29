@@ -1,9 +1,43 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+# Jekyll gems
+gem 'jekyll', '~> 3.9.0'
+gem 'jekyll-paginate', '~> 1.1'
+gem 'jekyll-sitemap', '~> 1.4'
+gem 'jekyll-tagging', '~> 1.1'
+gem 'jekyll-bits', '~> 0.15'
+gem 'jekyll-plantuml', '~> 1.3', '>= 1.3.4'
+# gem 'jekyll-responsive-image', '~> 1.4'
+gem 'jekyll-seo-tag', '~> 2.7', '>= 2.7.1'
+gem 'jekyll-toc'
+gem 'jekyll-mermaid', '~> 1.0'
 
-group :jekyll_plugins do
-  gem "jekyll-sitemap"
-  gem "jekyll-paginate"
-  gem "jemoji"
-end
+# Non-jekyll gems
+gem 'posix-spawn', '~> 0.3.15'
+gem 'github-pages', '~> 218'
+gem 'jemoji', '~> 0.12.0'
+gem 'webrick', '~> 1.7'
+gem 'fastimage', '>= 2.2.4'
+# gem 'rmagick', '~> 4.2.2'
+# gem 'fontcustom', '~> 2.0'
+gem 'jslint', '~> 1.2'
+gem 'html-proofer', '~> 3.19', '>= 3.19.2'
+gem 'kramdown', '~> 2.3', '>= 2.3.1'
+gem 'liquid', '>= 4.0.3'
+gem 'mail', '~> 2.7', '>= 2.7.1'
+gem 'nokogiri', '~> 1.13.6'
+gem 'nuggets', '~> 1.6'
+gem 'pygments.rb', '~> 2.2'
+gem 'rainbow', '~> 3.0'
+gem 'rake', '~> 13.0', '>= 13.0.6'
+gem 'redcarpet', '~> 3.5', '>= 3.5.1'
+gem 'rubocop', '~> 1.18', '>= 1.18.4'
+gem 'rubocop-rspec', '~> 2.4'
+gem 'sass', '~> 3.7', '>= 3.7.4'
+gem 'scss_lint', '~> 0.59.0'
+gem 'trollop', '~> 2.9', '>= 2.9.10'
+gem 'uuidtools', '~> 2.2'
+gem 'w3c_validators', '~> 1.3', '>= 1.3.6'
+gem "sprockets", "~> 3.7"
+gem 'json', '~> 2.5', '>= 2.5.1'
+gem 'jekyll-last-modified-at', '~> 1.3'
