@@ -21,16 +21,16 @@ layout: main
         <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       
-      <div class="toc">
+      <!-- <div class="toc">
           <nav aria-label="table of contents">
             <ol id="toc-list">
               {% toc %}
             </ol>
           </nav>
       </div>
+       -->
       
-      
-      {{content | markdownify}}
+      {{content | markdownify | toc}}
       <div class="page-footer">
         <div class="page-share">
           <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
