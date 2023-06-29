@@ -1480,69 +1480,44 @@ a.newer-posts:hover {
   }
 }
 
-
-
-/* TOC ADDITION */
-.toc__list:before {
-  content: "Table Of Contents";
-  font-weight: bold;
-  font-size: 1.5rem;
-  position: sticky;
-
- }
- 
- .toc__list {
-  border: 2px solid #eee;
-  border-radius: 4px;
-  line-height: 1.8rem;
-  padding: 1rem 1.5rem;
-  font-weight: 600;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  row-gap: .2rem;  
-  
- }
- 
- .toc__sublist li {
-  padding-left: 1.25rem;
- }
- 
- .toc-h2:first-child {
-  margin-top: 1rem;
- }  
- 
- #toc a {
-  color: #8c83b4;
-  text-decoration: none;
-  
- }
- 
- #toc a:hover {
-  color: #000000;
- }
-
-
-
 html {
   scroll-behavior: smooth;
 }
 
+a:link{
+  color:blue;
+  text-decoration: none;
 
-.toc {
+}
+
+a:visited{
+  color:blue;
+  text-decoration: none;
+}
+
+a:hover{
+  color:rgb(32, 32, 32);
+}
+
+.toc-title h2{
+  color: rgb(48, 48, 48); 
+  border: 5px solid;
+  border-color: #999;
+  background-color: white;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: sticky;
-
+  justify-content: center;
 }
 
+.toc-title h4{
+  color: rgb(48, 48, 48); 
+  border: 5px solid;
+  border-color: #999;
+  background-color: white;
 
-nav {
-  margin-block-start: .2rem;
-}
-
-h2 {
-	text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 1px;
 }

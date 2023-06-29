@@ -5,7 +5,6 @@ date: 2022-06-07 00:00:00 +0600
 # description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
 img: benface.png
 tags: [Azure, Face Recognition] 
-toc: true
 ---
 
 At ConvergeOne we recently showcased a few customer demos involving various face detection and recognition methods. These were rooted in AWS and Azure's API services (Rekognition and Face API, respectively), but also included demonstrations on how to train and deploy custom models to IoT Edge devices for local inference. 
