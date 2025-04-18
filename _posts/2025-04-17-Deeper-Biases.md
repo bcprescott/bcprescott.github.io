@@ -4,7 +4,7 @@ title: Beyond The Training Data: Understanding the Deeper Biases in AI
 date: 2025-04-17 00:00:00 +0600
 description: Beyond The Data - Understanding the Deeper Biases in AI # Add post description (optional)
 img: /assets/images/bttd/bttd.png # Add image post (optional)
-tags: [GAN, Deep Learning] # add tag
+tags: [AI, LLM, Bias] # add tag
 ---
 
 # Beyond The Training Data: Understanding the Deeper Biases in AI
