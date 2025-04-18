@@ -3,10 +3,10 @@ layout: post
 title: Beyond The Training Data - Understanding the Deeper Biases in AI
 date: 2025-04-17 00:00:00 +0600
 description: Beyond The Data - Understanding the Deeper Biases in AI # Add post description (optional)
-img: /assets/images/bttd/bttd.png # Add image post (optional)
+img: bttd.png # Add image post (optional)
 tags: [AI, LLM, Bias] # add tag
 ---
-![bttd](/assets/images/bttd/bttd.png){:max-width="400"}
+![bttd](/assets/images/bttd/bttd.png){:width="400" height="640"}
 
 Discussions about bias in Artificial Intelligence (AI) often focus on the initial training data. When the data used to train an AI model reflects inequities or lacks sufficient diversity, the resulting model will inevitably learn (and usually amplify) those same biases. 
 
