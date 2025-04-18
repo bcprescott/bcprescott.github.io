@@ -57,6 +57,10 @@ The purpose of these feedback loop examples is to demonstrate that bias is not j
 
 ## Bias in the Algorithm's Design
 
+
+![algo](/assets/images/bttd/algo.jpg){:max-width="400" max-height="400"}
+
+
 Bias is not just learned from data; sometimes it exists within the model's fundamental design, such as the Transformer architecture underpinning most modern LLMs.
 
 ### Positional Bias
