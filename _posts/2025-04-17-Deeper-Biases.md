@@ -6,7 +6,7 @@ description: Beyond The Data - Understanding the Deeper Biases in AI # Add post 
 img: bttd.png # Add image post (optional)
 tags: [AI, LLM, Bias] # add tag
 ---
-![bttd](/assets/images/bttd/bttd.png){:width="400" height="640"}
+![bttd](/assets/images/bttd/bttd.png){:max-width="640" max-height="480"}
 
 Discussions about bias in Artificial Intelligence (AI) often focus on the initial training data. When the data used to train an AI model reflects inequities or lacks sufficient diversity, the resulting model will inevitably learn (and usually amplify) those same biases. 
 
@@ -81,7 +81,7 @@ The attention heads are key to making the Transformer algorithm work so well. Ho
 
 **Approaches to Mitigation:** Unfortunately, many of the mitigation approaches are reliant on architectural changes within the Transformer algorithm itself, creation of new architectures, or through modification and regularization techniques at training time. Given this is a fundamental design challenge, there is not much (at time of writing) for businesses to influence, unless training your own Transformer from scratch. 
 
-## The Alignment Paradox - When Fixes Introduce New Issues
+## The Alignment Paradox: Fixes Introduce New Issues
 
 ![paradox](/assets/images/bttd/paradox.png)
 
