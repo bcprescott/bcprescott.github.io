@@ -141,7 +141,10 @@ Attempting to find some simple "debiasing" solution overlooks the dynamic and sy
 
 Instead, focus on building a practice around **managing bias** to help evolve towards continuous oversight and the integration of ethical and responsible use considerations throughout the AI lifecycle. 
 
+
 # Key Takeaways (TL;DR):
+
+![tldr](/assets/images/bttd/tldr.jpeg){:max-width="400" max-height="400"}
 
 **Acknowledge the Complexity of Bias:** Look past the simplistic "it's just the data" perspective. Recognize the impact and role of feedback loops, the model and solution architecture, and various alignment methods at play.
 
