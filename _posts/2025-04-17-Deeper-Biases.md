@@ -26,7 +26,7 @@ Understanding these hidden dynamics is important for any organization looking to
 
 # Bias in the Feedback Loop
 
-![feedback](/assets/images/bttd/loop.png){:width="400" height="400"}
+![feedback](/assets/images/bttd/loop.png)
 
 One particularly interesting challenge is known as the bias feedback loop. This occurs when an AI model's outputs (predictions - yes, even with 'GenAI') alter the system/environment in a way that appears to validate its biases that resulted from the original training data, creating a self-reinforcing cycle of bias amplification. 
 
