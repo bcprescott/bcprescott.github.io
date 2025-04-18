@@ -3,7 +3,7 @@ layout: post
 title: Understanding Complex AI Bias
 date: 2025-04-18 00:00:00 +0600
 description: Understanding Complex AI Bias # Add post description (optional)
-img: bttd.png # Add image post (optional)
+img: title.jpg # Add image post (optional)
 tags: [AI, LLM, Bias] # add tag
 ---
 # Introduction
