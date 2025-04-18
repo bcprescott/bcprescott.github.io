@@ -26,7 +26,7 @@ Understanding these hidden dynamics is important for any organization deploying 
 
 ## Bias in the Feedback Loop
 
-![feedback](/assets/images/bttd/feedback.png)
+![feedback](/assets/images/bttd/feedback.png){:max-width="400" max-height="400"}
 
 One particularly interesting challenge is known as the bias feedback loop. This occurs when an AI system's outputs (predictions) alter the system/environment in a way that appears to validate its biases resulting from training data, creating a self-reinforcing cycle of bias. 
 
@@ -83,7 +83,7 @@ The attention heads are key to making the Transformer algorithm work so well. Ho
 
 ## The Alignment Paradox: Fixes Introduce New Issues
 
-![paradox](/assets/images/bttd/paradox.png)
+![paradox](/assets/images/bttd/paradox.png){:max-width="400" max-height="400"}
 
 A common approach to improving performance of models, and to improve the safety and security of them, involves leveraging techniques like Reinforcement Learning from Human Feedback (RLHF). This process involves using human evaluators to rate outputs/responses of the model, in turn 'teaching' the model the preferred interaction styles through the human-provided feedback. 
 
@@ -119,7 +119,7 @@ For example, there was a time when the longer a coherent output generated, the h
 
 ## Implications for the Organization
 
-![implications](/assets/images/bttd/implications.png)
+![implications](/assets/images/bttd/implications.png){:max-width="400" max-height="400"}
 
 Some of these challenges can be directly influenced by organizations not training models from scratch, while others are on the research industry and labs providing models for consumption. Regardless, understanding these various forms of bias is valuable given their consequences extend beyond negative publicity for the organization, all increasing risk around:
 
@@ -129,7 +129,7 @@ Some of these challenges can be directly influenced by organizations not trainin
 
 ## Bias Management as Continuous Practice
 
-![biasmgmt](/assets/images/bttd/biasmgmt.jpg)
+![biasmgmt](/assets/images/bttd/biasmgmt.jpg){:max-width="400" max-height="400"}
 
 This is all fun and exciting information, but what practical steps can technical leaders and organizations take to minimize the risk associated with some of these types of bias? 
 
@@ -139,7 +139,7 @@ Attempting to find some simple "debiasing" solution overlooks the dynamic and sy
 
 Instead, focus on building a practice around **managing bias** to help evolve towards continuous oversight and the integration of ethical and responsible use considerations throughout the AI lifecycle. 
 
-### Key Takeaways (aka TL;DR):
+## Key Takeaways (aka TL;DR):
 
 * **Acknowledge the Complexity of Bias:** Look past the simplistic "it's just the data" perspective. Recognize the impact and role of feedback loops, the model and solution architecture, and various alignment methods at play.
 
