@@ -16,7 +16,7 @@ const About: React.FC = () => {
                 <div 
                   className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-40 w-40 border-[6px] border-background-dark shadow-2xl relative z-10 transform group-hover:scale-105 transition-transform duration-500" 
                   // style={{ backgroundImage: 'url("https://github.com/bcprescott/bcprescott.github.io/blob/main/components/prescott.jpg&auto=format&fit=crop&w=300&q=80")' }}
-                  style={{ backgroundImage: url("../pages/images/prescott.jpg") }}
+                  style={{ backgroundImage: 'url("../pages/images/prescott.jpg")'}}
                 ></div>
                 <div className="absolute bottom-2 right-2 z-20 flex items-center justify-center size-10 rounded-full bg-background-dark shadow-lg border border-white/10 text-xl group-hover:rotate-12 transition-transform duration-300">👋</div>
               </div>
