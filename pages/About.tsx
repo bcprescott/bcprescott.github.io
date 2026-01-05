@@ -76,7 +76,7 @@ const About: React.FC = () => {
                <section>
                   <h2 className="flex items-center gap-4 text-2xl font-bold text-white mb-8">
                      <span className="w-8 h-1 bg-primary rounded-full"></span>
-                     My Arsenal
+                     My Expertise
                   </h2>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                      <div className="col-span-2 md:col-span-2 row-span-2 group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-navy-800 to-blue-900 text-white shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -84,7 +84,7 @@ const About: React.FC = () => {
                         <div className="relative h-full flex flex-col justify-between z-10">
                            <div className="size-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4"><span className="material-symbols-outlined text-3xl">code_blocks</span></div>
                            <div>
-                              <h3 className="text-2xl font-bold mb-2">AI Lifecycle Expertise</h3>
+                              <h3 className="text-2xl font-bold mb-2">AI Consulting Expertise</h3>
                               <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">Mastering the end-to-end AI design process from use case understanding to deployment and integration.</p>
                               <div className="flex flex-wrap gap-2">
                                  {['Microsoft Azure', 'Python', 'SQL', 'Power BI'].map(tool => (
