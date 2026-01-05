@@ -31,16 +31,20 @@ const About: React.FC = () => {
                         "Crafting scalable, production-ready solutions that solve real business problems."
                      </p>
 
-                     <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6"></div>\
+                     <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6"></div>
 
                      <div className="flex flex-col w-full gap-3">
-                        {['LinkedIn', 'GitHub', 'Email'].map((item) => (
-                           <a key={item} href="#" className="flex items-center justify-between w-full p-3 rounded-xl bg-background hover:bg-primary hover:text-white group/link transition-all duration-300 border border-transparent hover:border-primary/20">
+                        {[
+                           { name: 'LinkedIn', href: 'https://www.linkedin.com/in/benjaminprescott/' },
+                           { name: 'GitHub', href: 'https://github.com/bcprescott' },
+                           { name: 'Email', href: 'mailto:bcprescott@outlook.com' }
+                        ].map((item) => (
+                           <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-3 rounded-xl bg-background hover:bg-primary hover:text-white group/link transition-all duration-300 border border-transparent hover:border-primary/20">
                               <div className="flex items-center gap-3">
                                  <span className="material-symbols-outlined text-[20px] group-hover/link:text-white text-slate-400 transition-colors">
-                                    {item === 'Email' ? 'mail' : item === 'GitHub' ? 'code' : 'link'}
+                                    {item.name === 'Email' ? 'mail' : item.name === 'GitHub' ? 'code' : 'link'}
                                  </span>
-                                 <span className="text-sm font-medium">{item}</span>
+                                 <span className="text-sm font-medium">{item.name}</span>
                               </div>
                               <span className="material-symbols-outlined text-[16px] opacity-0 group-hover/link:opacity-100 -translate-x-2 group-hover/link:translate-x-0 transition-all">arrow_forward</span>
                            </a>
