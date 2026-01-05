@@ -1,12 +1,12 @@
 ---
-layout: post
 title: Introduction to Generative Networks
-date: 2022-09-26 00:00:00 +0600
-description: Basic introduction to Generative Adversarial Networks and how they work. # Add post description (optional)
-img: arch1.png # Add image post (optional)
-tags: [GAN, Deep Learning] # add tag
+category: ['GAN', 'Deep Learning']
+heroImage: /public/images/arch1.png
+description: Basic introduction to Generative Adversarial Networks and how they work.
+author: Ben Prescott
+date: September 26, 2022
+readTime: 6 min read
 ---
-
 
 This idea came about while in the process of writing another article regarding classifying plant disease using synthetic data. 
 
@@ -31,7 +31,7 @@ You may have seen some recent articles written about ["AI" creating art](https:/
 
 While generating art is fun ([and also tends to irritate the art community a bit...](https://www.nytimes.com/2022/09/02/technology/ai-artificial-intelligence-artists.html)), GANs have also been used to create [deepfakes](https://www.youtube.com/watch?v=cQ54GDm1eL0). Unless you've been living under a rock lately, you probably know that deepfakes are generated faces that are commonly superimposed onto video. 
 
-![df](/assets/images/GAN/df.gif)
+![df](/public/images/GAN/df.gif)
 
 As you might imagine, these [deepfakes are also being used maliciously](https://www.trendmicro.com/en_us/research/21/d/deepfakes-are-getting-closer-to-reality.html), leading to research into deepfake detection methods.
 
@@ -46,7 +46,7 @@ Let's assume that you have a bunch of cats and dogs running rampant in your hous
 
 As an aspiring ML developer, you decide to automate the cat door using a camera to detect if a cat or dog is at the door. If it is a cat, the door will open letting the cat through. If it detects a dog, it won't open (thus saving you money on having to buy more cat food). 
 
-![millies](/assets/images/GAN/idea2.png)
+![millies](/public/images/GAN/idea2.png)
 
 You have the hardware in place and are ready to train your first neural network. You start by taking a picture of each dog/cat and use those images as your training data, with the predicted labels being binary (0 or 1, cat or dog). After your first training iteration you notice the accuracy of the model is only 8%. _oof_
 
@@ -61,7 +61,7 @@ Frustrated with your invention not working as intended, you remember stumbling a
 
 Intro: the "**a-ha!**" moment.
 
-![aha](/assets/images/GAN/idea.jpg)
+![aha](/public/images/GAN/idea.jpg)
 
 Sure, the generated images might not look 100% realistic, but they might be close enough to fool your classification network into thinking they are new images of your furry friends.
 
@@ -69,7 +69,7 @@ You leave your current cat/dog classification architecture as-is, and insert a s
 
 You have now expanded the image dataset for each pet from hundreds to thousands. Using this new mixed dataset of real and synthetic images, you re-train your classification network and notice an average accuracy of 88%. Significant improvement! Even your dog high fives you. _nice_
 
-![dogfive](/assets/images/GAN/doghighfive.png)
+![dogfive](/public/images/GAN/doghighfive.png)
 
 <span style="color:lightblue">**Note**</span>: Don't confuse GANs with other data augmentation methods, such as simply flipping/skewing/cropping etc.. GANs are generating brand new data using patterns it found from the training data, not simply modifying existing images. 
 
@@ -111,7 +111,7 @@ Such a beautiful relationship.
 
 (notice my art skills showing the noisy image looking more like a cat, to show progression...)
 
-![arch2](/assets/images/GAN/arch2.png)
+![arch2](/public/images/GAN/arch2.png)
 
 Looking Forward
 ----------------------------------
@@ -121,4 +121,3 @@ This is a longer post than I initially intended. Hopefully you didn't find this 
 This was also meant to be a precursor to my next post that focuses on plant disease classification. In that post I make use of a custom trained GAN to generate synthetic images. There you will find much more detail of how GANs work, including the code (TensorFlow) that makes it all work, if that's your kind of thing. 
 
 If you have any questions, comments, or find any errors or bland jokes/sarcasm in this post, please reach out!
-

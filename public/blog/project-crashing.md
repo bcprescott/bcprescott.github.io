@@ -1,10 +1,11 @@
 ---
-layout: post
-title:  Project Crashing - A Prescriptive Analytics Approach
-date: 2021-03-30 00:00:00 +0600
-# description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
-img: pert.png
-tags: [Optimization, Gurobi, MLP] 
+title: Project Crashing - A Prescriptive Analytics Approach
+category: ['Operations Research',Optimization', 'Gurobi', 'MLP']
+heroImage: /public/images/pert.png
+description: Using Mixed-Integer Programming and Gurobi to optimize project schedules and reduce costs.
+author: Ben Prescott
+date: March 30, 2021
+readTime: 12 min read
 ---
 
 Have you been involved in a project that requires a shortened timeline? It isn't uncommon for project deadlines to be imposed after a project kickoff occurs, or to attempt to accelerate a project for any number of reasons. 
@@ -122,7 +123,7 @@ print('Obj: %g' % m.objVal)
 
 The output of our model is shown below. We can see at the end that we'll achieve a maximum revenue of $9,330 by creating 267 pairs of jeans and 66 shirts, while ensuring the solution meets all of the given constrains.
 
-![LPBasic](/assets/images/lpbasic.png)
+![LPBasic](/public/images/lpbasic.png)
 
 Alright... back to project crashing!
 
@@ -146,13 +147,13 @@ The below screenshot shows an example project's task crash plan. We can see the 
 
 At the bottom you'll also see I've color-coded the two project resource, a senior and junior, as well as a made up internal cost per hour. The color-coded tasks represent which resource is responsible for it.
 
-![rawsheet](/assets/images/raw.png)
+![rawsheet](/public/images/raw.png)
 
 Part of the crashing effort may involve creating a _Program Evaluation Review Technique_ (PERT) chart. PERT charts provide a visualization of the project's timeline, with different tasks associated with the project and their dependencies. PERT charts may also provide additional information, such as the duration of each task and the effort from the different project resources. 
 
 We can now create a PERT chart from this information. There is plenty of information online on how to create a PERT chart, but it can follow information from the spreadsheet and just models the project visually.
 
-![pert](/assets/images/pert.png)
+![pert](/public/images/pert.png)
 
 From here we can create our model formulation. This gets a bit complex, so bear with me! 
  
@@ -294,7 +295,7 @@ Interpreting The Results
 
 After running this model we'll be presented with the following output:
 
-![CrashOutput](/assets/images/crashout.png)
+![CrashOutput](/public/images/crashout.png)
 
 This provides us with a few pieces of information. The Y variables we defined represent the number of days to crash a task. This is ultimately the prescriptive part of this model. Essentially, it is telling us to crash task 1 by 2 days, crash task 3 by 1 day, task 7 by 1 day, etc. 
 

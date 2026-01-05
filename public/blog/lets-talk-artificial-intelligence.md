@@ -1,10 +1,11 @@
 ---
-layout: post
-title:  Let's Talk Artificial Intelligence
-date: 2021-05-04 00:00:00 +0600
-# description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
-img: alexa.png
-tags: [Opinion, Basics, AI] 
+title: Let's Talk Artificial Intelligence
+category: ['Opinion', 'Basics', 'AI']
+heroImage: /public/images/alexa.png
+description: A discussion on the definition of AI, Machine Learning, and the history of intelligent systems.
+author: Ben Prescott
+date: May 4, 2021
+readTime: 6 min read
 ---
 
 I thought writing a quick post on the topic of 'Artificial Intelligence', or AI, would be fun. As you read through this article, keep a few things in mind: 
@@ -16,7 +17,7 @@ I thought writing a quick post on the topic of 'Artificial Intelligence', or AI,
 
 Ugh, Another 'What Is AI' Post...
 -----------------------
-![robot](/assets/images/robot.png)
+![robot](/public/images/robot.png)
 
 Exactly! ;) 
 
@@ -48,7 +49,7 @@ Something worth noodling on: is machine learning 'artificial intelligence'? Thes
 
 What Is Intelligence Anyway?
 -----------------------------------
-![dataidea](/assets/images/datahasabetteridea.png)
+![dataidea](/public/images/datahasabetteridea.png)
 
 According to a [simple definition](https://www.merriam-webster.com/dictionary/intelligence) by Merriam-Webster, Intelligence is "the ability to learn or understand or to deal with new or trying situations", or "the ability to apply knowledge to manipulate one's environment or to think abstractly as measured by objective criteria (such as tests)". 
 
@@ -76,7 +77,7 @@ If you have watched the Hulu documentary about WeWork you may have noticed how S
 
 Conclusion
 -----------------------------------
-![ai](/assets/images/ai.png)
+![ai](/public/images/ai.png)
 
 So, what does it all mean? Is everything you see being touted as AI is actually AI? Probably not. The reality of the situation is that the term catches a lot of interest/hype and will be abused to aid marketing efforts.
 
@@ -85,4 +86,3 @@ My recommendation is to tread lightly when you see something being called AI and
 With machine learning advancing rapidly, especially in the space of unstructured data (text/documents), we will in turn see the continued growth of artificial intelligence. ML is likely to be a key driver of new capabilities for a while. If you have an interest in this space, make sure to study up on it!
 
 As mentioned at the beginning, these definitions may all change as technology advances and we uncover more about our own mind, but hopefully this helps provide more insight and spark some interesting thoughts!
-

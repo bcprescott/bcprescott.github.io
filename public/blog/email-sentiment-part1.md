@@ -1,10 +1,11 @@
 ---
-layout: post
-title:  Email Sentiment Analysis Using Python & Microsoft Azure - Part 1
-date: 2020-05-08 00:00:00 +0600
+title: Email Sentiment Analysis Using Python & Microsoft Azure - Part 1
+category: ['Sentiment', 'Python', 'Azure', 'NLP']
+heroImage: /public/images/happy.jpg
 description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
-img: happy.jpg
-tags: [Sentiment, Python, Azure, NLP] 
+author: Ben Prescott
+date: May 8, 2020
+readTime: 8 min read
 ---
 
 What does our e-mail Sent Items folder say about our demeanor? 
@@ -333,7 +334,7 @@ Step 5--- Performing Sentiment Analysis
 
 Photo by [Tim Mossholder](https://unsplash.com/@timmossholder?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
-Now that we have a list of "meh, I kind of cleaned it" data, we can start to send the data to our Azure API, retrieve the results, and visualize our data.
+Now that we have a list of "meh, I kind of cleaned it" data, we can start to send the data to our API, retrieve the results, and visualize our data.
 
 We're going to provide our newly created list as our list_name argument in our core sentiment analysis function. The function is written in a way to provide not just a frequency table of results, but also a list containing the rows themselves that may contain errors when analyzing.
 

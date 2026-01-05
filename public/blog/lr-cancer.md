@@ -1,10 +1,11 @@
 ---
-layout: post
-title:  Univariate & Multivariate Linear Regression - Cancer Mortality Rates
-date: 2020-09-14 00:00:00 +0600
-description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
-img: regression.png
-tags: [Regression, Cancer] 
+title: Univariate & Multivariate Linear Regression - Cancer Mortality Rates
+category: ['Regression', 'Cancer']
+heroImage: /public/images/regression.png
+description: Exploring univariate and multivariate Linear Regression using a cancer mortality dataset.
+author: Ben Prescott
+date: September 14, 2020
+readTime: 6 min read
 ---
 
 *Full disclosure:* There is a lot of code behind this article, much of which won't be included here. For full details please review the [notebook.](https://github.com/bcprescott/datascience/blob/master/assorted/CancerBlog.ipynb) If you have any feedback, find any errors in process or code, or just want to chat please send me a message! I'm always looking for areas to improve.

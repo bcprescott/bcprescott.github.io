@@ -5,13 +5,134 @@ const blogPosts = [
    {
       id: 'complex-ai-bias',
       title: 'Understanding Complex AI Bias',
-      category: ['Generative AI'],
+      category: ['Generative AI', 'Agentic AI'],
       image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       excerpt: 'Exploring how various types of bias artificial intelligence influences the quality and trustworthiness of AI-generated content.',
       author: 'Ben Prescott',
       date: 'Apr 18, 2025',
       readTime: '10 min read',
       featured: true
+   },
+   {
+      id: 'intro-gan',
+      title: 'Introduction to Generative Networks',
+      category: ['GAN', 'Deep Learning'],
+      image: '/public/images/arch1.png',
+      excerpt: 'Basic introduction to Generative Adversarial Networks and how they work, from art generation to data augmentation.',
+      author: 'Ben Prescott',
+      date: 'Sep 26, 2022',
+      readTime: '6 min read',
+      featured: false
+   },
+   {
+      id: 'getting-started-faceapi',
+      title: 'Getting Started With Azure Face API',
+      category: ['Azure', 'Face Recognition'],
+      image: '/public/images/benface.png',
+      excerpt: 'A guide to using Azure Face API for face detection and recognition, distinguishing between the two and exploring ethical considerations.',
+      author: 'Ben Prescott',
+      date: 'Jun 7, 2022',
+      readTime: '8 min read',
+      featured: false
+   },
+   {
+      id: 'visualizing-cnn',
+      title: 'Peering Inside A Convolutional Neural Network',
+      category: ['CNN', 'Deep Learning', 'XAI'],
+      image: '/public/images/cnn.jpeg',
+      excerpt: 'Visualizing feature maps in a Convolutional Neural Network to understand model predictions and explainability.',
+      author: 'Ben Prescott',
+      date: 'Aug 4, 2021',
+      readTime: '8 min read',
+      featured: false
+   },
+   {
+      id: 'google-vertex-ai-demo',
+      title: 'House Sale Prediction Using GCP Vertex AI',
+      category: ['Regression', 'GCP'],
+      image: '/public/images/vertex.png',
+      excerpt: 'Training and deploying a linear regression model for house price prediction using Google Cloud Vertex AI.',
+      author: 'Ben Prescott',
+      date: 'May 20, 2021',
+      readTime: '8 min read',
+      featured: false
+   },
+   {
+      id: 'lets-talk-artificial-intelligence',
+      title: 'Let\'s Talk Artificial Intelligence',
+      category: ['Opinion', 'Basics', 'AI'],
+      image: '/public/images/alexa.png',
+      excerpt: 'A discussion on the definition of AI, Machine Learning, and the history of intelligent systems.',
+      author: 'Ben Prescott',
+      date: 'May 4, 2021',
+      readTime: '6 min read',
+      featured: false
+   },
+   {
+      id: 'project-crashing',
+      title: 'Project Crashing - A Prescriptive Analytics Approach',
+      category: ['Operations Research', 'Optimization', 'Gurobi', 'MLP'],
+      image: '/public/images/pert.png',
+      excerpt: 'Using Mixed-Integer Programming and Gurobi to optimize project schedules and reduce costs.',
+      author: 'Ben Prescott',
+      date: 'Mar 30, 2021',
+      readTime: '12 min read',
+      featured: false
+   },
+   {
+      id: 'graph-databases-part2',
+      title: 'Basics of Graph Databases - Part 2',
+      category: ['Neo4j', 'Graph', 'Database', 'Architecture'],
+      image: '/public/images/graph2.png',
+      excerpt: 'Deploying, configuring, and querying a Neo4j graph database on Microsoft Azure.',
+      author: 'Ben Prescott',
+      date: 'Dec 3, 2020',
+      readTime: '10 min read',
+      featured: false
+   },
+   {
+      id: 'graph-databases-part1',
+      title: 'Basics of Graph Databases - Part 1',
+      category: ['Neo4j', 'Graph', 'Database', 'Architecture'],
+      image: '/public/images/graph.png',
+      excerpt: 'An introduction to graph databases, focusing on Neo4j and the Cypher query language.',
+      author: 'Ben Prescott',
+      date: 'Nov 30, 2020',
+      readTime: '7 min read',
+      featured: false
+   },
+   {
+      id: 'lr-cancer',
+      title: 'Univariate & Multivariate Linear Regression',
+      category: ['Regression', 'Cancer'],
+      image: '/public/images/regression.png',
+      excerpt: 'Exploring univariate and multivariate Linear Regression using a cancer mortality dataset.',
+      author: 'Ben Prescott',
+      date: 'Sep 14, 2020',
+      readTime: '6 min read',
+      featured: false
+   },
+   {
+      id: 'email-sentiment-part2',
+      title: 'Email Sentiment Analysis - Part 2',
+      category: ['Sentiment', 'Python', 'Azure', 'NLP'],
+      image: '/public/images/thinkpositive.jpg',
+      excerpt: 'Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.',
+      author: 'Ben Prescott',
+      date: 'Jun 11, 2020',
+      readTime: '6 min read',
+      featured: false
+   },
+   {
+      id: 'email-sentiment-part1',
+      title: 'Email Sentiment Analysis - Part 1',
+      category: ['Sentiment', 'Python', 'Azure', 'NLP'],
+      image: '/public/images/happy.jpg',
+      excerpt: 'Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.',
+      author: 'Ben Prescott',
+      date: 'May 8, 2020',
+      readTime: '8 min read',
+      featured: false
    }
 ];
 
@@ -54,11 +175,11 @@ const Blog: React.FC = () => {
                <span className="text-primary font-bold uppercase tracking-widest text-xs">Blog / Insights</span>
             </div>
             <h1 className="text-5xl sm:text-7xl font-serif font-medium leading-[1.1] text-white mb-6">
-               Exploring ideas in <br />
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 italic pr-2">Design & Technology</span>
+               Exploring my thoughts in <br />
+               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 italic pr-2">Artificial Intelligence</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-xl leading-relaxed">
-               A collection of thoughts on UI/UX, coding patterns, and the future of digital products. Curated for builders and thinkers.
+               A collection of thoughts on artificial intelligence, operations research, and the future of an AI-powered society. Curated for builders and thinkers.
             </p>
          </div>
 
@@ -127,7 +248,7 @@ const Blog: React.FC = () => {
                   <div className="flex flex-col gap-5">
                      <h3 className="font-serif text-xl font-bold text-white border-b border-slate-700 pb-3">Topics</h3>
                      <div className="flex flex-wrap gap-2">
-                        {['All', 'Agentic AI', 'Generative AI', 'Machine Learning', 'Operations Research', 'R&D'].map(tag => (
+                        {['All', 'Agentic AI', 'Generative AI', 'Machine Learning', 'Operations Research', 'Deep Learning', 'NLP', 'Graph Databases', 'Azure', 'GCP'].map(tag => (
                            <button
                               key={tag}
                               onClick={() => toggleCategory(tag)}
@@ -141,7 +262,7 @@ const Blog: React.FC = () => {
                         ))}
                      </div>
                   </div>
-                  <div className="rounded-2xl bg-slate-800 p-6 text-slate-200">
+                  {/* <div className="rounded-2xl bg-slate-800 p-6 text-slate-200">
                      <span className="material-symbols-outlined text-3xl mb-3">mail</span>
                      <h4 className="font-serif text-lg font-bold mb-2">Weekly Insights</h4>
                      <p className="text-sm text-slate-400 mb-4">Get the latest articles delivered to your inbox.</p>
@@ -151,7 +272,7 @@ const Blog: React.FC = () => {
                            <span className="material-symbols-outlined text-sm">arrow_forward</span>
                         </button>
                      </div>
-                  </div>
+                  </div> */}
                </div>
             </aside>
          </div>

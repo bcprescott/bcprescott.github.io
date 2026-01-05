@@ -1,10 +1,11 @@
 ---
-layout: post
-title:  Basics of Graph Databases - Part 1
-date: 2020-11-30 00:00:00 +0600
-# description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
-img: graph.png
-tags: [Neo4j, Graph, Database, Architecture] 
+title: Basics of Graph Databases - Part 1
+category: ['Neo4j', 'Graph', 'Database', 'Architecture']
+heroImage: /public/images/graph.png
+description: An introduction to graph databases, focusing on Neo4j and the Cypher query language.
+author: Ben Prescott
+date: November 30, 2020
+readTime: 7 min read
 ---
 
 *This is Part 1 of 2. Part 2 will be focused on deploying/configuring and building/querying a graph database in Neo4j on Microsoft Azure.*

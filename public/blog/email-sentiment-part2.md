@@ -1,12 +1,13 @@
 ---
-layout: post
-title:  Email Sentiment Analysis Using Python & Microsoft Azure - Part 2
-date: 2020-06-11 00:00:00 +0600
+title: Email Sentiment Analysis Using Python & Microsoft Azure - Part 2
+category: ['Sentiment', 'Python', 'Azure', 'NLP']
+heroImage: /public/images/thinkpositive.jpg
 description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
-img: thinkpositive.jpg
-tags: [Sentiment, Python, Azure, NLP] 
-
+author: Ben Prescott
+date: June 11, 2020
+readTime: 6 min read
 ---
+
 Just to recap real quick, Part 1 of this series was focused on grabbing a CSV export of your email Sent Items and using Microsoft Azure's Text Analytics API to return a sentiment result for each line.
 
 The results that we grabbed from the API we used to increment a frequency table to essentially show us the overall count of Positive, Negative, Neutral or Unknown results.
