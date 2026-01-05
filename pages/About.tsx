@@ -63,7 +63,7 @@ const About: React.FC = () => {
                   </h2>
                   <div className="p-8 rounded-2xl bg-background-light border border-white/5 shadow-sm relative overflow-hidden group">
                      <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <span className="material-symbols-outlined text-8xl text-white rotate-12">code</span>
+                        <span className="material-symbols-outlined text-9xl text-white rotate-12">code</span>
                      </div>
                      <div className="relative space-y-4 text-lg leading-relaxed text-slate-400">
                         <p><span className="text-4xl float-left mr-2 font-serif text-primary leading-none">A</span>s a seasoned AI leader with over <strong className="text-white font-semibold">10+ years of experience in applied AI</strong>, I specialize in bridging the gap between technical complexity and business ROI. My career has evolved from managing mission-critical signal systems in the US Army to architecting advanced Generative AI and agentic AI solutions like agentic RAG systems and Text-to-SQL frameworks for global enterprises.</p>
@@ -80,11 +80,11 @@ const About: React.FC = () => {
                   </h2>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                      <div className="col-span-2 md:col-span-2 row-span-2 group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-navy-800 to-blue-900 text-white shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div className="absolute right-0 top-0 p-6 opacity-20"><span className="material-symbols-outlined text-9xl rotate-12">code</span></div>
+                        <div className="absolute right-0 top-0 p-6 opacity-20"><span className="material-symbols-outlined text-9xl rotate-12">all_inclusive</span></div>
                         <div className="relative h-full flex flex-col justify-between z-10">
-                           <div className="size-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4"><span className="material-symbols-outlined text-3xl">code_blocks</span></div>
+                           <div className="size-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4"><span className="material-symbols-outlined text-3xl">all_inclusive</span></div>
                            <div>
-                              <h3 className="text-2xl font-bold mb-2">AI Consulting Expertise</h3>
+                              <h3 className="text-2xl font-bold mb-2">End-to-End AI Lifecycle</h3>
                               <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">Mastering the end-to-end AI design process from use case understanding to deployment and integration.</p>
                               <div className="flex flex-wrap gap-2">
                                  {['Microsoft Azure', 'Python', 'SQL', 'Power BI'].map(tool => (
@@ -94,20 +94,28 @@ const About: React.FC = () => {
                            </div>
                         </div>
                      </div>
-                     <div className="col-span-2 md:col-span-2 p-6 rounded-2xl bg-background-light border border-white/5 hover:-translate-y-1 transition-transform">
+                     {/* <div className="col-span-2 md:col-span-2 p-6 rounded-2xl bg-background-light border border-white/5 hover:-translate-y-1 transition-transform">
                         <div className="flex items-start justify-between mb-4">
                            <div className="size-10 rounded-xl bg-orange-900/30 text-orange-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">model_training</span></div>
                         </div>
                         <h3 className="font-bold text-lg text-white mb-1">Business Innovation</h3>
                         <div className="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden mt-3"><div className="bg-orange-500 h-1.5 rounded-full w-4/5"></div></div>
+                     </div> */}
+                     <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
+                        <div className="size-10 rounded-full bg-purple-900/30 text-purple-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">tactic</span></div>
+                        <h3 className="font-bold text-sm text-white">Strategy & Use Case Definition</h3>
                      </div>
                      <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
-                        <div className="size-10 rounded-full bg-purple-900/30 text-purple-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">crowdsource</span></div>
-                        <h3 className="font-bold text-sm text-white">Use Case Understanding</h3>
+                        <div className="size-10 rounded-full bg-sky-900/30 text-sky-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">sync_arrow_up</span></div>
+                        <h3 className="font-bold text-sm text-white">Rapid Proofs of Value</h3>
                      </div>
                      <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
                         <div className="size-10 rounded-full bg-emerald-900/30 text-emerald-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">automation</span></div>
-                        <h3 className="font-bold text-sm text-white">AI Solutions Design</h3>
+                        <h3 className="font-bold text-sm text-white">Production Solution Design</h3>
+                     </div>
+                     <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
+                        <div className="size-10 rounded-full bg-amber-900/30 text-amber-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">integration_instructions</span></div>
+                        <h3 className="font-bold text-sm text-white">Integration & User Enablement</h3>
                      </div>
                   </div>
                </section>
