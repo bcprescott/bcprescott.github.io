@@ -107,7 +107,7 @@ const About: React.FC = () => {
                      </div>
                      <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
                         <div className="size-10 rounded-full bg-sky-900/30 text-sky-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">sync_arrow_up</span></div>
-                        <h3 className="font-bold text-sm text-white">Rapid Proofs of Value</h3>
+                        <h3 className="font-bold text-sm text-white">Rapid AI Proofs of Value</h3>
                      </div>
                      <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
                         <div className="size-10 rounded-full bg-emerald-900/30 text-emerald-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">automation</span></div>
