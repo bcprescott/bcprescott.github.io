@@ -84,8 +84,8 @@ const About: React.FC = () => {
                         <div className="relative h-full flex flex-col justify-between z-10">
                            <div className="size-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4"><span className="material-symbols-outlined text-3xl">code_blocks</span></div>
                            <div>
-                              <h3 className="text-2xl font-bold mb-2">AI Design</h3>
-                              <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">Mastering the end-to-end design process from concept to deployment and integration.</p>
+                              <h3 className="text-2xl font-bold mb-2">AI Lifecycle Expertise</h3>
+                              <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">Mastering the end-to-end AI design process from use case understanding to deployment and integration.</p>
                               <div className="flex flex-wrap gap-2">
                                  {['Microsoft Azure', 'Python', 'SQL', 'Power BI'].map(tool => (
                                     <span key={tool} className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium border border-white/10">{tool}</span>
@@ -96,18 +96,18 @@ const About: React.FC = () => {
                      </div>
                      <div className="col-span-2 md:col-span-2 p-6 rounded-2xl bg-background-light border border-white/5 hover:-translate-y-1 transition-transform">
                         <div className="flex items-start justify-between mb-4">
-                           <div className="size-10 rounded-xl bg-orange-900/30 text-orange-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">groups</span></div>
+                           <div className="size-10 rounded-xl bg-orange-900/30 text-orange-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">model_training</span></div>
                         </div>
-                        <h3 className="font-bold text-lg text-white mb-1">User Research</h3>
+                        <h3 className="font-bold text-lg text-white mb-1">Business Innovation</h3>
                         <div className="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden mt-3"><div className="bg-orange-500 h-1.5 rounded-full w-4/5"></div></div>
                      </div>
                      <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
-                        <div className="size-10 rounded-full bg-purple-900/30 text-purple-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">code</span></div>
-                        <h3 className="font-bold text-sm text-white">Frontend</h3>
+                        <div className="size-10 rounded-full bg-purple-900/30 text-purple-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">crowdsource</span></div>
+                        <h3 className="font-bold text-sm text-white">Use Case Understanding</h3>
                      </div>
                      <div className="col-span-1 p-5 rounded-2xl bg-background-light border border-white/5 flex flex-col justify-center items-center text-center gap-3 hover:-translate-y-1 transition-transform">
-                        <div className="size-10 rounded-full bg-emerald-900/30 text-emerald-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">grid_view</span></div>
-                        <h3 className="font-bold text-sm text-white">Systems</h3>
+                        <div className="size-10 rounded-full bg-emerald-900/30 text-emerald-400 flex items-center justify-center"><span className="material-symbols-outlined text-2xl">automation</span></div>
+                        <h3 className="font-bold text-sm text-white">AI Solutions Design</h3>
                      </div>
                   </div>
                </section>
@@ -120,9 +120,55 @@ const About: React.FC = () => {
                   <div className="relative space-y-12 pl-4">
                      <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-gradient-to-b from-primary via-white/10 to-transparent"></div>
                      {[
-                        { year: '2020 - Present', role: 'Lead Product Designer', company: 'Innovatech Solutions Inc.', current: true },
-                        { year: '2017 - 2020', role: 'UX/UI Designer', company: 'Creative Minds Agency', current: false },
-                        { year: '2013 - 2017', role: 'BSc in Graphic Design', company: 'University of Design & Arts', current: false, icon: 'school' }
+                        {
+                           year: '2024 - Present',
+                           role: 'Head of AI Solutions',
+                           company: 'Trace3',
+                           current: true,
+                           description: 'Leading the organizational strategy and GTM offerings for AI solutions, focusing on agentic architectures and generative AI applications.'
+                        },
+                        {
+                           year: '2023 - 2024',
+                           role: 'Principal Data Scientist',
+                           company: 'AHEAD',
+                           current: false,
+                           description: 'Architected and delivered large-scale AI platforms, custom machine learning models, and generative AI applications for Fortune 500 clients.'
+                        },
+                        {
+                           year: '2021 - 2023',
+                           role: 'Practice Manager, Analytics',
+                           company: 'ConvergeOne',
+                           current: false,
+                           description: 'Managed a national-level analytics practice, delivering envisioning workshops and pre-sales initiatives that translated complex analytics and AI opportunities into high-value client projects.'
+                        },
+                        {
+                           year: '2018 - 2021',
+                           role: 'Azure Delivery Manager',
+                           company: 'AHEAD',
+                           current: false,
+                           description: 'Provided direct leadership, career pathing, and upskilling for a cross-functional team of 16 infrastructure, data, and AI consultants.'
+                        },
+                        {
+                           year: '2017 - 2018',
+                           role: 'Azure AI Practice Lead',
+                           company: 'Presidio',
+                           current: false,
+                           description: 'Drove early-market AI adoption by designing and delivering Azure Machine Learning proofs-of-concept and technical solution workshops for enterprise clients'
+                        },
+                        {
+                           year: '2016 - 2017',
+                           role: 'Cloud Architect',
+                           company: 'Rightpoint',
+                           current: false,
+                           description: 'Architected mission-critical IoT infrastructure on Microsoft Azure to support a global smart-home ecosystem with over 3 million active connections.'
+                        },
+                        {
+                           year: '2008 - 2016',
+                           role: 'Various Roles',
+                           company: 'US Army, NPI, Amelia',
+                           current: false,
+                           description: 'See resume for details...'
+                        },
                      ].map((job, idx) => (
                         <div key={idx} className="relative pl-12 group">
                            <div className={`absolute left-2 top-0 w-4 h-4 rounded-full border-4 -translate-x-1/2 transition-all duration-300 z-10 ${job.current ? 'bg-primary border-primary scale-110' : 'bg-background border-gray-600 group-hover:border-primary'}`}></div>
@@ -131,12 +177,12 @@ const About: React.FC = () => {
                               <div className="relative z-10">
                                  <span className="text-sm font-semibold text-slate-400 block mb-1">{job.year}</span>
                                  <h3 className="text-xl font-bold text-white mb-1">{job.role}</h3>
-                                 <p className="text-base font-medium text-primary">{job.company}</p>
+                                 <p className="text-base font-medium text-primary mb-4">{job.company}</p>
+                                 <p className="text-slate-400 text-sm leading-relaxed">{job.description}</p>
                               </div>
                            </div>
                         </div>
-                     ))}
-                  </div>
+                     ))}</div>
                </section>
             </div>
          </div>
