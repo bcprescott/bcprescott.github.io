@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import ProjectDetail from './pages/ProjectDetail';
+import BlogDetail from './pages/BlogDetail';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -31,6 +32,7 @@ const App: React.FC = () => {
             <Route path="/projects" element={<Portfolio />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
