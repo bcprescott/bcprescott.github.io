@@ -15,25 +15,29 @@ const Home: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
         {/* Left Content */}
         <div className="lg:col-span-7 flex flex-col gap-8 lg:pr-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 w-fit backdrop-blur-sm">
+          
+          
+          {/*Open for New Opportunities Bubble*/}
+
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 w-fit backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
             <span className="text-xs font-semibold text-primary-glow tracking-wide uppercase">Open for new opportunities</span>
-          </div>
+          </div> */}
           
           <div className="relative">
             <h1 className="font-display font-bold text-5xl md:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700 mb-2">Architecting</span>
-              <span className="block text-white mb-2">Digital</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-glow to-accent-cyan">Reality.</span>
+              {/* <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700 mb-2">Developing AI Solutions.</span> */}
+              {/* <span className="block text-white mb-2">AI's</span> */}
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-glow to-accent-cyan">Leading the AI Revolution.</span>
             </h1>
             <div className="hidden lg:block absolute -left-12 top-4 w-[2px] h-full bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0"></div>
           </div>
           
           <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
-            I'm John, a software engineer obsessed with performance and design. I craft high-end web experiences that merge artistic vision with technical precision.
+            I'm Ben and I'm obsessed with realistic and measurable applications of artificial intelligence (AI) solutions for businesses. With a background in applied data science and AI, I design production-ready AI solutions that deliver measurable outcomes and empower organizations to make data-driven decisions.
           </p>
           
           <div className="flex flex-wrap items-center gap-4 mt-2">
@@ -51,16 +55,16 @@ const Home: React.FC = () => {
           
           <div className="pt-8 border-t border-white/5 flex items-center gap-8 md:gap-12 mt-4">
             <div>
-              <div className="text-2xl font-display font-bold text-white">5+</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Years Exp.</div>
+              <div className="text-2xl font-display font-bold text-white">10+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Years of AI Experience</div>
             </div>
             <div>
-              <div className="text-2xl font-display font-bold text-white">40+</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Projects</div>
+              <div className="text-2xl font-display font-bold text-white">30+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Client-facing AI Projects</div>
             </div>
             <div>
-              <div className="text-2xl font-display font-bold text-white">100%</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Delivery</div>
+              <div className="text-2xl font-display font-bold text-white">25+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Technical Experts Led</div>
             </div>
           </div>
         </div>
@@ -94,7 +98,7 @@ const Home: React.FC = () => {
                 <div className="pl-4 text-green-400">innovation: <span className="text-orange-400">true</span>,</div>
                 <div className="pl-4 text-green-400">limits: <span className="text-orange-400">null</span>,</div>
                 <div className="pl-4 text-green-400">stack: <span className="text-white">[</span></div>
-                <div className="pl-8 text-gray-500">'Web3', 'AI', 'UI'</div>
+                <div className="pl-8 text-gray-500">'Azure', 'AWS', 'Python', 'TensorFlow', 'PyTorch', 'Terraform', 'LlamaIndex', 'MLflow'</div>
                 <div className="pl-4 text-white">]</div>
                 <div className="text-white">{`};`}</div>
               </div>

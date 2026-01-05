@@ -40,10 +40,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:border-primary/50 transition-colors">
-              <span className="font-display font-bold text-xl text-white group-hover:text-primary transition-colors">J</span>
+              <span className="font-display font-bold text-xl text-white group-hover:text-primary transition-colors">B</span>
               <div className="absolute inset-0 bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
-            <span className="font-display font-bold text-lg tracking-wide hidden sm:block">John Doe</span>
+            <span className="font-display font-bold text-lg tracking-wide hidden sm:block">Ben Prescott</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

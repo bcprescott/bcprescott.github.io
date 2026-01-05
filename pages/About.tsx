@@ -15,19 +15,20 @@ const About: React.FC = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent-cyan opacity-20 blur-xl animate-pulse"></div>
                 <div 
                   className="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-40 w-40 border-[6px] border-background-dark shadow-2xl relative z-10 transform group-hover:scale-105 transition-transform duration-500" 
-                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80")' }}
+                  // style={{ backgroundImage: 'url("https://github.com/bcprescott/bcprescott.github.io/blob/main/components/prescott.jpg&auto=format&fit=crop&w=300&q=80")' }}
+                  style={{ backgroundImage: 'url("pages/images/prescott.jpg")' }}
                 ></div>
                 <div className="absolute bottom-2 right-2 z-20 flex items-center justify-center size-10 rounded-full bg-background-dark shadow-lg border border-white/10 text-xl group-hover:rotate-12 transition-transform duration-300">👋</div>
               </div>
               
-              <h1 className="text-3xl font-extrabold tracking-tight text-white mb-1">John Doe</h1>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+              <h1 className="text-3xl font-extrabold tracking-tight text-white mb-1">Ben Prescott</h1>
+              {/* <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
                 <span className="size-2 rounded-full bg-green-500 animate-pulse"></span>
                 <span className="text-xs font-semibold uppercase tracking-wider text-blue-300">Open to work</span>
-              </div>
+              </div> */}
               
               <p className="text-lg font-serif italic text-slate-400 mb-6 leading-relaxed">
-                "Senior Product Designer crafting intuitive experiences bridging user needs and business goals."
+                "Crafting scalable, production-ready solutions that solve real business problems."
               </p>
               
               <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6"></div>
@@ -58,11 +59,12 @@ const About: React.FC = () => {
              </h2>
              <div className="p-8 rounded-2xl bg-background-light border border-white/5 shadow-sm relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                   <span className="material-symbols-outlined text-8xl text-white rotate-12">fingerprint</span>
+                   <span className="material-symbols-outlined text-8xl text-white rotate-12">code</span>
                 </div>
                 <div className="relative space-y-4 text-lg leading-relaxed text-slate-400">
-                  <p><span className="text-4xl float-left mr-2 font-serif text-primary leading-none">A</span>s a seasoned product designer with over <strong className="text-white font-semibold">7 years of experience</strong>, I specialize in creating user-centric digital products that are not only beautiful but also highly functional. My journey in design began with a fascination for how technology can solve real-world problems.</p>
-                  <p>Outside of the design world, you'll often find me exploring hiking trails, experimenting with new recipes in the kitchen, or capturing moments through my camera lens.</p>
+                  <p><span className="text-4xl float-left mr-2 font-serif text-primary leading-none">A</span>s a seasoned AI leader with over <strong className="text-white font-semibold">10+ years of experience in applied AI</strong>, I specialize in bridging the gap between technical complexity and business ROI. My career has evolved from managing mission-critical signal systems in the US Army to architecting advanced Generative AI and agentic AI solutions like agentic RAG systems and Text-to-SQL frameworks for global enterprises.</p>
+                  <p>I am a data scientist and engineer by trade, holding an <strong className="text-white font-semibold">M.S. in Data Science from Northwestern University</strong>. I am obsessed with realistic, measurable applications of AI, not just proofs of concept.</p>
+                  <p>Outside of the AI world, you’ll likely find me in my woodshop building guitars or cutting boards, or exploring the world with my family.</p>
                 </div>
              </div>
           </section>
@@ -74,14 +76,14 @@ const About: React.FC = () => {
              </h2>
              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="col-span-2 md:col-span-2 row-span-2 group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-navy-800 to-blue-900 text-white shadow-lg transition-all duration-300 hover:-translate-y-1">
-                   <div className="absolute right-0 top-0 p-6 opacity-20"><span className="material-symbols-outlined text-9xl rotate-12">design_services</span></div>
+                   <div className="absolute right-0 top-0 p-6 opacity-20"><span className="material-symbols-outlined text-9xl rotate-12">code</span></div>
                    <div className="relative h-full flex flex-col justify-between z-10">
-                      <div className="size-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4"><span className="material-symbols-outlined text-3xl">brush</span></div>
+                      <div className="size-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4"><span className="material-symbols-outlined text-3xl">code_blocks</span></div>
                       <div>
-                         <h3 className="text-2xl font-bold mb-2">Product Design</h3>
-                         <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">Mastering the end-to-end design process from concept to delivery.</p>
+                         <h3 className="text-2xl font-bold mb-2">AI Design</h3>
+                         <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">Mastering the end-to-end design process from concept to deployment and integration.</p>
                          <div className="flex flex-wrap gap-2">
-                            {['Figma', 'Adobe XD', 'Sketch'].map(tool => (
+                            {['Microsoft Azure', 'Python', 'SQL', 'Power BI'].map(tool => (
                                <span key={tool} className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium border border-white/10">{tool}</span>
                             ))}
                          </div>
