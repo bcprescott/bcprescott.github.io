@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Azure Face API
 category: ['Azure', 'Face Recognition']
-heroImage: /public/images/benface.png
+heroImage: /images/benface.png
 description: A guide to using Azure Face API for face detection and recognition.
 author: Ben Prescott
 date: June 7, 2022
@@ -21,7 +21,7 @@ To get started, lets review the difference between recognition and detection. Th
 
 **Face Recognition** - identifying _who_ the faces belong to that were found within the image
 
-![Compare](/public/images/detectvsrecog.png)
+![Compare](/images/detectvsrecog.png)
 
 Barrier to entry for the two is also different, as detecting if a face exists in an image does not require any customization/training data. It is common for everyone to have similar facial features (nose/mouth/eyes) that many different methods can detect. This is like identifying if a vehicle is present in an image or not, but becomes more difficult when determining what make/model the car is. 
 
@@ -30,7 +30,7 @@ Many libraries, such as OpenCV, come with face detection algorithms (i.e. HAAR c
 AWS Rekognition or Azure Face API?
 ----------------------------------
 
-<div style="text-align:center"><img src="/public/images/rekogface.png" /></div>
+<div style="text-align:center"><img src="/images/rekogface.png" /></div>
 
 Both AWS' Rekognition service, and the Azure Face API service, are hosted computer vision services that help with video or image analysis tasks. In typical 'AWS vs Azure' fashion, the services are similar but also different. The **TL;DR**:
 
@@ -123,7 +123,7 @@ Reviewing the Results
 
 If all goes well you should have a Python window display that is showing you the frame-by-frame live playback (example below). 
 
-![Playback](/public/images/frameplayback.gif)
+![Playback](/images/frameplayback.gif)
 
 Remember, in this scenario we are reading a video feed, which is just a stream of images/frames. Therefore, we can treat our manipulation and playback as individual images. 
 
@@ -142,7 +142,7 @@ Facial recognition has gained some bad press due to how it is applied and blindl
 
 Below is a notice from Microsoft on their [Face API documentation pages](https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview)
 
-![MSFTwarn](/public/images/msftwarning.png)
+![MSFTwarn](/images/msftwarning.png)
 
 On another extreme, consider the military's use of face recognition. Incorrectly identifying a person of interest may lead to an innocent person being killed. However, correctly identifying someone quickly could save lives. Something worth noodling on.
 

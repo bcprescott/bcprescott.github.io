@@ -1,7 +1,7 @@
 ---
 title: Basics of Graph Databases - Part 1
 category: ['Neo4j', 'Graph', 'Database', 'Architecture']
-heroImage: /public/images/graph.png
+heroImage: /images/graph.png
 description: An introduction to graph databases, focusing on Neo4j and the Cypher query language.
 author: Ben Prescott
 date: November 30, 2020

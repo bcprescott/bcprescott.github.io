@@ -27,7 +27,7 @@ Understanding these hidden dynamics is important for any organization looking to
 
 # Bias in the Feedback Loop
 
-![feedback](/public/images/bttd/loop.png)
+![feedback](/images/bttd/loop.png)
 
 One particularly interesting challenge is known as the bias feedback loop. This occurs when an AI model's outputs (predictions - yes, even with 'GenAI') alter the system/environment in a way that appears to validate its biases that resulted from the original training data, creating a self-reinforcing cycle of bias amplification. 
 
@@ -57,7 +57,7 @@ The purpose of these feedback loop examples is to demonstrate that bias is not j
 # Bias in the Algorithm's Design
 
 
-![algo](/public/images/bttd/algo.jpg)
+![algo](/images/bttd/algo.jpg)
 
 
 Bias is not just learned from data; sometimes it exists within the model's fundamental design, such as the Transformer architecture underpinning most modern LLMs.
@@ -86,7 +86,7 @@ The attention heads are key to making the Transformer algorithm work so well. Ho
 
 # The Alignment Paradox
 
-![paradox](/public/images/bttd/paradox.png)
+![paradox](/images/bttd/paradox.png)
 
 A common approach to improving performance of models, and to improve the safety and security of them, involves leveraging techniques like Reinforcement Learning from Human Feedback (RLHF). This process uses human reviewers to rate outputs/responses of the model, in turn 'teaching' the model the preferred interaction styles through the human-provided feedback. 
 
@@ -122,7 +122,7 @@ For example, there was a time when the longer a coherent output generated, the h
 
 # Implications for the Organization
 
-![implications](/public/images/bttd/implications.png)
+![implications](/images/bttd/implications.png)
 
 Some of these challenges can be directly influenced by organizations not training models from scratch, while others are on the research industry and labs providing models for consumption. Regardless, understanding various forms of bias is valuable given their downstream consequences that extend beyond negative publicity for the organization, potentially increasing risk around:
 
@@ -132,7 +132,7 @@ Some of these challenges can be directly influenced by organizations not trainin
 
 # Bias Management as Continuous Practice
 
-![biasmgmt](/public/images/bttd/biasmgmt.jpg)
+![biasmgmt](/images/bttd/biasmgmt.jpg)
 
 This is all fun and exciting information, but what practical steps can technical leaders and organizations take to minimize the risk associated with some of these types of bias? 
 

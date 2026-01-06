@@ -1,7 +1,7 @@
 ---
 title: Email Sentiment Analysis Using Python & Microsoft Azure - Part 1
 category: ['Sentiment', 'Python', 'Azure', 'NLP']
-heroImage: /public/images/happy.jpg
+heroImage: /images/happy.jpg
 description: Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.
 author: Ben Prescott
 date: May 8, 2020

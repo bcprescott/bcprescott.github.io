@@ -1,7 +1,7 @@
 ---
 title: Univariate & Multivariate Linear Regression - Cancer Mortality Rates
 category: ['Regression', 'Cancer']
-heroImage: /public/images/regression.png
+heroImage: /images/regression.png
 description: Exploring univariate and multivariate Linear Regression using a cancer mortality dataset.
 author: Ben Prescott
 date: September 14, 2020

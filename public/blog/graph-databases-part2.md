@@ -1,7 +1,7 @@
 ---
 title: Basics of Graph Databases - Part 2
 category: ['Neo4j', 'Graph', 'Database', 'Architecture']
-heroImage: /public/images/graph2.png
+heroImage: /images/graph2.png
 description: Deploying, configuring, and querying a Neo4j graph database on Microsoft Azure.
 author: Ben Prescott
 date: December 3, 2020

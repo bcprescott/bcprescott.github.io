@@ -1,7 +1,7 @@
 ---
 title: Let's Talk Artificial Intelligence
 category: ['Opinion', 'Basics', 'AI']
-heroImage: /public/images/alexa.png
+heroImage: /images/alexa.png
 description: A discussion on the definition of AI, Machine Learning, and the history of intelligent systems.
 author: Ben Prescott
 date: May 4, 2021
@@ -17,7 +17,7 @@ I thought writing a quick post on the topic of 'Artificial Intelligence', or AI,
 
 Ugh, Another 'What Is AI' Post...
 -----------------------
-![robot](/public/images/robot.png)
+![robot](/images/robot.png)
 
 Exactly! ;) 
 
@@ -49,7 +49,7 @@ Something worth noodling on: is machine learning 'artificial intelligence'? Thes
 
 What Is Intelligence Anyway?
 -----------------------------------
-![dataidea](/public/images/datahasabetteridea.png)
+![dataidea](/images/datahasabetteridea.png)
 
 According to a [simple definition](https://www.merriam-webster.com/dictionary/intelligence) by Merriam-Webster, Intelligence is "the ability to learn or understand or to deal with new or trying situations", or "the ability to apply knowledge to manipulate one's environment or to think abstractly as measured by objective criteria (such as tests)". 
 
@@ -77,7 +77,7 @@ If you have watched the Hulu documentary about WeWork you may have noticed how S
 
 Conclusion
 -----------------------------------
-![ai](/public/images/ai.png)
+![ai](/images/ai.png)
 
 So, what does it all mean? Is everything you see being touted as AI is actually AI? Probably not. The reality of the situation is that the term catches a lot of interest/hype and will be abused to aid marketing efforts.
 

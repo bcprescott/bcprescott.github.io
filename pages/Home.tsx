@@ -81,7 +81,7 @@ const Home: React.FC = () => {
             <div className="absolute top-[15%] right-[10%] w-32 h-32 md:w-40 md:h-40 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl animate-float z-20 flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
               <img
-                src="../public/images/azure.png"
+                src="/images/azure.png"
                 alt="Logo"
                 className="w-full h-full object-cover relative z-10"
               />

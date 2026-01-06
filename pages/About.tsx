@@ -22,14 +22,16 @@ const About: React.FC = () => {
                      </div>
 
                      <h1 className="text-3xl font-extrabold tracking-tight text-white mb-1">Ben Prescott</h1>
+                     <h2 className="text-base font-normal tracking-tight text-indigo-400 mb-1">M.S. Data Science</h2>
+                     <h2 className="text-base font-bold tracking-tight text-indigo-400 mb-1">Northwestern University</h2>
                      {/* <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
                 <span className="size-2 rounded-full bg-green-500 animate-pulse"></span>
                 <span className="text-xs font-semibold uppercase tracking-wider text-blue-300">Open to work</span>
               </div> */}
-
+                     {/* 
                      <p className="text-lg font-serif italic text-slate-400 mb-6 leading-relaxed">
                         "Crafting scalable, production-ready solutions that solve real business problems."
-                     </p>
+                     </p> */}
 
                      <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6"></div>
 
@@ -62,12 +64,12 @@ const About: React.FC = () => {
                      About Me
                   </h2>
                   <div className="p-8 rounded-2xl bg-background-light border border-white/5 shadow-sm relative overflow-hidden group">
-                     <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                     <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-5 transition-opacity">
                         <span className="material-symbols-outlined text-9xl text-white rotate-12">code</span>
                      </div>
                      <div className="relative space-y-4 text-lg leading-relaxed text-slate-400">
-                        <p>As a seasoned AI leader with over <strong className="text-white font-semibold">10+ years of experience in applied AI</strong>, I specialize in bridging the gap between technical complexity and business ROI. My career has evolved from managing mission-critical signal systems in the US Army to architecting advanced Generative AI and agentic AI solutions like agentic RAG systems and Text-to-SQL frameworks for global enterprises.</p>
-                        <p>I am a data scientist and engineer by trade, holding an <strong className="text-white font-semibold">M.S. in Data Science from Northwestern University</strong>. I am obsessed with realistic, measurable applications of AI, not just proofs of concept.</p>
+                        <p>I’m an engineer by trade and a pragmatist by necessity. With over <strong className="text-white font-semibold">17+ years of experience</strong> spanning mission-critical systems, cloud architecture, and applied AI, I’ve learned that the hardest part of AI isn't the technical solution, it’s the integration and adoption.</p>
+                        <p>My career has evolved from building the foundational infrastructure that powers global enterprises to architecting the agentic RAG systems and Text-to-SQL frameworks that define the future of business. Because I’ve spent nearly a decade in cloud infrastructure, I build AI solutions that actually make it to production.</p>
                         <p>Outside of the AI world, you’ll likely find me in my woodshop building guitars or cutting boards, or exploring the world with my family.</p>
                      </div>
                   </div>
