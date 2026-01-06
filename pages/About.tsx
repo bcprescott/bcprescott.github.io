@@ -39,12 +39,14 @@ const About: React.FC = () => {
                         {[
                            { name: 'LinkedIn', href: 'https://www.linkedin.com/in/benjaminprescott/' },
                            { name: 'GitHub', href: 'https://github.com/bcprescott' },
-                           { name: 'Email', href: 'mailto:bcprescott@outlook.com' }
+                           { name: 'Email', href: 'mailto:bcprescott@outlook.com' },
+                           { name: 'Research', href: 'https://bcprescott.github.io/files/resume.pdf' },
+                           { name: 'Resume', href: '/files/resume.pdf' },
                         ].map((item) => (
                            <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-3 rounded-xl bg-background hover:bg-primary hover:text-white group/link transition-all duration-300 border border-transparent hover:border-primary/20">
                               <div className="flex items-center gap-3">
                                  <span className="material-symbols-outlined text-[20px] group-hover/link:text-white text-slate-400 transition-colors">
-                                    {item.name === 'Email' ? 'mail' : item.name === 'GitHub' ? 'code' : 'link'}
+                                    {item.name === 'Email' ? 'mail' : item.name === 'GitHub' ? 'code' : item.name === 'Research' ? 'science' : item.name === 'Resume' ? 'article' : 'link'}
                                  </span>
                                  <span className="text-sm font-medium">{item.name}</span>
                               </div>

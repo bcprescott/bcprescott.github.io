@@ -56,6 +56,14 @@ const Navbar: React.FC = () => {
                 {link.name}
               </Link>
             ))}
+            <a
+              href="/files/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-medium text-gray-400 hover:text-white transition-colors"
+            >
+              Resume
+            </a>
             <Link
               to="/contact"
               className="px-5 py-2.5 text-sm font-bold text-background-dark bg-white rounded-lg hover:bg-primary hover:text-white transition-all duration-300 transform hover:-translate-y-0.5"
@@ -86,6 +94,14 @@ const Navbar: React.FC = () => {
               {link.name}
             </Link>
           ))}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium py-2 text-gray-400 hover:text-white transition-colors"
+          >
+            Resume
+          </a>
           <Link
             to="/contact"
             className="px-5 py-3 text-center text-sm font-bold text-background-dark bg-white rounded-lg hover:bg-primary hover:text-white transition-all"
