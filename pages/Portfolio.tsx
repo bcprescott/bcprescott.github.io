@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const projects = [
    {
       id: 'ecommerce-replatform',
-      title: 'E-commerce Redesign',
+      title: 'Placeholder',
       category: ['Agentic AI', 'Machine Learning', 'Client Project'],
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      desc: 'Revamped online store for increased user engagement.',
+      desc: 'Placeholder',
       span: 'md:col-span-2'
    }
 ];
@@ -95,8 +95,8 @@ const Portfolio: React.FC = () => {
             <div className="flex flex-col items-center justify-end gap-6 px-4 py-10 md:py-20 bg-navy-900/50 backdrop-blur-sm border border-navy-800 rounded-[2rem] relative overflow-hidden mt-8">
                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -mr-16 -mt-16"></div>
                <div className="flex flex-col gap-2 text-center relative z-10">
-                  <h2 className="text-white text-3xl md:text-4xl font-black font-syne leading-tight">Interested in collaborating?</h2>
-                  <p className="text-slate-400 text-base max-w-2xl">Let's connect and discuss how I can help bring your ideas to life.</p>
+                  <h2 className="text-white text-3xl md:text-4xl font-black font-displayleading-tight">Interested in collaborating?</h2>
+                  <p className="text-slate-400 text-base max-w-2xl">Let's connect and discuss how we can contribute to the field of AI together.</p>
                </div>
                <div className="relative z-10">
                   <Link to="/contact" className="inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-background-dark font-bold hover:bg-slate-200 transition-all shadow-lg shadow-white/10">Get in Touch</Link>

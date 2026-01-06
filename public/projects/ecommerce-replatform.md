@@ -1,5 +1,5 @@
 ---
-title: E-Commerce Re-Platform
+title: PLACEHOLDER - THIS ISNT REAL I PROMISE
 category: Web Dev
 heroImage: https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80
 description: A complete architectural overhaul of a legacy retail system, migrating to a modern MACH stack to boost performance and scalability.
@@ -12,7 +12,7 @@ techStack:
   - Tailwind CSS
   - Node.js
   - PostgreSQL
-projectType: Freelance Client Work
+projectType: Random Kaggle Thingy
 timeline: 3 Months (Aug - Oct 2024)
 ---
 

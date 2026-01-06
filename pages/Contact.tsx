@@ -1,6 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
+   const [status, setStatus] = useState<'IDLE' | 'SUBMITTING' | 'SUCCESS' | 'ERROR'>('IDLE');
+   const [verified, setVerified] = useState(false);
+
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setStatus('SUBMITTING');
+
+      const form = e.currentTarget;
+      const data = new FormData(form);
+
+      try {
+         const response = await fetch('https://formspree.io/f/xlgdyply', {
+            method: 'POST',
+            body: data,
+            headers: {
+               'Accept': 'application/json'
+            }
+         });
+
+         if (response.ok) {
+            setStatus('SUCCESS');
+            form.reset();
+         } else {
+            setStatus('ERROR');
+         }
+      } catch (error) {
+         setStatus('ERROR');
+      }
+   };
+
    return (
       <div className="relative flex min-h-screen w-full flex-col pt-20">
          {/* Background blobs */}
@@ -38,16 +68,6 @@ const Contact: React.FC = () => {
                               </div>
                            </a>
                         </div>
-                        {/* <div>
-                           <p className="text-sm font-medium text-white/40 mb-4 ml-1">Connect on social</p>
-                           <div className="flex gap-4">
-                              {['LinkedIn', 'GitHub', 'Twitter'].map((social) => (
-                                 <a key={social} href="#" className="group flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/5 text-white/60 transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white">
-                                    <span className="text-xs">{social[0]}</span>
-                                 </a>
-                              ))}
-                           </div>
-                        </div> */}
                      </div>
                   </div>
 
@@ -58,31 +78,78 @@ const Contact: React.FC = () => {
                            <h3 className="text-2xl font-bold text-white mb-2">Send a Message</h3>
                            <p className="text-white/50 text-sm">I usually respond within 24-48 hours, unless I'm in the hospital or something...</p>
                         </div>
-                        <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                              <div className="group">
-                                 <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="full-name">Full Name</label>
-                                 <input className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm" id="full-name" type="text" />
+
+                        {status === 'SUCCESS' ? (
+                           <div className="p-6 rounded-xl bg-green-500/10 border border-green-500/20 text-center">
+                              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500/20 text-green-500 mb-4">
+                                 <span className="material-symbols-outlined text-2xl">check</span>
                               </div>
-                              <div className="group">
-                                 <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="email">Email Address</label>
-                                 <input className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm" id="email" placeholder="john@example.com" type="email" />
-                              </div>
-                           </div>
-                           <div className="group">
-                              <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="subject">Subject</label>
-                              <input className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm" id="subject" placeholder="Project Inquiry" type="text" />
-                           </div>
-                           <div className="group">
-                              <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="message">Message</label>
-                              <textarea className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm resize-none" id="message" placeholder="Tell me about your project..." rows={5}></textarea>
-                           </div>
-                           <div className="pt-2">
-                              <button className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-primary py-4 px-8 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-primary/40" type="submit">
-                                 Send Message <span className="material-symbols-outlined text-[1.25em] group-hover:translate-x-1 transition-transform duration-300">send</span>
+                              <h4 className="text-xl font-bold text-white mb-2">Message Sent!</h4>
+                              <p className="text-slate-400">Thanks for reaching out. I'll get back to you shortly.</p>
+                              <button
+                                 onClick={() => setStatus('IDLE')}
+                                 className="mt-6 text-sm font-semibold text-primary hover:text-primary-glow transition-colors"
+                              >
+                                 Send another message
                               </button>
                            </div>
-                        </form>
+                        ) : (
+                           <form className="space-y-8" onSubmit={handleSubmit}>
+                              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                                 <div className="group">
+                                    <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="full-name">Full Name</label>
+                                    <input className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm" id="full-name" name="name" placeholder="Ben Prescott" type="text" required disabled={status === 'SUBMITTING'} />
+                                 </div>
+                                 <div className="group">
+                                    <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="email">Email Address</label>
+                                    <input className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm" id="email" name="email" placeholder="ben@aol.com" type="email" required disabled={status === 'SUBMITTING'} />
+                                 </div>
+                              </div>
+                              <div className="group">
+                                 <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="subject">Subject</label>
+                                 <input className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm" id="subject" name="subject" placeholder="Collaborate on a blog..." type="text" required disabled={status === 'SUBMITTING'} />
+                              </div>
+                              <div className="group">
+                                 <label className="block text-xs font-semibold text-white/70 uppercase tracking-wider mb-2 ml-1" htmlFor="message">Message</label>
+                                 <textarea className="block w-full rounded-xl border-0 bg-white/5 px-4 py-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary/50 focus:bg-white/10 transition-all sm:text-sm resize-none" id="message" name="message" placeholder="Tell me what you have in mind!" rows={5} required disabled={status === 'SUBMITTING'}></textarea>
+                              </div>
+
+                              {status === 'ERROR' && (
+                                 <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+                                    Something went wrong. Please try again later.
+                                 </div>
+                              )}
+
+                              {/* Bot protection checkbox */}
+                              <div className="flex items-center gap-3 py-2">
+                                 <div className="relative flex items-center">
+                                    <input
+                                       type="checkbox"
+                                       id="human-verify"
+                                       className="peer h-5 w-5 cursor-pointer appearance-none rounded border border-white/20 bg-white/5 checked:bg-primary checked:border-primary transition-all"
+                                       onChange={(e) => setVerified(e.target.checked)}
+                                    />
+                                    <span className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100">
+                                       <span className="material-symbols-outlined text-[16px] font-bold">check</span>
+                                    </span>
+                                 </div>
+                                 <label htmlFor="human-verify" className="cursor-pointer select-none text-sm text-white/60 hover:text-white/80 transition-colors">
+                                    I verify that I am a human
+                                 </label>
+                              </div>
+
+                              <div className="pt-2">
+                                 <button
+                                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-primary py-4 px-8 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-primary/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
+                                    type="submit"
+                                    disabled={status === 'SUBMITTING' || !verified}
+                                 >
+                                    {status === 'SUBMITTING' ? 'Sending...' : 'Send Message'}
+                                    {status !== 'SUBMITTING' && <span className="material-symbols-outlined text-[1.25em] group-hover:translate-x-1 transition-transform duration-300">send</span>}
+                                 </button>
+                              </div>
+                           </form>
+                        )}
                      </div>
                   </div>
                </div>
