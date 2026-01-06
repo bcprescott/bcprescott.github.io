@@ -1,7 +1,7 @@
 ---
 title: Introduction to Generative Networks
 category: ['GAN', 'Deep Learning']
-heroImage: /public/images/arch1.png
+heroImage: /public/images/GAN/arch1.png
 description: Basic introduction to Generative Adversarial Networks and how they work.
 author: Ben Prescott
 date: September 26, 2022

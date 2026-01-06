@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <div className="relative min-h-fit flex pt-24 overflow-hidden">
       {/* Background Elements */}
       <div className="fixed inset-0 z-0 opacity-[0.07] pointer-events-none" style={{ backgroundSize: '40px 40px', backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)' }}></div>
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -12,11 +12,11 @@ const Home: React.FC = () => {
         <div className="absolute top-[40%] left-[20%] w-[300px] h-[300px] bg-accent-cyan/10 rounded-full blur-[100px]"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-8 w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
         {/* Left Content */}
         <div className="lg:col-span-7 flex flex-col gap-8 lg:pr-10">
-          
-          
+
+
           {/*Open for New Opportunities Bubble*/}
 
           {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 w-fit backdrop-blur-sm">
@@ -26,20 +26,20 @@ const Home: React.FC = () => {
             </span>
             <span className="text-xs font-semibold text-primary-glow tracking-wide uppercase">Open for new opportunities</span>
           </div> */}
-          
+
           <div className="relative">
-            <h1 className="font-display font-bold text-5xl md:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
+            <h1 className="font-display font-bold text-5xl md:text-7xl xl:text-7.8xl leading-[0.95] tracking-tight">
               {/* <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700 mb-2">Developing AI Solutions.</span> */}
-              {/* <span className="block text-white mb-2">AI's</span> */}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-glow to-accent-cyan">Leading the AI Revolution.</span>
+              <span className="block text-white mb-2">Practical AI.</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-glow to-accent-cyan ">Production Ready.</span>
             </h1>
-            <div className="hidden lg:block absolute -left-12 top-4 w-[2px] h-full bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0"></div>
+            <div className="hidden lg:block absolute -left-12 top-4 w-[3px] h-full bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0"></div>
           </div>
-          
+
           <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
-            I'm Ben and I'm obsessed with realistic and measurable applications of artificial intelligence (AI) solutions for businesses. With a background in applied data science and AI, I design production-ready AI solutions that deliver measurable outcomes and empower organizations to make data-driven decisions.
+            I’m Ben, and I specialize in stripping the hype away from AI. With over a decade in applied data science, I bridge the gap between strategy and production to deliver solutions focused on measurable business outcomes.
           </p>
-          
+
           <div className="flex flex-wrap items-center gap-4 mt-2">
             <Link to="/projects" className="group relative px-8 py-4 bg-white text-background-dark font-bold text-base rounded-lg overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:-translate-y-0.5">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
               <span>Contact Me</span>
             </Link>
           </div>
-          
+
           <div className="pt-8 border-t border-white/5 flex items-center gap-8 md:gap-12 mt-4">
             <div>
               <div className="text-2xl font-display font-bold text-white">10+</div>
@@ -77,14 +77,19 @@ const Home: React.FC = () => {
               <div className="absolute w-[250px] h-[250px] md:w-[380px] md:h-[380px] border border-dashed border-primary/20 rounded-full animate-spin-reverse-slow"></div>
               <div className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] border border-white/10 rounded-full rotate-45"></div>
             </div>
-            
+
             <div className="absolute top-[15%] right-[10%] w-32 h-32 md:w-40 md:h-40 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl animate-float z-20 flex items-center justify-center overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
-               <div className="grid grid-cols-3 gap-2 p-4 w-full h-full opacity-50">
-                 <div className="bg-primary/40 rounded-sm"></div><div className="bg-transparent"></div><div className="bg-primary/40 rounded-sm"></div>
-                 <div className="bg-transparent"></div><div className="bg-primary/40 rounded-sm"></div><div className="bg-transparent"></div>
-                 <div className="bg-primary/40 rounded-sm"></div><div className="bg-transparent"></div><div className="bg-primary/40 rounded-sm"></div>
-               </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+              <img
+                src="/public/images/azure.png"
+                alt="Logo"
+                className="w-full h-full object-cover relative z-10"
+              />
+              {/* <div className="grid grid-cols-3 gap-2 p-4 w-full h-full opacity-50">
+                <div className="bg-primary/40 rounded-sm"></div><div className="bg-transparent"></div><div className="bg-primary/40 rounded-sm"></div>
+                <div className="bg-transparent"></div><div className="bg-primary/40 rounded-sm"></div><div className="bg-transparent"></div>
+                <div className="bg-primary/40 rounded-sm"></div><div className="bg-transparent"></div><div className="bg-primary/40 rounded-sm"></div>
+              </div> */}
             </div>
 
             <div className="relative w-48 h-64 md:w-64 md:h-80 bg-background-light/40 backdrop-blur-xl border border-white/10 rounded-3xl z-10 flex flex-col p-6 shadow-2xl shadow-primary/10">
@@ -96,7 +101,8 @@ const Home: React.FC = () => {
               <div className="space-y-3 font-mono text-xs text-gray-400">
                 <div className="flex gap-2"><span className="text-purple-400">const</span> <span className="text-blue-400">future</span> = <span className="text-white">{`{`}</span></div>
                 <div className="pl-4 text-green-400">innovation: <span className="text-orange-400">true</span>,</div>
-                <div className="pl-4 text-green-400">limits: <span className="text-orange-400">null</span>,</div>
+                <div className="pl-4 text-green-400">isProduction: <span className="text-orange-400">true</span>,</div>
+                <div className="pl-4 text-green-400">value: <span className="text-red-400">"high"</span>,</div>
                 <div className="pl-4 text-green-400">stack: <span className="text-white">[</span></div>
                 <div className="pl-8 text-gray-500">'Azure', 'AWS', 'Python', 'TensorFlow', 'PyTorch', 'Terraform', 'LlamaIndex', 'MLflow'</div>
                 <div className="pl-4 text-white">]</div>
@@ -110,19 +116,19 @@ const Home: React.FC = () => {
             </div>
 
             <div className="absolute bottom-[10%] left-[5%] md:left-[10%] w-36 h-24 md:w-48 md:h-32 bg-background-light/40 backdrop-blur-xl border border-white/10 rounded-xl animate-float-delayed z-30 p-4">
-               <div className="flex items-center justify-between mb-2">
-                 <span className="text-xs font-bold text-white">System Status</span>
-                 <span className="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
-               </div>
-               <div className="flex items-end gap-1 h-10 mt-2">
-                 <div className="w-1/5 bg-primary/40 rounded-t h-[40%]"></div>
-                 <div className="w-1/5 bg-primary/60 rounded-t h-[70%]"></div>
-                 <div className="w-1/5 bg-primary/30 rounded-t h-[50%]"></div>
-                 <div className="w-1/5 bg-primary/80 rounded-t h-[90%]"></div>
-                 <div className="w-1/5 bg-primary/50 rounded-t h-[60%]"></div>
-               </div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-white">System Status</span>
+                <span className="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
+              </div>
+              <div className="flex items-end gap-1 h-10 mt-2">
+                <div className="w-1/5 bg-primary/40 rounded-t h-[40%]"></div>
+                <div className="w-1/5 bg-primary/60 rounded-t h-[70%]"></div>
+                <div className="w-1/5 bg-primary/30 rounded-t h-[50%]"></div>
+                <div className="w-1/5 bg-primary/80 rounded-t h-[90%]"></div>
+                <div className="w-1/5 bg-primary/50 rounded-t h-[60%]"></div>
+              </div>
             </div>
-            
+
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-accent-cyan/30 rounded-full blur-[60px] -z-10"></div>
           </div>
         </div>

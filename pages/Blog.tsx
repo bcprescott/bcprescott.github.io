@@ -16,8 +16,8 @@ const blogPosts = [
    {
       id: 'intro-gan',
       title: 'Introduction to Generative Networks',
-      category: ['GAN', 'Deep Learning'],
-      image: '/public/images/arch1.png',
+      category: ['Generative AI', 'Deep Learning'],
+      image: '/public/images/GAN/arch1.png',
       excerpt: 'Basic introduction to Generative Adversarial Networks and how they work, from art generation to data augmentation.',
       author: 'Ben Prescott',
       date: 'Sep 26, 2022',
@@ -27,7 +27,7 @@ const blogPosts = [
    {
       id: 'getting-started-faceapi',
       title: 'Getting Started With Azure Face API',
-      category: ['Azure', 'Face Recognition'],
+      category: ['Deep Learning', 'Azure'],
       image: '/public/images/benface.png',
       excerpt: 'A guide to using Azure Face API for face detection and recognition, distinguishing between the two and exploring ethical considerations.',
       author: 'Ben Prescott',
@@ -38,7 +38,7 @@ const blogPosts = [
    {
       id: 'visualizing-cnn',
       title: 'Peering Inside A Convolutional Neural Network',
-      category: ['CNN', 'Deep Learning', 'XAI'],
+      category: ['Deep Learning'],
       image: '/public/images/cnn.jpeg',
       excerpt: 'Visualizing feature maps in a Convolutional Neural Network to understand model predictions and explainability.',
       author: 'Ben Prescott',
@@ -49,7 +49,7 @@ const blogPosts = [
    {
       id: 'google-vertex-ai-demo',
       title: 'House Sale Prediction Using GCP Vertex AI',
-      category: ['Regression', 'GCP'],
+      category: ['Machine Learning', 'GCP'],
       image: '/public/images/vertex.png',
       excerpt: 'Training and deploying a linear regression model for house price prediction using Google Cloud Vertex AI.',
       author: 'Ben Prescott',
@@ -115,7 +115,7 @@ const blogPosts = [
    {
       id: 'email-sentiment-part2',
       title: 'Email Sentiment Analysis - Part 2',
-      category: ['Sentiment', 'Python', 'Azure', 'NLP'],
+      category: ['Machine Learning', 'Sentiment', 'Python', 'Azure', 'NLP'],
       image: '/public/images/thinkpositive.jpg',
       excerpt: 'Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.',
       author: 'Ben Prescott',
@@ -126,7 +126,7 @@ const blogPosts = [
    {
       id: 'email-sentiment-part1',
       title: 'Email Sentiment Analysis - Part 1',
-      category: ['Sentiment', 'Python', 'Azure', 'NLP'],
+      category: ['Machine Learning', 'Natural Language Processing', 'Azure'],
       image: '/public/images/happy.jpg',
       excerpt: 'Analyzing and performing sentiment analysis on sanitized emails using Microsoft Azure and Python.',
       author: 'Ben Prescott',
@@ -248,7 +248,7 @@ const Blog: React.FC = () => {
                   <div className="flex flex-col gap-5">
                      <h3 className="font-serif text-xl font-bold text-white border-b border-slate-700 pb-3">Topics</h3>
                      <div className="flex flex-wrap gap-2">
-                        {['All', 'Agentic AI', 'Generative AI', 'Machine Learning', 'Operations Research', 'Deep Learning', 'NLP', 'Graph Databases', 'Azure', 'GCP'].map(tag => (
+                        {['All', 'Agentic AI', 'Deep Learning', 'Generative AI', 'Machine Learning', 'Natural Language Processing', 'Operations Research', 'Azure', 'GCP'].map(tag => (
                            <button
                               key={tag}
                               onClick={() => toggleCategory(tag)}
