@@ -102,7 +102,7 @@ const Home: React.FC = () => {
                 <div className="flex gap-2"><span className="text-purple-400">const</span> <span className="text-blue-400">future</span> = <span className="text-white">{`{`}</span></div>
                 <div className="pl-4 text-green-400">innovation: <span className="text-orange-400">true</span>,</div>
                 <div className="pl-4 text-green-400">isProduction: <span className="text-orange-400">true</span>,</div>
-                <div className="pl-4 text-green-400">value: <span className="text-red-400">"high"</span>,</div>
+                <div className="pl-4 text-green-400">businessValue: <span className="text-red-400">"high"</span>,</div>
                 <div className="pl-4 text-green-400">stack: <span className="text-white">[</span></div>
                 <div className="pl-8 text-gray-500">'Azure', 'AWS', 'Python', 'TensorFlow', 'PyTorch', 'Terraform', 'LlamaIndex', 'MLflow'</div>
                 <div className="pl-4 text-white">]</div>
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
 
             <div className="absolute bottom-[10%] left-[5%] md:left-[10%] w-36 h-24 md:w-48 md:h-32 bg-background-light/40 backdrop-blur-xl border border-white/10 rounded-xl animate-float-delayed z-30 p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-white">System Status</span>
+                <span className="text-xs font-bold text-white">Creating Value</span>
                 <span className="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
               </div>
               <div className="flex items-end gap-1 h-10 mt-2">
