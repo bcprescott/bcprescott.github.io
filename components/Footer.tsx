@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col gap-1 text-center md:text-left">
           <p className="text-sm font-medium text-white">© 2026 Ben Prescott</p>
-          <p className="text-sm text-slate-500">Yes, I used AI to help build this...</p>
+          <p className="text-sm text-slate-500">Of course I used AI to help build this...</p>
         </div>
         <div className="flex gap-6">
           {[
