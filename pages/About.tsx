@@ -66,7 +66,7 @@ const About: React.FC = () => {
                         <span className="material-symbols-outlined text-9xl text-white rotate-12">code</span>
                      </div>
                      <div className="relative space-y-4 text-lg leading-relaxed text-slate-400">
-                        <p><span className="text-4xl float-left mr-2 font-serif text-primary leading-none">A</span>s a seasoned AI leader with over <strong className="text-white font-semibold">10+ years of experience in applied AI</strong>, I specialize in bridging the gap between technical complexity and business ROI. My career has evolved from managing mission-critical signal systems in the US Army to architecting advanced Generative AI and agentic AI solutions like agentic RAG systems and Text-to-SQL frameworks for global enterprises.</p>
+                        <p>As a seasoned AI leader with over <strong className="text-white font-semibold">10+ years of experience in applied AI</strong>, I specialize in bridging the gap between technical complexity and business ROI. My career has evolved from managing mission-critical signal systems in the US Army to architecting advanced Generative AI and agentic AI solutions like agentic RAG systems and Text-to-SQL frameworks for global enterprises.</p>
                         <p>I am a data scientist and engineer by trade, holding an <strong className="text-white font-semibold">M.S. in Data Science from Northwestern University</strong>. I am obsessed with realistic, measurable applications of AI, not just proofs of concept.</p>
                         <p>Outside of the AI world, you’ll likely find me in my woodshop building guitars or cutting boards, or exploring the world with my family.</p>
                      </div>
