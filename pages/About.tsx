@@ -40,7 +40,7 @@ const About: React.FC = () => {
                            { name: 'LinkedIn', href: 'https://www.linkedin.com/in/benjaminprescott/' },
                            { name: 'GitHub', href: 'https://github.com/bcprescott' },
                            { name: 'Email', href: 'mailto:bcprescott@outlook.com' },
-                           { name: 'Research', href: 'https://bcprescott.github.io/files/resume.pdf' },
+                           { name: 'Research', href: 'https://arxiv.org/pdf/2112.07102' },
                            { name: 'Resume', href: '/files/resume.pdf' },
                         ].map((item) => (
                            <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-3 rounded-xl bg-background hover:bg-primary hover:text-white group/link transition-all duration-300 border border-transparent hover:border-primary/20">
