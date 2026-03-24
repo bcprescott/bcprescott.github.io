@@ -7,8 +7,6 @@ author: Ben Prescott
 date: March 23, 2026
 readTime: 9 min read
 ---
-
-# This Isn't an Anti-AI Post
  
 The goal of this post is _not_ to convince you to stop using AI tools. I use AI daily, and you probably are too. If you're _not_ using it in some capacity, you're likely making things way harder on yourself than they need to be.
  
