@@ -1,0 +1,118 @@
+<svg viewBox="0 0 840 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&amp;display=swap');
+      .label { font-family: 'Caveat', cursive; fill: #3b3b3b; }
+      .title { font-size: 24px; font-weight: 700; }
+      .subtitle { font-size: 17px; font-weight: 600; }
+      .body { font-size: 15px; fill: #666; }
+      .caption { font-size: 14px; fill: #999; font-style: italic; }
+      .era-label { font-size: 20px; font-weight: 700; }
+      .highlight { fill: #1a6847; font-weight: 600; }
+      .dim { fill: #b0b0b0; }
+    </style>
+
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="4" result="noise" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="rough-light" x="-1%" y="-1%" width="102%" height="102%">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="3" result="noise" seed="9"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blend"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.06"/>
+      </feComponentTransfer>
+      <feComposite in="SourceGraphic" operator="over"/>
+    </filter>
+    <filter id="glow-green">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-dim">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="840" height="400" fill="#faf9f6" rx="6" filter="url(#paper)"/>
+
+  <!-- divider line -->
+  <line x1="420" y1="50" x2="420" y2="360" stroke="#e0e0e0" stroke-width="1.2" stroke-dasharray="6,4" filter="url(#rough-light)"/>
+
+  <!-- LEFT SIDE: Before GPS / Active Learning -->
+  <text x="210" y="46" class="label era-label" text-anchor="middle" style="fill: #1a6847;">Before GPS</text>
+
+  <!-- Brain outline - left (active, with lit pathways) -->
+  <ellipse cx="210" cy="165" rx="80" ry="72" fill="none" stroke="#3b3b3b" stroke-width="2" filter="url(#rough)"/>
+  <!-- inner folds suggestion -->
+  <path d="M 160 140 C 175 155, 185 130, 200 148" stroke="#888" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+  <path d="M 195 125 C 210 142, 225 120, 240 138" stroke="#888" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+  <path d="M 170 170 C 185 185, 200 165, 218 180" stroke="#888" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+  <path d="M 210 145 C 220 165, 240 155, 252 170" stroke="#888" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+
+  <!-- active neural pathways (bright green lines) -->
+  <path d="M 170 145 C 190 150, 200 160, 220 148" stroke="#34d399" stroke-width="2.5" fill="none" filter="url(#glow-green)" opacity="0.9"/>
+  <path d="M 185 170 C 200 155, 215 175, 235 162" stroke="#34d399" stroke-width="2.5" fill="none" filter="url(#glow-green)" opacity="0.9"/>
+  <path d="M 195 135 C 210 150, 220 140, 240 155" stroke="#34d399" stroke-width="2" fill="none" filter="url(#glow-green)" opacity="0.7"/>
+  <path d="M 165 160 C 180 175, 195 155, 210 172" stroke="#34d399" stroke-width="2" fill="none" filter="url(#glow-green)" opacity="0.7"/>
+  <path d="M 200 180 C 215 170, 230 185, 248 172" stroke="#34d399" stroke-width="2" fill="none" filter="url(#glow-green)" opacity="0.6"/>
+
+  <!-- active nodes -->
+  <circle cx="175" cy="148" r="4" fill="#34d399" filter="url(#glow-green)"/>
+  <circle cx="220" cy="150" r="4" fill="#34d399" filter="url(#glow-green)"/>
+  <circle cx="195" cy="172" r="3.5" fill="#34d399" filter="url(#glow-green)"/>
+  <circle cx="240" cy="158" r="3.5" fill="#34d399" filter="url(#glow-green)"/>
+  <circle cx="205" cy="138" r="3" fill="#34d399" filter="url(#glow-green)"/>
+  <circle cx="165" cy="162" r="3" fill="#34d399" filter="url(#glow-green)"/>
+
+  <!-- left side text -->
+  <text x="210" y="268" class="label subtitle highlight" text-anchor="middle">You learned the route</text>
+  <text x="210" y="292" class="label body" text-anchor="middle">Built a mental map. Understood</text>
+  <text x="210" y="310" class="label body" text-anchor="middle">how places connected to each other.</text>
+  <text x="210" y="340" class="label caption" text-anchor="middle">Pathways strengthened every trip.</text>
+
+  <!-- RIGHT SIDE: After GPS / Passive Following -->
+  <text x="630" y="46" class="label era-label dim" text-anchor="middle">After GPS</text>
+
+  <!-- Brain outline - right (dimmed, inactive pathways) -->
+  <ellipse cx="630" cy="165" rx="80" ry="72" fill="none" stroke="#c0c0c0" stroke-width="2" filter="url(#rough)"/>
+  <!-- inner folds (dimmed) -->
+  <path d="M 580 140 C 595 155, 605 130, 620 148" stroke="#d4d4d4" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+  <path d="M 615 125 C 630 142, 645 120, 660 138" stroke="#d4d4d4" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+  <path d="M 590 170 C 605 185, 620 165, 638 180" stroke="#d4d4d4" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+  <path d="M 630 145 C 640 165, 660 155, 672 170" stroke="#d4d4d4" stroke-width="1.2" fill="none" filter="url(#rough-light)"/>
+
+  <!-- faded/inactive pathways (gray, dashed) -->
+  <path d="M 590 145 C 610 150, 620 160, 640 148" stroke="#d0d0d0" stroke-width="1.5" fill="none" stroke-dasharray="4,4" filter="url(#rough-light)" opacity="0.6"/>
+  <path d="M 605 170 C 620 155, 635 175, 655 162" stroke="#d0d0d0" stroke-width="1.5" fill="none" stroke-dasharray="4,4" filter="url(#rough-light)" opacity="0.6"/>
+  <path d="M 615 135 C 630 150, 640 140, 660 155" stroke="#d0d0d0" stroke-width="1.5" fill="none" stroke-dasharray="4,4" filter="url(#rough-light)" opacity="0.5"/>
+  <path d="M 585 160 C 600 175, 615 155, 630 172" stroke="#d0d0d0" stroke-width="1.5" fill="none" stroke-dasharray="4,4" filter="url(#rough-light)" opacity="0.5"/>
+
+  <!-- dimmed nodes -->
+  <circle cx="595" cy="148" r="4" fill="#d8d8d8" filter="url(#glow-dim)"/>
+  <circle cx="640" cy="150" r="4" fill="#d8d8d8" filter="url(#glow-dim)"/>
+  <circle cx="615" cy="172" r="3.5" fill="#d8d8d8" filter="url(#glow-dim)"/>
+  <circle cx="660" cy="158" r="3.5" fill="#d8d8d8" filter="url(#glow-dim)"/>
+  <circle cx="625" cy="138" r="3" fill="#d8d8d8" filter="url(#glow-dim)"/>
+
+  <!-- one single active pathway remains - the GPS route -->
+  <path d="M 600 155 L 630 155 L 655 165" stroke="#f59e0b" stroke-width="2.5" fill="none" filter="url(#glow-green)" opacity="0.8"/>
+  <circle cx="655" cy="165" r="4" fill="#f59e0b" opacity="0.8"/>
+  <!-- tiny arrow icon suggesting GPS -->
+  <polygon points="652,160 658,165 652,170" fill="#f59e0b" opacity="0.7"/>
+
+  <!-- right side text -->
+  <text x="630" y="268" class="label subtitle dim" text-anchor="middle">You follow the blue line</text>
+  <text x="630" y="292" class="label body" text-anchor="middle">One route lights up. Everything else</text>
+  <text x="630" y="310" class="label body" text-anchor="middle">goes quiet. Drive it 50 times, learn nothing.</text>
+  <text x="630" y="340" class="label caption" text-anchor="middle">Pathways faded from disuse.</text>
+
+  <!-- bottom annotation spanning full width -->
+  <text x="420" y="384" class="label caption" text-anchor="middle" style="font-size: 15px; fill: #888;">Now replace "routes" with "reasoning, writing, debugging, analysis" and you have the AI version of this problem.</text>
+</svg>
