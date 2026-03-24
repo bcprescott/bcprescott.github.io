@@ -1,6 +1,8 @@
 import React from 'react';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const About: React.FC = () => {
+   useDocumentTitle('About');
    return (
       <div className="container mx-auto max-w-6xl px-4 py-24 md:py-32">
          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">

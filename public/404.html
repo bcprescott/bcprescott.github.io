@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ben Prescott</title>
+    <script>
+      // Single Page App GitHub Pages redirect
+      // https://github.com/rafgraph/spa-github-pages
+      // Routes like /about, /blog/my-post get redirected here by GitHub Pages.
+      // This script converts the path into a query string so index.html can
+      // pick it up and use replaceState to restore the original URL.
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

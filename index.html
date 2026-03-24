@@ -4,6 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ben Prescott - AI Leader, Architect, Veteran</title>
+    <meta name="description" content="Ben Prescott specializes in practical, production-ready AI. Over a decade of applied data science bridging strategy and production for measurable business outcomes." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ben Prescott - Practical AI. Production Ready." />
+    <meta property="og:description" content="Stripping the hype away from AI. Over a decade in applied data science, bridging the gap between strategy and production." />
+    <meta property="og:url" content="https://bcprescott.github.io" />
+    <meta property="og:image" content="https://bcprescott.github.io/images/prescott.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ben Prescott - Practical AI. Production Ready." />
+    <meta name="twitter:description" content="Stripping the hype away from AI. Over a decade in applied data science, bridging the gap between strategy and production." />
+    <meta name="twitter:image" content="https://bcprescott.github.io/images/prescott.jpg" />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,20 +98,19 @@
           scrollbar-width: none;  /* Firefox */
       }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
-    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
-    "js-yaml": "https://esm.sh/js-yaml@^4.1.1",
-    "vite": "https://esm.sh/vite@^7.3.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
+
+    <!-- SPA GitHub Pages redirect handler -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location));
+    </script>
+
 </head>
   <body>
     <div id="root"></div>

@@ -21,7 +21,6 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/blog' },
   ];
 
@@ -95,7 +94,7 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
           <a
-            href="/resume.pdf"
+            href="/files/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium py-2 text-gray-400 hover:text-white transition-colors"

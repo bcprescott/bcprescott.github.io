@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const blogPosts = [
+   {
+      id: 'using-ai-without-losing-yourself',
+      title: 'A Guide to Using AI Without Losing Yourself',
+      category: ['Opinion', 'AI', 'XAI'],
+      image: '/images/losingyourself/ai-spectrum.svg',
+      excerpt: 'Exploring some of the implications of over-reliance of AI.',
+      author: 'Ben Prescott',
+      date: 'Mar 23, 2026',
+      readTime: '9 min read',
+      featured: true
+   },
    {
       id: 'complex-ai-bias',
       title: 'Understanding Complex AI Bias',
@@ -11,7 +23,7 @@ const blogPosts = [
       author: 'Ben Prescott',
       date: 'Apr 18, 2025',
       readTime: '10 min read',
-      featured: true
+      featured: false
    },
    {
       id: 'intro-gan',
@@ -137,7 +149,9 @@ const blogPosts = [
 ];
 
 const Blog: React.FC = () => {
+   useDocumentTitle('Blog');
    const [activeCategories, setActiveCategories] = useState<string[]>([]);
+   const [searchQuery, setSearchQuery] = useState('');
 
    const toggleCategory = (category: string) => {
       if (category === 'All') {
@@ -160,6 +174,14 @@ const Blog: React.FC = () => {
 
    const gridPosts = blogPosts.filter(post => {
       if (post.featured) return false;
+      // Search filter
+      if (searchQuery.trim()) {
+         const query = searchQuery.toLowerCase();
+         const matchesSearch = post.title.toLowerCase().includes(query) ||
+            post.excerpt.toLowerCase().includes(query);
+         if (!matchesSearch) return false;
+      }
+      // Category filter
       if (activeCategories.length === 0) return true;
       // Ensure post.category is always an array for filtering
       const postCategories = Array.isArray(post.category) ? post.category : [post.category];
@@ -242,7 +264,13 @@ const Blog: React.FC = () => {
             <aside className="lg:w-80 lg:flex-shrink-0">
                <div className="sticky top-28 flex flex-col gap-10">
                   <div className="relative">
-                     <input className="w-full bg-background-light border-none rounded-xl py-4 pl-12 pr-4 text-white placeholder-slate-500 shadow-sm focus:ring-2 focus:ring-primary" placeholder="Search articles..." type="text" />
+                     <input
+                        className="w-full bg-background-light border-none rounded-xl py-4 pl-12 pr-4 text-white placeholder-slate-500 shadow-sm focus:ring-2 focus:ring-primary"
+                        placeholder="Search articles..."
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                     />
                      <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
                   </div>
                   <div className="flex flex-col gap-5">

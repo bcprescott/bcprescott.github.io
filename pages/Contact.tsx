@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const Contact: React.FC = () => {
+   useDocumentTitle('Contact');
    const [status, setStatus] = useState<'IDLE' | 'SUBMITTING' | 'SUCCESS' | 'ERROR'>('IDLE');
    const [verified, setVerified] = useState(false);
 
@@ -58,7 +60,7 @@ const Contact: React.FC = () => {
 
                      <div className="space-y-6">
                         <div className="group relative overflow-hidden rounded-2xl bg-background-light/40 border border-white/5 p-1 transition-all hover:bg-background-light/60">
-                           <a className="flex items-center gap-5 p-4 rounded-xl transition-all" href="mailto:contact@johndoe.com">
+                           <a className="flex items-center gap-5 p-4 rounded-xl transition-all" href="mailto:bcprescott@outlook.com">
                               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 text-primary ring-1 ring-white/10 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                  <span className="material-symbols-outlined text-2xl">mail</span>
                               </div>

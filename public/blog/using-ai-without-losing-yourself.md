@@ -1,14 +1,14 @@
 ---
 title: A Guide to Using AI Without Losing Yourself
 category: ['Opinion', 'AI', 'XAI']
-heroImage: /images/cnn.jpeg
+heroImage: /images/losingyourself/ai-spectrum.svg
 description: Exploring some of the implications of over-reliance of AI.
 author: Ben Prescott
 date: March 23, 2026
 readTime: 9 min read
 ---
 
-# This Isn't an Anti-AI Post (And It Won't Be)
+# This Isn't an Anti-AI Post
  
 The goal of this post is _not_ to convince you to stop using AI tools. I use AI daily, and you probably are too. If you're _not_ using it in some capacity, you're likely making things way harder on yourself than they need to be.
  
@@ -17,7 +17,7 @@ The point of this post is about _how_ we use these tools, not _whether_ we shoul
 So, I thought it would be fun to put together something practical here... a set of principles, habits, or ways of thinking that might help you (or your team) use AI tools intentionally, without giving up the skills and critical thinking that make you amazing at what you do in the first place.
 
 
-![intelligence](/public/images/losingyourself/ai-spectrum.svg)
+![intelligence](/images/losingyourself/ai-spectrum.svg)
  
 As you read through this article, keep a few things in mind:
  
@@ -53,7 +53,7 @@ Here's a simple analogy I keep coming back to. Think about what happened when GP
 
 This example might be a bit extreme, as many of you are probably asking "are you thinking we need to learn map reading in case GPS goes down forever?", in which case I'd agree with the sentiment and say we'd probably have bigger issues. However, the intent behind the example stands. 
  
-![gps](/public/images/losingyourself/brain-gps-comparison.svg)
+![gps](/images/losingyourself/brain-gps-comparison.svg)
  
 AI tools pose a similar risk, but for _cognitive_ skills rather than navigational ones. Research from Polytechnique Insights highlights that from a neurological standpoint, widespread use of generative AI carries a real risk of overall cognitive atrophy and a loss of brain plasticity [6]. Put simply, the "use it or lose it" principle applies to your brain just as much as it does to your muscles.
  
@@ -79,7 +79,7 @@ Everything we've talked about so far has been at the individual level, but I thi
  
 When one person becomes overly reliant on AI, they lose some sharpness. When an entire _team_ does, you start losing institutional knowledge, mentorship quality, and the ability to critically evaluate AI-generated work, because nobody on the team is practicing those skills anymore.
  
-![dev](/public/images/losingyourself/juniordevflow.png)
+![dev](/images/losingyourself/juniordevflow.png)
  
 Research on AI adoption in organizations suggests that thoughtful implementation is critical to maintaining trust and ensuring these tools actually enhance rather than diminish team capabilities [7]. Most organizations are implementing AI tools with the singular goal of "move faster, be more efficient!" and not giving much thought as to what gets lost along the way.
  
@@ -105,7 +105,7 @@ I'll bring us back to my somewhat lame GPS analogy for a second. You don't pract
  
 The same logic applies here. You don't practice writing code from scratch because you think AI coding assistants are going away. You practice because the deep understanding you build by doing so makes you better at _using_ the AI tools, better at evaluating their output, and better at solving the novel problems that the AI hasn't seen before.
 
-![capability](/public/images/losingyourself/capability.png)
+![capability](/images/losingyourself/capability.png)
 
 As these tools improve, the value of the remaining people who can think independently, evaluate critically, and bring genuine expertise to the table is only going to go _up_. The people who will thrive aren't the ones who can prompt the best, but are the ones who understand a domain deeply enough to know when AI is wrong, when the approach is flawed, or when the problem needs to be reframed entirely. 
  

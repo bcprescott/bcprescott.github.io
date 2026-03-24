@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import yaml from 'js-yaml';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 interface BlogFrontmatter {
     title: string;
@@ -13,19 +14,66 @@ interface BlogFrontmatter {
     readTime?: string;
 }
 
+// Lightbox modal for zooming into images
+const ImageLightbox: React.FC<{ src: string; alt: string; onClose: () => void }> = ({ src, alt, onClose }) => {
+    useEffect(() => {
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') onClose();
+        };
+        document.addEventListener('keydown', handleKey);
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.removeEventListener('keydown', handleKey);
+            document.body.style.overflow = '';
+        };
+    }, [onClose]);
+
+    return (
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-zoom-out p-4 sm:p-8"
+            onClick={onClose}
+        >
+            <button
+                onClick={onClose}
+                className="absolute top-4 right-4 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                aria-label="Close"
+            >
+                <span className="material-symbols-outlined text-[24px]">close</span>
+            </button>
+            <img
+                src={src}
+                alt={alt}
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+            />
+        </div>
+    );
+};
+
 const BlogDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [frontmatter, setFrontmatter] = useState<BlogFrontmatter | null>(null);
     const [content, setContent] = useState<string>('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const [lightboxSrc, setLightboxSrc] = useState<{ src: string; alt: string } | null>(null);
+
+    useDocumentTitle(frontmatter?.title || 'Blog');
+
+    const openLightbox = useCallback((src: string, alt: string) => {
+        setLightboxSrc({ src, alt });
+    }, []);
+
+    const closeLightbox = useCallback(() => {
+        setLightboxSrc(null);
+    }, []);
 
     useEffect(() => {
         const fetchPost = async () => {
             setLoading(true);
             setError(false);
             try {
-                const response = await fetch(`blog/${id}.md`);
+                const response = await fetch(`/blog/${id}.md`);
                 if (!response.ok) {
                     throw new Error('Post not found');
                 }
@@ -83,6 +131,10 @@ const BlogDetail: React.FC = () => {
 
     return (
         <div className="min-h-screen w-full flex-col pt-20 pb-12">
+            {lightboxSrc && (
+                <ImageLightbox src={lightboxSrc.src} alt={lightboxSrc.alt} onClose={closeLightbox} />
+            )}
+
             <div className="fixed inset-0 z-0 pointer-events-none">
                 <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px]"></div>
                 <div className="absolute bottom-[10%] left-[-10%] w-[600px] h-[600px] bg-accent-cyan/5 rounded-full blur-[120px]"></div>
@@ -120,7 +172,10 @@ const BlogDetail: React.FC = () => {
                     )}
                 </div>
 
-                <div className="relative mb-16 group">
+                <div
+                    className="relative mb-16 group cursor-zoom-in"
+                    onClick={() => openLightbox(frontmatter.heroImage, frontmatter.title)}
+                >
                     <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary to-accent-cyan opacity-20 blur transition duration-500 group-hover:opacity-40"></div>
                     <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-background-light border border-white/10 shadow-2xl">
                         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url("${frontmatter.heroImage}")` }}></div>
@@ -128,7 +183,21 @@ const BlogDetail: React.FC = () => {
                 </div>
 
                 <div className="prose prose-invert prose-lg max-w-none prose-headings:font-display prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-accent-purple prose-img:rounded-xl">
-                    <ReactMarkdown>{content}</ReactMarkdown>
+                    <ReactMarkdown
+                        components={{
+                            img: ({ src, alt, ...props }) => (
+                                <img
+                                    {...props}
+                                    src={src}
+                                    alt={alt || ''}
+                                    className="rounded-xl cursor-zoom-in hover:opacity-90 transition-opacity"
+                                    onClick={() => openLightbox(src || '', alt || '')}
+                                />
+                            ),
+                        }}
+                    >
+                        {content}
+                    </ReactMarkdown>
                 </div>
             </div>
         </div>

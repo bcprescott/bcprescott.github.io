@@ -27,7 +27,7 @@ const ProjectDetail: React.FC = () => {
       setLoading(true);
       setError(false);
       try {
-        const response = await fetch(`projects/${id}.md`);
+        const response = await fetch(`/projects/${id}.md`);
         if (!response.ok) {
            throw new Error('Project not found');
         }
