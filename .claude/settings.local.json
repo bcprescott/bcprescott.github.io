@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:devicon.dev)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "Bash(curl -s \"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.json\")",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(d['name'], d.get\\('versions',{}\\).get\\('font',[]\\)\\) for d in data if 'tensorflow' in d['name'].lower\\(\\)]\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(d['name'], d.get\\('versions',{}\\).get\\('font',[]\\)\\) for d in data if 'tensorflow' in d['name'].lower\\(\\)]\")"
+    ]
+  }
+}

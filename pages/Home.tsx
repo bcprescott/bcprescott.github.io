@@ -74,10 +74,37 @@ const recentPosts = [
   },
 ];
 
-const techStack = [
-  'Azure', 'AWS', 'Python', 'TensorFlow', 'PyTorch',
-  'Terraform', 'LlamaIndex', 'MLflow', 'SQL', 'Power BI',
-  'Docker', 'Kubernetes', 'Databricks', 'OpenAI', 'LangChain',
+const techCategories = [
+  {
+    label: 'Cloud & Infrastructure',
+    items: [
+      { name: 'Azure', icon: 'devicon-azure-plain', iconType: 'devicon' as const },
+      { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark', iconType: 'devicon' as const },
+      { name: 'Docker', icon: 'devicon-docker-plain', iconType: 'devicon' as const },
+      { name: 'Kubernetes', icon: 'devicon-kubernetes-plain', iconType: 'devicon' as const },
+      { name: 'Terraform', icon: 'devicon-terraform-plain', iconType: 'devicon' as const },
+    ],
+  },
+  {
+    label: 'AI & Machine Learning',
+    items: [
+      { name: 'PyTorch', icon: 'devicon-pytorch-plain', iconType: 'devicon' as const },
+      { name: 'TensorFlow', icon: 'devicon-tensorflow-original', iconType: 'devicon' as const },
+      { name: 'LlamaIndex', icon: 'hub', iconType: 'material' as const },
+      { name: 'LangChain', icon: 'link', iconType: 'material' as const },
+      { name: 'OpenAI', icon: 'auto_awesome', iconType: 'material' as const },
+      { name: 'MLflow', icon: 'conversion_path', iconType: 'material' as const },
+    ],
+  },
+  {
+    label: 'Data & Analytics',
+    items: [
+      { name: 'Python', icon: 'devicon-python-plain', iconType: 'devicon' as const },
+      { name: 'SQL', icon: 'devicon-azuresqldatabase-original', iconType: 'devicon' as const },
+      { name: 'Power BI', icon: 'devicon-plotly-plain', iconType: 'devicon' as const },
+      { name: 'Databricks', icon: 'devicon-apachespark-original', iconType: 'devicon' as const },
+    ],
+  },
 ];
 
 const expertise = [
@@ -125,7 +152,7 @@ const Home: React.FC = () => {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="lg:col-span-7 flex flex-col gap-8">
-            <div className="relative">
+            <div className="relative hero-stagger hero-stagger-1">
               <h1 className="font-display font-bold text-5xl md:text-7xl xl:text-[5.2rem] leading-[0.95] tracking-tight">
                 <span className="block text-white mb-2">Practical AI.</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-glow to-accent-cyan">Production Ready.</span>
@@ -133,11 +160,11 @@ const Home: React.FC = () => {
               <div className="hidden lg:block absolute -left-10 top-4 w-[3px] h-full bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0"></div>
             </div>
 
-            <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
+            <p className="hero-stagger hero-stagger-2 text-lg text-gray-400 leading-relaxed max-w-xl">
               I'm Ben, and I specialize in stripping the hype away from AI. With over a decade in applied data science, I bridge the gap between strategy and production to deliver solutions focused on measurable business outcomes.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mt-2">
+            <div className="hero-stagger hero-stagger-3 flex flex-wrap items-center gap-4 mt-2">
               <Link to="/blog" className="group relative px-8 py-4 bg-white text-background-dark font-bold text-base rounded-lg overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:-translate-y-0.5">
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative flex items-center gap-2">
@@ -152,7 +179,7 @@ const Home: React.FC = () => {
           </div>
 
           {/* Right Visual - Professional Headshot */}
-          <div className="lg:col-span-5 flex items-center justify-center">
+          <div className="lg:col-span-5 flex items-center justify-center hero-stagger hero-stagger-4">
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               {/* Glow effect behind photo */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent-cyan/20 to-primary/10 rounded-full blur-[60px] scale-110"></div>
@@ -244,14 +271,26 @@ const Home: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white">Tech Stack</h2>
           </div>
 
-          <div className={`flex flex-wrap gap-3 transition-all duration-700 delay-200 ${techSection.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            {techStack.map((tech, idx) => (
-              <span
-                key={idx}
-                className="px-5 py-2.5 rounded-lg bg-background-light border border-white/5 text-sm font-medium text-gray-300 hover:border-primary/30 hover:text-white transition-all duration-300"
-              >
-                {tech}
-              </span>
+          <div className={`flex flex-col gap-10 transition-all duration-700 delay-200 ${techSection.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            {techCategories.map((category, catIdx) => (
+              <div key={catIdx}>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">{category.label}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {category.items.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg bg-background-light border border-white/5 text-sm font-medium text-gray-300 hover:border-primary/30 hover:text-white transition-all duration-300"
+                    >
+                      {tech.iconType === 'devicon' ? (
+                        <i className={`${tech.icon} text-base opacity-60`}></i>
+                      ) : (
+                        <span className="material-symbols-outlined text-[16px] opacity-60">{tech.icon}</span>
+                      )}
+                      {tech.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
